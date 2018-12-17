@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[TB_TRIBO](
+	[ID] INT IDENTITY NOT NULL,
+	[Logo] VARCHAR(200),
+	[Nome] VARCHAR(50) NOT NULL,
+	[Status] BIT NOT NULL, -- (Ativo/Inativo)
+	CONSTRAINT [PK_TRIBO] PRIMARY KEY([ID])
+)
+GO
