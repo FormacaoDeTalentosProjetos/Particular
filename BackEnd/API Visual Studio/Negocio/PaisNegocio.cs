@@ -94,8 +94,7 @@ namespace Negocio
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum pais com este ID: { id }");
             }
-            _paisRepositorio.Deletar(obj.Id);
+            _paisRepositorio.Deletar(obj.ID);
         }
-
     }
 }

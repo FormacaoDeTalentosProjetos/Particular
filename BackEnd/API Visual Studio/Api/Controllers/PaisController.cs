@@ -71,13 +71,12 @@ namespace Api.Controllers
         {
             var objPais = new Pais()
             {
-                Id = Input.Id,
                 Nome = Input.Nome,
                 Sigla = Input.Sigla
             };
 
             var idPapel = _paisNegocio.Inserir(objPais);
-            objPais.Id = idPapel;
+            objPais.ID = idPapel;
             return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPais);
         }
 
@@ -100,7 +99,6 @@ namespace Api.Controllers
         {
             var objPais = new Pais()
             {
-                Id = input.Id,
                 Nome = input.Nome,
                 Sigla = input.Sigla
             };

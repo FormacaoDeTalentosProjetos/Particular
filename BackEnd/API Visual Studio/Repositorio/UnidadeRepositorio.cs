@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class UnidadeRepositorio: IRepositorioBase<Unidade>
+    public class UnidadeRepositorio//: IRepositorioBase<Unidade>
     {
         /// <summary>
         /// Método que seleciona todos as unidades do database.

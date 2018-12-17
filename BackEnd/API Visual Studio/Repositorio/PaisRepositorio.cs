@@ -70,7 +70,7 @@ namespace Repositorio
                 connection.Execute($"UPDATE [TB_PAIS] " +
                                    $"SET Nome = '{entity.Nome}', " +
                                    $"Sigla = '{entity.Sigla}' " +
-                                   $"WHERE ID = {entity.Id}");
+                                   $"WHERE ID = {entity.ID}");
             }
         }
 
