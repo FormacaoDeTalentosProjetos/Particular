@@ -15,14 +15,8 @@ namespace Api.Controllers
     [Route("api/Login")]
     public class LoginController : Controller
     {
-        /// <summary>
-        /// 
-        /// </summary>
         private LoginNegocio _loginNegocio;
 
-        /// <summary>
-        /// 
-        /// </summary>
         public LoginController()
         {
             _loginNegocio = new LoginNegocio();
@@ -55,58 +49,33 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UM "LOGIN" POR {NICK}
+        /// MÉTODO QUE OBTÉM UM "LOGIN" POR {USERNAME}
         /// </summary>
-        /// <param name="nick"></param>
+        /// <param name="unsername"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("Username/{user}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Login), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetUser(string user)
+        public IActionResult GetUser(string unsername)
         {
-            return Ok(_loginNegocio.SelecionarPorUser(user));
+            return Ok(_loginNegocio.SelecionarPorUser(unsername));
         }
 
         /// <summary>
-        /// MÉTODO QUE VALIDA O LOGIN POR ({CPF} / {EMAIL}) E {SENHA}
+        /// MÉTODO QUE VALIDA O LOGIN POR {USERNAME}) E {SENHA}
         /// </summary>
-        /// <param name="login"></param>
+        /// <param name="unsername"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("Validar")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Login), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetLogin([FromQuery]string login, [FromQuery]string senha)
+        public IActionResult GetLogin([FromQuery]string unsername, [FromQuery]string senha)
         {
-            return Ok(_loginNegocio.EfetuarLoginUser(login, senha));
+            return Ok(_loginNegocio.EfetuarLoginUser(unsername, senha));
         }
-
-
-        /*
-        /// <summary>
-        /// MÉTODO QUE INSERE UM "LOGIN"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]LoginInput input)
-        {
-            var objLogin = new Login()
-            {
-                User = input.User,
-                Senha = input.Senha
-            };
-
-            var idLogin = _loginNegocio.Inserir(objLogin);
-            objLogin.ID = idLogin;
-            return CreatedAtRoute(nameof(GetId), new { id = idLogin }, objLogin);
-        }
-        */
 
         /// <summary>
         /// MÉTODO QUE ALTERA SENHA DO "LOGIN" POR {ID}
@@ -131,7 +100,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE ALTERA SENHA DO "LOGIN" POR {ID}
+        /// MÉTODO QUE ALTERA "USERNAME" DO "LOGIN" POR {ID}
         /// </summary>
         /// <param name="id"></param>
         /// <param name="input"></param>

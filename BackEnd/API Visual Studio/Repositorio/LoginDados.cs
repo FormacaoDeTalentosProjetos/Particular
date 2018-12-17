@@ -61,7 +61,7 @@ namespace Repositorio
         /// <summary>
         /// REALIZA LOGIN PELO USERNAME E SENHA
         /// </summary>
-        /// <param name="nick"></param>
+        /// <param name="user"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
         public Login EfetuarLoginUser(string user, string senha)

@@ -59,7 +59,7 @@ namespace Repositorio
         }
 
         /// <summary>
-        /// CADASTRA USUARIO
+        /// CADASTRA PAPEL
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
@@ -79,7 +79,7 @@ namespace Repositorio
         }
 
         /// <summary>
-        /// ALTERA SENHA DO USUÁRIO
+        /// ALTERA PAPEL
         /// </summary>
         /// <param name="entity"></param>
         public void AlterarPapel(Papel entity)

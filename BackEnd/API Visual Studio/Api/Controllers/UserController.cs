@@ -15,15 +15,9 @@ namespace Api.Controllers
     [Route("api/User")]
     public class UserController : Controller
     {
-        /// <summary>
-        /// 
-        /// </summary>
         private UserNegocio _userNegocio;
         private LoginNegocio _loginNegocio;
-
-        /// <summary>
-        /// 
-        /// </summary>
+        
         public UserController()
         {
             _userNegocio = new UserNegocio();
@@ -70,7 +64,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR {NOME}
+        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR {NOME} OU PARTE DO {NOME}
         /// </summary>
         /// <param name="nome"></param>
         /// <returns></returns>
@@ -84,7 +78,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR {PAPEL}
+        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR RESPONSABILIDADE {PAPEL}
         /// </summary>
         /// <param name="IdPapel"></param>
         /// <returns></returns>
@@ -127,7 +121,7 @@ namespace Api.Controllers
 
 
         /// <summary>
-        /// MÉTODO QUE ALTERA SENHA DO "USUÁRIO" POR {ID}
+        /// MÉTODO QUE ALTERA DADOS DO "USUÁRIO" POR {ID}
         /// </summary>
         /// <param name="id"></param>
         /// <param name="input"></param>
@@ -152,7 +146,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE ALTERA SENHA DO "USUÁRIO" POR {ID}
+        /// MÉTODO QUE ALTERA STATUS DO "USUÁRIO" POR {ID} (ATIVO/INATIVO)
         /// </summary>
         /// <param name="id"></param>
         /// <param name="input"></param>

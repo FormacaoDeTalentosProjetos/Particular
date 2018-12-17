@@ -18,6 +18,10 @@ namespace Negocio
             _LoginDados = new LoginDados();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarTodos()
         {
             var lista = _UserDados.SelecionarTodos();
@@ -28,6 +32,10 @@ namespace Negocio
             return lista;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarAtivos()
         {
             var lista = _UserDados.SelecionarAtivos();
@@ -38,6 +46,11 @@ namespace Negocio
             return lista;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public User SelecionarPorId(int id)
         {
             var obj = _UserDados.SelecionarPorId(id);
@@ -48,6 +61,11 @@ namespace Negocio
             return obj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarPorNome(string nome)
         {
             var obj = _UserDados.SelecionarPorNome(nome);
@@ -58,6 +76,11 @@ namespace Negocio
             return obj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="IdPapel"></param>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarPorPapel(int IdPapel)
         {
             var obj = _UserDados.SelecionarPorPapel(IdPapel);
@@ -68,6 +91,11 @@ namespace Negocio
             return obj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public int Inserir(User entity)
         {
             var UserExistente = _LoginDados.SelecionarPorUser(entity.Username);
@@ -80,6 +108,12 @@ namespace Negocio
             return _UserDados.Inserir(entity);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public User AlterarPerfilUsuario(int id, User entity)
         {
             entity.ID = id;
@@ -88,6 +122,12 @@ namespace Negocio
             return _UserDados.SelecionarPorId(id);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public User AlterarAtivoInativo(int id, User entity)
         {
             entity.ID = id;
@@ -95,11 +135,11 @@ namespace Negocio
 
             return _UserDados.SelecionarPorId(id);
         }
-
+        
         /// <summary>
-		/// 
-		/// </summary>
-		/// <param name="id"></param>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
 		public void Deletar(int id)
         {
             var obj = _UserDados.SelecionarPorId(id);

@@ -124,7 +124,7 @@ namespace Repositorio
         }
 
         /// <summary>
-        /// ALTERA SENHA DO USUÁRIO
+        /// ALTERA DADOS DE PERFIL DO USUÁRIO
         /// </summary>
         /// <param name="entity"></param>
         public void AlterarPerfilUsuario(User entity)
@@ -141,7 +141,7 @@ namespace Repositorio
         }
 
         /// <summary>
-        /// ALTERA SENHA DO USUÁRIO
+        /// ALTERA STATUS DO USUÁRIO (ATIVO/INATIVO)
         /// </summary>
         /// <param name="entity"></param>
         public void AlterarAtivoInativo(User entity)

@@ -23,7 +23,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UMA LISTA DOS "USUÁRIOS"
+        /// MÉTODO QUE OBTÉM UMA LISTA DOS "PAPEIS"
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -35,7 +35,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR {ID}
+        /// MÉTODO QUE OBTÉM UM "PAPEL" POR {ID}
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -49,7 +49,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UM "USUÁRIO" POR {NOME}
+        /// MÉTODO QUE OBTÉM UM "PAPEL" PELO {NOME}
         /// </summary>
         /// <param name="nome"></param>
         /// <returns></returns>
@@ -63,7 +63,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE INSERE UM "USUÁRIO"
+        /// MÉTODO QUE INSERE UM "PAPEL"
         /// </summary>
         /// <param name="Input"></param>
         /// <returns></returns>
@@ -86,7 +86,7 @@ namespace Api.Controllers
 
 
         /// <summary>
-        /// MÉTODO QUE ALTERA SENHA DO "USUÁRIO" POR {ID}
+        /// MÉTODO QUE ALTERA UM "PAPEL" POR {ID}
         /// </summary>
         /// <param name="id"></param>
         /// <param name="input"></param>
@@ -109,7 +109,7 @@ namespace Api.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE EXCLUI UM "USUÁRIO" POR {ID}
+        /// MÉTODO QUE EXCLUI UM "PAPEL" POR {ID}
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

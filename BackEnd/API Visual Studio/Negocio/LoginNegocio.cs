@@ -17,6 +17,10 @@ namespace Negocio
             _UserDados = new UserDados();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Login> Selecionar()
         {
             var lista = _loginDados.Selecionar();
@@ -27,6 +31,11 @@ namespace Negocio
             return lista;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Login SelecionarPorId(int id)
         {
             var obj = _loginDados.SelecionarPorId(id);
@@ -37,6 +46,11 @@ namespace Negocio
             return obj;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public Login SelecionarPorUser(string user)
         {
             var obj = _loginDados.SelecionarPorUser(user);
@@ -47,7 +61,12 @@ namespace Negocio
             return obj;
         }
 
-        // ALTERAR A FORMA DE LOGIN PARA EMAIL E OU NICKNAME
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="senha"></param>
+        /// <returns></returns>
         public Login EfetuarLoginUser(string login, string senha)
         {
             var objUser = _loginDados.EfetuarLoginUser(login, senha);
@@ -62,20 +81,12 @@ namespace Negocio
             }
         }
 
-        /*
-        public int Inserir(Login entity, User Entity)
-        {
-            var UserExistente = _loginDados.SelecionarPorUser(entity.Username);
-
-            if (UserExistente != null)
-            {
-                throw new ConflitoException($"Já existe cadastrado o USUÁRIO {UserExistente.Username}, para outro Login!");
-            }
-
-            return _loginDados.Inserir(entity, Entity);
-        }
-        */
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public Login AlterarSenha(int id, Login entity)
         {
             entity.ID = id;
@@ -84,6 +95,12 @@ namespace Negocio
             return _loginDados.SelecionarPorId(id);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public Login AlterarUser(int id, Login entity)
         {
             entity.ID = id;
