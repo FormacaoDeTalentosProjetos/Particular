@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Dominio;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class TriboRepositorio
+    public class TriboRepositorio : IRepositorioBase<Tribo>
     {
         /// <summary>
         /// PESQUISA TRIBOS

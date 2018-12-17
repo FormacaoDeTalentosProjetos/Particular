@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class PapelRepositorio
+    public class PapelRepositorio : IRepositorioBase<Papel>
     {
         /// <summary>
         /// PESQUISA PAPEIS
@@ -82,7 +82,7 @@ namespace Repositorio
         /// ALTERA PAPEL
         /// </summary>
         /// <param name="entity"></param>
-        public void AlterarPapel(Papel entity)
+        public void Alterar(Papel entity)
         {
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {

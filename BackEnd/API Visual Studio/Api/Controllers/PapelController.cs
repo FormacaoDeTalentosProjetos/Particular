@@ -104,7 +104,7 @@ namespace Api.Controllers
                 Nivel = input.Nivel
             };
 
-            var obj = _papelNegocio.AlterarPapel(id, objUser);
+            var obj = _papelNegocio.Alterar(id, objUser);
             return Accepted(obj);
         }
 

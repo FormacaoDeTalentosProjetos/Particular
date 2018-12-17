@@ -8,13 +8,11 @@ namespace Negocio
 {
     public class LoginNegocio
     {
-        private readonly LoginRepositorio _loginDados;
-        private readonly UserRepositorio _UserDados;
+        private readonly LoginRepositorio _loginRepositorio;
 
         public LoginNegocio()
         {
-            _loginDados = new LoginRepositorio();
-            _UserDados = new UserRepositorio();
+            _loginRepositorio = new LoginRepositorio();
         }
 
         /// <summary>
@@ -23,7 +21,7 @@ namespace Negocio
         /// <returns></returns>
         public IEnumerable<Login> Selecionar()
         {
-            var lista = _loginDados.Selecionar();
+            var lista = _loginRepositorio.Selecionar();
 
             if (lista == null)
                 throw new NaoEncontradoException();
@@ -38,7 +36,7 @@ namespace Negocio
         /// <returns></returns>
         public Login SelecionarPorId(int id)
         {
-            var obj = _loginDados.SelecionarPorId(id);
+            var obj = _loginRepositorio.SelecionarPorId(id);
 
             if (obj == null)
                 throw new NaoEncontradoException();
@@ -53,7 +51,7 @@ namespace Negocio
         /// <returns></returns>
         public Login SelecionarPorUser(string user)
         {
-            var obj = _loginDados.SelecionarPorUser(user);
+            var obj = _loginRepositorio.SelecionarPorUser(user);
 
             if (obj == null)
                 throw new NaoEncontradoException();
@@ -69,7 +67,7 @@ namespace Negocio
         /// <returns></returns>
         public Login EfetuarLoginUser(string login, string senha)
         {
-            var objUser = _loginDados.EfetuarLoginUser(login, senha);
+            var objUser = _loginRepositorio.EfetuarLoginUser(login, senha);
 
             if (objUser != null)
             {
@@ -90,9 +88,9 @@ namespace Negocio
         public Login AlterarSenha(int id, Login entity)
         {
             entity.ID = id;
-            _loginDados.AlterarSenha(entity);
+            _loginRepositorio.AlterarSenha(entity);
 
-            return _loginDados.SelecionarPorId(id);
+            return _loginRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -104,9 +102,9 @@ namespace Negocio
         public Login AlterarUser(int id, Login entity)
         {
             entity.ID = id;
-            _loginDados.AlterarUser(entity);
+            _loginRepositorio.AlterarUser(entity);
 
-            return _loginDados.SelecionarPorId(id);
+            return _loginRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -115,9 +113,9 @@ namespace Negocio
 		/// <param name="id"></param>
 		public void Deletar(int id)
         {
-            var obj = _loginDados.SelecionarPorId(id);
+            var obj = _loginRepositorio.SelecionarPorId(id);
 
-            _loginDados.Deletar(obj.ID);
+            _loginRepositorio.Deletar(obj.ID);
         }
     }
 }
