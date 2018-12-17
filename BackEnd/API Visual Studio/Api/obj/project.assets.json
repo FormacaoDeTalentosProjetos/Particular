@@ -14906,11 +14906,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Api\\Api.csproj",
+      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Api\\Api.csproj",
+      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\Api.csproj",
       "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Api\\obj\\",
+      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14929,11 +14929,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Dominio\\Dominio.csproj"
+            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj"
             },
-            "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\GIT PROJECTS\\Scopio\\LemuresMutualistas\\Negocio\\Negocio.csproj"
+            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj"
             }
           }
         }
