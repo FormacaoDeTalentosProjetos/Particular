@@ -9,11 +9,11 @@ namespace Negocio
 {
     public class PapelNegocio
     {
-        private readonly PapelDados _papelDados;
+        private readonly PapelRepositorio _papelDados;
 
         public PapelNegocio()
         {
-            _papelDados = new PapelDados();
+            _papelDados = new PapelRepositorio();
         }
 
         /// <summary>

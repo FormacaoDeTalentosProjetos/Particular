@@ -55,6 +55,64 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="F:Api.Controllers.PaisController._paisNegocio">
+            <summary>
+            Declara as regras de negócio para o país.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.PaisController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.PaisController.Get">
+            <summary>
+            Método que obtêm todos os paises.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.PaisController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm um país.
+            </summary>
+            <param name="id">Usado para selecionar o país.</param>
+            <returns></returns>
+            <remarks>Obtêm um país através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.PaisController.Post(Api.Model.PaisInput)">
+            <summary>
+            Método que insere um país.
+            </summary>
+            <param name="input">Objeto com os dados do país.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.PaisController.Put(System.Int32,Api.Model.PaisInput)">
+            <summary>
+            Método que altera os dados de um país.
+            </summary>
+            <param name="id">Usado para selecionar o país.</param>
+            <param name="input">Objeto que contêm os dados a serem alterados.</param>
+            <returns></returns>
+            <response code="202">Accepted</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.PaisController.Delete(System.Int32)">
+            <summary>
+            Método que deleta um país.
+            </summary>
+            <param name="id">Usado para selecionar o país.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
+        </member>
         <member name="M:Api.Controllers.PapelController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTA DOS "PAPEIS"

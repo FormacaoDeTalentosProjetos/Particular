@@ -8,13 +8,13 @@ namespace Negocio
 {
     public class LoginNegocio
     {
-        private readonly LoginDados _loginDados;
-        private readonly UserDados _UserDados;
+        private readonly LoginRepositorio _loginDados;
+        private readonly UserRepositorio _UserDados;
 
         public LoginNegocio()
         {
-            _loginDados = new LoginDados();
-            _UserDados = new UserDados();
+            _loginDados = new LoginRepositorio();
+            _UserDados = new UserRepositorio();
         }
 
         /// <summary>
