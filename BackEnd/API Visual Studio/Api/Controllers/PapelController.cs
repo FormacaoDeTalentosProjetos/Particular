@@ -57,7 +57,7 @@ namespace Api.Controllers
         [Route("Descricao/{nome}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetUser(string nome)
+        public IActionResult GetPapel(string nome)
         {
             return Ok(_papelNegocio.SelecionarPorDescricao(nome));
         }
@@ -84,7 +84,6 @@ namespace Api.Controllers
             return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPapel);
         }
 
-
         /// <summary>
         /// MÉTODO QUE ALTERA UM "PAPEL" POR {ID}
         /// </summary>
@@ -98,13 +97,13 @@ namespace Api.Controllers
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
         public IActionResult PutPapel([FromRoute]int id, [FromBody]PapelInput input)
         {
-            var objUser = new Papel()
+            var objPapel = new Papel()
             {
                 Nome = input.Nome,
                 Nivel = input.Nivel
             };
 
-            var obj = _papelNegocio.Alterar(id, objUser);
+            var obj = _papelNegocio.Alterar(id, objPapel);
             return Accepted(obj);
         }
 

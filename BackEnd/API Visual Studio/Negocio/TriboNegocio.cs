@@ -96,6 +96,20 @@ namespace Negocio
         /// 
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public Tribo AlterarAtivoInativo(int id, Tribo entity)
+        {
+            entity.ID = id;
+            _triboRepositorio.AlterarAtivoInativo(entity);
+
+            return _triboRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
 		public void Deletar(int id)
         {
             var obj = _triboRepositorio.SelecionarPorId(id);

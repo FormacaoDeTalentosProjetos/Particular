@@ -96,6 +96,20 @@ namespace Negocio
         /// 
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public Squad AlterarAtivoInativo(int id, Squad entity)
+        {
+            entity.ID = id;
+            _squadRepositorio.AlterarAtivoInativo(entity);
+
+            return _squadRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
 		public void Deletar(int id)
         {
             var obj = _squadRepositorio.SelecionarPorId(id);

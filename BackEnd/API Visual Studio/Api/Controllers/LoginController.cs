@@ -57,7 +57,7 @@ namespace Api.Controllers
         [Route("Username/{user}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Login), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetUser(string unsername)
+        public IActionResult GetLoginUser(string unsername)
         {
             return Ok(_loginNegocio.SelecionarPorUser(unsername));
         }
@@ -110,7 +110,7 @@ namespace Api.Controllers
         [SwaggerResponse((int)HttpStatusCode.Accepted, typeof(Login), nameof(HttpStatusCode.Accepted))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult PutUser([FromRoute]int id, [FromBody]LoginInput input)
+        public IActionResult PutLoginUser([FromRoute]int id, [FromBody]LoginInput input)
         {
             var objLogin = new Login()
             {

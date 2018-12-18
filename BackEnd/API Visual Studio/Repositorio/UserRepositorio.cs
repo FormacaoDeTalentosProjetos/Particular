@@ -105,7 +105,7 @@ namespace Repositorio
                                                       $"(IdPapel, Nome, Email, Tel, Status) " +
                                                       $"VALUES ({entity.IdPapel}, " +
                                                       $"'{entity.Nome}', '{entity.Email}', " +
-                                                      $"'{entity.Tel}', {entity.Status})" +
+                                                      $"'{entity.Tel}', 1)" +
                                                       $"SET @IDUser = SCOPE_IDENTITY();" +
                                                       $"SELECT @IDUser " +
                                                       $"DECLARE @HASH VARCHAR(32); " +

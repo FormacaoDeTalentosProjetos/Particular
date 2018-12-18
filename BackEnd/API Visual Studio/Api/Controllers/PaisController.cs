@@ -75,9 +75,9 @@ namespace Api.Controllers
                 Sigla = Input.Sigla
             };
 
-            var idPapel = _paisNegocio.Inserir(objPais);
-            objPais.ID = idPapel;
-            return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPais);
+            var idPais = _paisNegocio.Inserir(objPais);
+            objPais.ID = idPais;
+            return CreatedAtRoute(nameof(GetId), new { id = idPais }, objPais);
         }
 
 

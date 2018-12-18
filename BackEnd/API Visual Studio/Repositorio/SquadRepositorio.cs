@@ -71,7 +71,7 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_SQUAD] " +
                                                       $"(IdUnidade, IdTribo, Logo, Nome, Status) " +
                                                       $"VALUES ({entity.IdUnidade}, {entity.IdTribo}, " +
-                                                      $"'{entity.Logo}', '{entity.Nome}', {entity.Status})" +
+                                                      $"'{entity.Logo}', '{entity.Nome}', 1)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
@@ -99,7 +99,7 @@ namespace Repositorio
         /// ALTERA STATUS (ATIVO/INATIVO)
         /// </summary>
         /// <param name="entity"></param>
-        public void AlterarStatus(Squad entity)
+        public void AlterarAtivoInativo(Squad entity)
         {
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
