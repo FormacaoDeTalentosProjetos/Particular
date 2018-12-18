@@ -293,6 +293,7 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
+<<<<<<< HEAD
         <member name="M:Api.Controllers.UnidadeController.GetNome(System.String)">
             <summary>
             Método que obtêm uma unidade.
@@ -303,6 +304,8 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
+=======
+>>>>>>> 5719ca076be9611925063ea3d7ff4e0b5a00907c
         <member name="M:Api.Controllers.UnidadeController.Post(Api.Model.UnidadeInput)">
             <summary>
             Método que insere uma unidade.
