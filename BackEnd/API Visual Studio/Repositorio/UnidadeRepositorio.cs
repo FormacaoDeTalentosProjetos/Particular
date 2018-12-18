@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class UnidadeRepositorio//: IRepositorioBase<Unidade>
+    public class UnidadeRepositorio: IRepositorioBase<Unidade>
     {
         /// <summary>
         /// Método que seleciona todos as unidades do database.
@@ -38,5 +38,55 @@ namespace Repositorio
                 return obj;
             }
         }
+
+        /// <summary>
+        /// Método para inserir uma unidade.
+        /// </summary>
+        /// <param name="entity">Objeto com os dados da unidade a ser inserida.</param>
+        /// <returns>ID da unidade inserida no Database.</returns>
+        public int Inserir(Unidade entity)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
+                                                      $"INSERT INTO [TB_UNIDADE] " +
+                                                      $"(IdPais, Nome) " +
+                                                      $"VALUES ({entity.IdPais}, " +
+                                                      $"'{entity.Nome}')" +
+                                                      $"SET @ID = SCOPE_IDENTITY();" +
+                                                      $"SELECT @ID");
+                return obj;
+            }
+        }
+
+        /// <summary>
+        /// Método para alterar uma unidade.
+        /// </summary>
+        /// <param name="entity">Objeto que contêm os dados da unidade.</param>
+        public void Alterar(Unidade entity)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                connection.Execute($"UPDATE [TB_UNIDADE] " +
+                                   $"SET IdPais = {entity.IdPais}, " +
+                                   $"Nome = '{entity.Nome}' " +
+                                   $"WHERE ID = {entity.Id}");
+            }
+        }
+
+        /// <summary>
+        /// Método para deletar uma unidade.
+        /// </summary>
+        /// <param name="id">Usado para selecionar a unidade no Database.</param>
+        public void Deletar(int id)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                connection.Execute($"DELETE " +
+                                   $"FROM [TB_UNIDADE] " +
+                                   $"WHERE ID = {id}");
+            }
+        }
+
     }
 }

@@ -70,7 +70,7 @@ namespace Repositorio
                 connection.Execute($"UPDATE [TB_PAIS] " +
                                    $"SET Nome = '{entity.Nome}', " +
                                    $"Sigla = '{entity.Sigla}' " +
-                                   $"WHERE ID = {entity.ID}");
+                                   $"WHERE ID = {entity.Id}");
             }
         }
 
@@ -78,7 +78,6 @@ namespace Repositorio
         /// Método para deletar um país.
         /// </summary>
         /// <param name="id">Usado para selecionar o país no Database.</param>
-        /// <returns></returns>
         public void Deletar(int id)
         {
             using (var connection = new SqlConnection(dbConnection.GetConn()))

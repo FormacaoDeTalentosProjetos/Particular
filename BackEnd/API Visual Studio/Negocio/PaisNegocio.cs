@@ -9,8 +9,14 @@ namespace Negocio
 {
     public class PaisNegocio: INegocioBase<Pais>
     {
+        /// <summary>
+        /// Declara o repositório do país.
+        /// </summary>
         private readonly PaisRepositorio _paisRepositorio;
 
+        /// <summary>
+        /// Construtor para instaciar o repositório.
+        /// </summary>
         public PaisNegocio()
         {
             _paisRepositorio = new PaisRepositorio();
@@ -79,6 +85,9 @@ namespace Negocio
                 throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
             }
 
+            entity.Id = id;
+            _paisRepositorio.Alterar(entity);
+
             return _paisRepositorio.SelecionarPorId(id);
         }
 
@@ -92,9 +101,9 @@ namespace Negocio
 
             if (obj == null)
             {
-                throw new NaoEncontradoException($"Não foi encontrado nenhum pais com este ID: { id }");
+                throw new NaoEncontradoException($"Não foi encontrado nenhum país com este ID: { id }");
             }
-            _paisRepositorio.Deletar(obj.ID);
+            _paisRepositorio.Deletar(obj.Id);
         }
     }
 }

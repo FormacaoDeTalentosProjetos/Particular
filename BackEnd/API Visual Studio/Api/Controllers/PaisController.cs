@@ -48,7 +48,7 @@ namespace Api.Controllers
         /// <response code="404">NotFoud</response>
         [HttpGet]
         [Route("{id}")]
-        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Pais), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
         {
@@ -64,22 +64,21 @@ namespace Api.Controllers
         /// <response code="400">BadRequest</response>
         /// <response code="500">InternalServerError</response>
         [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Papel), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Pais), nameof(HttpStatusCode.Created))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]PaisInput Input)
+        public IActionResult Post([FromBody]PaisInput input)
         {
             var objPais = new Pais()
             {
-                Nome = Input.Nome,
-                Sigla = Input.Sigla
+                Nome = input.Nome,
+                Sigla = input.Sigla
             };
 
             var idPais = _paisNegocio.Inserir(objPais);
-            objPais.ID = idPais;
+            objPais.Id = idPais;
             return CreatedAtRoute(nameof(GetId), new { id = idPais }, objPais);
         }
-
 
         /// <summary>
         /// Método que altera os dados de um país.
@@ -92,7 +91,7 @@ namespace Api.Controllers
         /// <response code="500">InternalServerError</response>
         [HttpPut]
         [Route("{id}")]
-        [SwaggerResponse((int)HttpStatusCode.Accepted, typeof(Papel), nameof(HttpStatusCode.Accepted))]
+        [SwaggerResponse((int)HttpStatusCode.Accepted, typeof(Pais), nameof(HttpStatusCode.Accepted))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
         public IActionResult Put([FromRoute]int id, [FromBody]PaisInput input)
