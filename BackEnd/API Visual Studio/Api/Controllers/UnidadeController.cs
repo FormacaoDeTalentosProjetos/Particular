@@ -56,6 +56,23 @@ namespace Api.Controllers
         }
 
         /// <summary>
+        /// Método que obtêm uma unidade.
+        /// </summary>
+        /// <param name="nome">Usado para selecionar a unidade.</param>
+        /// <returns></returns>
+        /// <remarks>Obtêm uma unidade através do Nome informado.</remarks>
+        /// <response code="200">OK</response>
+        /// <response code="404">NotFoud</response>
+        [HttpGet]
+        [Route("Nome/{nome}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Unidade), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetNome(string nome)
+        {
+            return Ok(_unidadeNegocio.SelecionarPorNome(nome));
+        }
+
+        /// <summary>
         /// Método que insere uma unidade.
         /// </summary>
         /// <param name="input">Objeto com os dados da unidade.</param>

@@ -83,6 +83,16 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
+        <member name="M:Api.Controllers.PaisController.GetNome(System.Int32)">
+            <summary>
+            Método que obtêm um país.
+            </summary>
+            <param name="nome">Usado para selecionar o país.</param>
+            <returns></returns>
+            <remarks>Obtêm um país através do Nome informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
         <member name="M:Api.Controllers.PaisController.Post(Api.Model.PaisInput)">
             <summary>
             Método que insere um país.
@@ -254,6 +264,74 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:Api.Controllers.UnidadeController._unidadeNegocio">
+            <summary>
+            Declara as regras de negócio para a unidade.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.Get">
+            <summary>
+            Método que obtêm todos as unidades.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm uma unidade.
+            </summary>
+            <param name="id">Usado para selecionar a unidade.</param>
+            <returns></returns>
+            <remarks>Obtêm uma unidade através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.GetNome(System.String)">
+            <summary>
+            Método que obtêm uma unidade.
+            </summary>
+            <param name="nome">Usado para selecionar a unidade.</param>
+            <returns></returns>
+            <remarks>Obtêm uma unidade através do Nome informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.Post(Api.Model.UnidadeInput)">
+            <summary>
+            Método que insere uma unidade.
+            </summary>
+            <param name="input">Objeto com os dados da unidade.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.Put(System.Int32,Api.Model.UnidadeInput)">
+            <summary>
+            Método que altera os dados de uma unidade.
+            </summary>
+            <param name="id">Usado para selecionar a unidade.</param>
+            <param name="input">Objeto que contêm os dados a serem alterados.</param>
+            <returns></returns>
+            <response code="202">Accepted</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.UnidadeController.Delete(System.Int32)">
+            <summary>
+            Método que deleta uma unidade.
+            </summary>
+            <param name="id">Usado para selecionar a unidade.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
         </member>
         <member name="M:Api.Controllers.UserController.Get">
             <summary>

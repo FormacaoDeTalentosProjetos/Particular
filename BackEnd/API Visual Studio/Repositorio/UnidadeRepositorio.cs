@@ -39,6 +39,22 @@ namespace Repositorio
             }
         }
 
+        // <summary>
+        /// Método que seleciona uma unidade do database.
+        /// </summary>
+        /// <param name="nome">Nome da unidade a ser buscada no Database.</param>
+        /// <returns>Objeto com os dados da unidade selecionada.</returns>
+        public Unidade SelecionarPorNome(string nome)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                var obj = connection.QueryFirstOrDefault<Unidade>($"SELECT * " +
+                                                                  $"FROM [TB_UNIDADE] " +
+                                                                  $"WHERE Nome = {nome}");
+                return obj;
+            }
+        }
+
         /// <summary>
         /// Método para inserir uma unidade.
         /// </summary>

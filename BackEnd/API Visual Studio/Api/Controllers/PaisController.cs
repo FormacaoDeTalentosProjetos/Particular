@@ -56,6 +56,23 @@ namespace Api.Controllers
         }
 
         /// <summary>
+        /// Método que obtêm um país.
+        /// </summary>
+        /// <param name="nome">Usado para selecionar o país.</param>
+        /// <returns></returns>
+        /// <remarks>Obtêm um país através do Nome informado.</remarks>
+        /// <response code="200">OK</response>
+        /// <response code="404">NotFoud</response>
+        [HttpGet]
+        [Route("Nome/{nome}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Pais), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetNome(string nome)
+        {
+            return Ok(_paisNegocio.SelecionarPorNome(nome));
+        }
+
+        /// <summary>
         /// Método que insere um país.
         /// </summary>
         /// <param name="input">Objeto com os dados do país.</param>

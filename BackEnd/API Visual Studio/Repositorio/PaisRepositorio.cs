@@ -40,6 +40,22 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// Método que seleciona um país do database.
+        /// </summary>
+        /// <param name="nome">Nome a ser buscado no Database.</param>
+        /// <returns>Objeto com os dados do pais selecionado.</returns>
+        public Pais SelecionarPorNome(string nome)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                var obj = connection.QueryFirstOrDefault<Pais>($"SELECT * " +
+                                                               $"FROM [TB_PAIS] " +
+                                                               $"WHERE Nome = {nome}");
+                return obj;
+            }
+        }
+
+        /// <summary>
         /// Método para inserir um país.
         /// </summary>
         /// <param name="entity">Objeto com os dados do país a ser inserido.</param>

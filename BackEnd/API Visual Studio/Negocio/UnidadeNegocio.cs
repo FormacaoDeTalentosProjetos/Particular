@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Negocio
 {
-    public class UnidadeNegocio : INegocioBase<Unidade>
+    public class UnidadeNegocio: INegocioBase<Unidade>
     {
         /// <summary>
         /// Declara o repositório da unidade.
@@ -36,7 +36,7 @@ namespace Negocio
         /// <summary>
         /// Seleciona uma unidade do Database.
         /// </summary>
-        /// <param name="id">>Usado para buscar uma unidade no Database.</param>
+        /// <param name="id">Usado para buscar uma unidade no Database.</param>
         /// <returns>Seleciona uma unidade ou gera uma exceção.</returns>
         public Unidade SelecionarPorId(int id)
         {
@@ -49,21 +49,44 @@ namespace Negocio
         }
 
         /// <summary>
+        /// Seleciona uma unidade do Database.
+        /// </summary>
+        /// <param name="nome">Usado para buscar uma unidade no Database.</param>
+        /// <returns>Seleciona uma unidade ou gera uma exceção.</returns>
+        public Unidade SelecionarPorNome(string nome)
+        {
+            var obj = _unidadeRepositorio.SelecionarPorNome(nome);
+
+            if (obj == null)
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma unidade com este Nome: { nome }");
+
+            return obj;
+        }
+
+        /// <summary>
         /// Verifica se existem campos obrigatórios que não estão preenchidos e se os campos respeitam 
         /// os limites de caracteres especificados no Database. Antes de inserir uma unidade.
         /// </summary>
         /// <param name="entity">Objeto com os dados da unidade.</param>
-        /// <returns>>ID da unuidade inserida no Database ou gera alguma exceção.</returns>
+        /// <returns>ID da unuidade inserida no Database ou gera alguma exceção.</returns>
         public int Inserir(Unidade entity)
         {
+            //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
             {
                 throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
             }
 
+            //Verifica se nenhum campo do objeto entity excede o limite de caracteres estipulado no Database.
             if (ExcedeLimiteDeCaracteres.Verificar(entity))
             {
                 throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
+            }
+
+            //Verifica se a unidade já foi cadastrada.
+            if (_unidadeRepositorio.SelecionarPorNome(entity.Nome) != null)
+            {
+                throw new ConflitoException($"A unidade: \"{entity.Nome}\", já foi cadastrada!");
             }
 
             return _unidadeRepositorio.Inserir(entity);
@@ -74,17 +97,25 @@ namespace Negocio
         /// os limites de caracteres especificados no Database. Antes de alterar os dados de uma unidade.
         /// </summary>
         /// <param name="entity">Objeto com os dados da unidade.</param>
-        /// <returns>>ID da unidade inserida no Database ou gera alguma exceção.</returns>
+        /// <returns>ID da unidade inserida no Database ou gera alguma exceção.</returns>
         public Unidade Alterar(int id, Unidade entity)
         {
+            //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
             {
                 throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
             }
 
+            //Verifica se nenhum campo do objeto entity excede o limite de caracteres estipulado no Database.
             if (ExcedeLimiteDeCaracteres.Verificar(entity))
             {
                 throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
+            }
+
+            //Verifica se a unidade já foi cadastrada.
+            if (_unidadeRepositorio.SelecionarPorNome(entity.Nome) != null)
+            {
+                throw new ConflitoException($"A unidade: \"{entity.Nome}\", já foi cadastrada!");
             }
 
             entity.Id = id;
