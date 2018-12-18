@@ -75,7 +75,8 @@ namespace Api.Controllers
         {
             var objPapel = new Papel()
             {
-                Nome = Input.Nome,
+                Desc = Input.Desc,
+                Sigla = Input.Sigla,
                 Nivel = Input.Nivel
             };
 
@@ -99,7 +100,8 @@ namespace Api.Controllers
         {
             var objPapel = new Papel()
             {
-                Nome = input.Nome,
+                Desc = input.Desc,
+                Sigla = input.Sigla,
                 Nivel = input.Nivel
             };
 

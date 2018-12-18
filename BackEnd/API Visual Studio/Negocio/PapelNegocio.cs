@@ -69,11 +69,11 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Papel entity)
         {
-            var UserExistente = _papelRepositorio.SelecionarPorDescricao(entity.Nome);
+            var UserExistente = _papelRepositorio.SelecionarPorDescricao(entity.Desc);
 
             if (UserExistente != null)
             {
-                throw new ConflitoException($"Já existe cadastrado o PAPEL {UserExistente.Nome}, cadastrado!");
+                throw new ConflitoException($"Já existe cadastrado o PAPEL {UserExistente.Desc}, cadastrado!");
             }
 
             return _papelRepositorio.Inserir(entity);

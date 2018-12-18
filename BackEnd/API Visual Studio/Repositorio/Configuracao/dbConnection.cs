@@ -7,10 +7,10 @@ namespace Repositorio.Configuracao
 {
     public static class dbConnection
     {
-        private static string DataSource = "WKSJUN000105";
+        private static string DataSource = "NB_CACIANO";
         private static string Catalog = "SCOPIO";
         private static string User = "sa";
-        private static string Password = "123Aa321";
+        private static string Password = "br1108";
 
         private static string Conn = @"Data Source="+ DataSource +";Initial Catalog="+ Catalog +";Persist Security Info=True;User ID="+ User +";Password="+ Password +";Connect Timeout=30";
 
