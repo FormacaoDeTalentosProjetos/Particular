@@ -51,15 +51,15 @@ namespace Api.Controllers
         /// <summary>
         /// MÉTODO QUE OBTÉM UM "PAPEL" PELO {NOME}
         /// </summary>
-        /// <param name="nome"></param>
+        /// <param name="desc"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("Descricao/{nome}")]
+        [Route("Descricao/{desc}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetPapel(string nome)
+        public IActionResult GetPapel(string desc)
         {
-            return Ok(_papelNegocio.SelecionarPorDescricao(nome));
+            return Ok(_papelNegocio.SelecionarPorDescricao(desc));
         }
 
         /// <summary>

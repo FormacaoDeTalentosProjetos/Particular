@@ -85,7 +85,7 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_MEMBRO] " +
                                    $"SET IdUser = {entity.IdUser}, " +
-                                   $"IdSquad = {entity.IdSquad}' " +
+                                   $"IdSquad = {entity.IdSquad} " +
                                    $"WHERE ID = {entity.Id}");
             }
         }

@@ -53,7 +53,7 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<Papel>($"SELECT * " +
                                                                 $"FROM [TB_PAPEL] " +
-                                                                $"WHERE Nome = '{desc}'");
+                                                                $"WHERE [Desc] = '{desc}'");
                 return obj;
             }
         }
@@ -69,7 +69,7 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_PAPEL] " +
-                                                      $"(Desc, Sigla, Nivel) " +
+                                                      $"([Desc], Sigla, Nivel) " +
                                                       $"VALUES ('{entity.Desc}', " +
                                                       $"'{entity.Sigla}', {entity.Nivel})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
@@ -87,7 +87,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_PAPEL] " +
-                                   $"SET Desc = '{entity.Desc}', " +
+                                   $"SET [Desc] = '{entity.Desc}', " +
                                    $"Sigla = '{entity.Sigla}', " +
                                    $"Nivel = {entity.Nivel} " +
                                    $"WHERE ID = {entity.ID}");

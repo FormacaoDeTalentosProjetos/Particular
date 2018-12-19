@@ -53,7 +53,7 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_SQUAD] " +
-                                                      $"(IdTribo, IdUser) " +
+                                                      $"(IdSquad, IdUser) " +
                                                       $"VALUES ({entity.IdSquad}, {entity.IdUser})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
@@ -70,7 +70,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_MENTOR_SQUAD] " +
-                                   $"SET IdTribo = {entity.IdSquad}, " +
+                                   $"SET IdSquad = {entity.IdSquad}, " +
                                    $"IdUser = {entity.IdUser} " +
                                    $"WHERE ID = {entity.ID}");
             }

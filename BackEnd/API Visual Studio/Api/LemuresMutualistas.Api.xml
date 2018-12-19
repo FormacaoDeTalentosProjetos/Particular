@@ -268,7 +268,7 @@
             <summary>
             MÉTODO QUE OBTÉM UM "PAPEL" PELO {NOME}
             </summary>
-            <param name="nome"></param>
+            <param name="desc"></param>
             <returns></returns>
         </member>
         <member name="M:Api.Controllers.PapelController.Post(Api.Model.PapelInput)">
