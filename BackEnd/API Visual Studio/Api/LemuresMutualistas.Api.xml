@@ -113,6 +113,7 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+<<<<<<< Updated upstream
         <member name="M:Api.Controllers.MentorSquadController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_SQUAD"
@@ -183,6 +184,8 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+=======
+>>>>>>> Stashed changes
         <member name="F:Api.Controllers.PaisController._paisNegocio">
             <summary>
             Declara as regras de negócio para o país.
