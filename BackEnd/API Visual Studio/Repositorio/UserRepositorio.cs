@@ -149,7 +149,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_USER] " +
-                                   $"SET Status = {entity.Status} " +
+                                   $"SET Status = '{entity.Status}' " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

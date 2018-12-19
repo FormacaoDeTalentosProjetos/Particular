@@ -102,7 +102,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_TRIBO] " +
-                                   $"SET Status = {entity.Status} " +
+                                   $"SET Status = '{entity.Status}' " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

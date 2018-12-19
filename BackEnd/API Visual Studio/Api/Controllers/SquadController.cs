@@ -112,6 +112,25 @@ namespace Api.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE RETIRA ASSOCIÇÃO COM "TRIBO" POR {ID}
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("SairDaTribo/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.Accepted, typeof(Squad), nameof(HttpStatusCode.Accepted))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult PutRemoveTribo([FromRoute]int id, [FromBody]SquadInput input)
+        {
+            var objSquad = new Squad();
+
+            var obj = _squadNegocio.SairDaTribo(id, objSquad);
+            return Accepted(obj);
+        }
+
+        /// <summary>
         /// MÉTODO QUE ALTERA STATUS DA "SQUAD" POR {ID} (ATIVO/INATIVO)
         /// </summary>
         /// <param name="id"></param>

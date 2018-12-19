@@ -9,6 +9,6 @@ namespace Api.Model
     {
         public string Logo { get; set; }
         public string Nome { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
     }
 }

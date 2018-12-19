@@ -96,6 +96,20 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// RETIRA ASSOCIÇÃO COM TRIBO
+        /// </summary>
+        /// <param name="entity"></param>
+        public void SairDaTribo(Squad entity)
+        {
+            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            {
+                connection.Execute($"UPDATE [TB_SQUAD] " +
+                                   $"SET Idtribo = NULL " +
+                                   $"WHERE ID = {entity.ID}");
+            }
+        }
+
+        /// <summary>
         /// ALTERA STATUS (ATIVO/INATIVO)
         /// </summary>
         /// <param name="entity"></param>
@@ -104,7 +118,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_SQUAD] " +
-                                   $"SET Status = {entity.Status} " +
+                                   $"SET Status = '{entity.Status}' " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

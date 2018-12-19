@@ -98,6 +98,20 @@ namespace Negocio
         /// <param name="id"></param>
         /// <param name="entity"></param>
         /// <returns></returns>
+        public Squad SairDaTribo(int id, Squad entity)
+        {
+            entity.ID = id;
+            _squadRepositorio.SairDaTribo(entity);
+
+            return _squadRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public Squad AlterarAtivoInativo(int id, Squad entity)
         {
             entity.ID = id;
