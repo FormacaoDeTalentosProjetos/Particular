@@ -62,7 +62,7 @@ namespace Api.Controllers
             var objMentorTribo = new MentorTribo()
             {
                 IdTribo = input.IdTribo,
-                IdMembro = input.IdMembro
+                IdUser = input.IdUser
             };
 
             var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
@@ -86,7 +86,7 @@ namespace Api.Controllers
             var objMentorTribo = new MentorTribo()
             {
                 IdTribo = input.IdTribo,
-                IdMembro = input.IdMembro
+                IdUser = input.IdUser
             };
 
             var obj = _mentorTriboNegocio.Alterar(id, objMentorTribo);

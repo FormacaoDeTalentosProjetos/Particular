@@ -62,7 +62,7 @@ namespace Api.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdMembro = input.IdMembro
+                IdUser = input.IdUser
             };
 
             var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
@@ -86,7 +86,7 @@ namespace Api.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdMembro = input.IdMembro
+                IdUser = input.IdUser
             };
 
             var obj = _mentorSquadNegocio.Alterar(id, objMentorSquad);

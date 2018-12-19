@@ -8,6 +8,6 @@ namespace Api.Model
     public class MentorSquadInput
     {
         public int IdSquad { get; set; }
-        public int IdMembro { get; set; }
+        public int IdUser { get; set; }
     }
 }
