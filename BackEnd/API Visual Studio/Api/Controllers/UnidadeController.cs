@@ -89,7 +89,8 @@ namespace Api.Controllers
             var objUnidade = new Unidade()
             {
                 IdPais = input.IdPais,
-                Nome = input.Nome
+                Nome = input.Nome,
+                EstSigla = input.EstSigla
             };
 
             var idUnidade = _unidadeNegocio.Inserir(objUnidade);
@@ -116,7 +117,8 @@ namespace Api.Controllers
             var objUnidade = new Unidade()
             {
                 IdPais = input.IdPais,
-                Nome = input.Nome
+                Nome = input.Nome,
+                EstSigla = input.EstSigla
             };
 
             var obj = _unidadeNegocio.Alterar(id, objUnidade);

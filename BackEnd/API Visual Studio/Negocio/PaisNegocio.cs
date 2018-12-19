@@ -110,11 +110,11 @@ namespace Negocio
                 throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
             }
 
-            //Verifica se o pais já foi cadastrado.
-            if (_paisRepositorio.SelecionarPorNome(entity.Nome) != null)
-            {
-                throw new ConflitoException($"O país: \"{entity.Nome}\", já foi cadastrado!");
-            }
+            ////Verifica se o pais já foi cadastrado.
+            //if (_paisRepositorio.SelecionarPorNome(entity.Nome) != null)
+            //{
+            //    throw new ConflitoException($"O país: \"{entity.Nome}\", já foi cadastrado!");
+            //}
 
             entity.Id = id;
             _paisRepositorio.Alterar(entity);

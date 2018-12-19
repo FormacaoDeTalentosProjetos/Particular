@@ -50,7 +50,7 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<Pais>($"SELECT * " +
                                                                $"FROM [TB_PAIS] " +
-                                                               $"WHERE Nome = {nome}");
+                                                               $"WHERE Nome = '{nome}'");
                 return obj;
             }
         }
