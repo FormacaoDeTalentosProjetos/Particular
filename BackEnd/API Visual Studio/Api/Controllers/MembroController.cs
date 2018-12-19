@@ -122,6 +122,5 @@ namespace Api.Controllers
             _membroNegocio.Deletar(id);
             return Ok();
         }
-
     }
 }

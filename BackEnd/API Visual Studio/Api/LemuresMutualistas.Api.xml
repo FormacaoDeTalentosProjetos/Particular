@@ -55,6 +55,64 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="F:Api.Controllers.MembroController._membroNegocio">
+            <summary>
+            Declara as regras de negócio para o membro.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MembroController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MembroController.Get">
+            <summary>
+            Método que obtêm todos as vinculações entre Membro e Squad.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.MembroController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm uma vinculação entre Membro e Squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.MembroController.Post(Api.Model.MembroInput)">
+            <summary>
+            Método que insere uma vinculação entre Membro e Squad.
+            </summary>
+            <param name="input">Objeto com os dados da vinculação.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.MembroController.Put(System.Int32,Api.Model.MembroInput)">
+            <summary>
+            Método que altera os dados de uma vinculação entre Membro e Squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <param name="input">Objeto que contêm os dados a serem alterados.</param>
+            <returns></returns>
+            <response code="202">Accepted</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.MembroController.Delete(System.Int32)">
+            <summary>
+            Método que deleta uma vinculação entre Membro e Squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
+        </member>
         <member name="M:Api.Controllers.MentorSquadController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_SQUAD"
@@ -153,7 +211,7 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-        <member name="M:Api.Controllers.PaisController.GetNome(System.Int32)">
+        <member name="M:Api.Controllers.PaisController.GetNome(System.String)">
             <summary>
             Método que obtêm um país.
             </summary>
@@ -363,7 +421,6 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-<<<<<<< HEAD
         <member name="M:Api.Controllers.UnidadeController.GetNome(System.String)">
             <summary>
             Método que obtêm uma unidade.
@@ -374,8 +431,6 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-=======
->>>>>>> 5719ca076be9611925063ea3d7ff4e0b5a00907c
         <member name="M:Api.Controllers.UnidadeController.Post(Api.Model.UnidadeInput)">
             <summary>
             Método que insere uma unidade.
