@@ -50,7 +50,7 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<Unidade>($"SELECT * " +
                                                                   $"FROM [TB_UNIDADE] " +
-                                                                  $"WHERE Nome = {nome}");
+                                                                  $"WHERE Nome = '{nome}'");
                 return obj;
             }
         }
@@ -86,7 +86,7 @@ namespace Repositorio
                 connection.Execute($"UPDATE [TB_UNIDADE] " +
                                    $"SET IdPais = {entity.IdPais}, " +
                                    $"Nome = '{entity.Nome}', " +
-                                   $"EstSigla = '{entity.EstSigla}')" +
+                                   $"EstSigla = '{entity.EstSigla}' " +
                                    $"WHERE ID = {entity.Id}");
             }
         }

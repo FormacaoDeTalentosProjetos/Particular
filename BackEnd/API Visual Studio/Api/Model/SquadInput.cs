@@ -11,6 +11,6 @@ namespace Api.Model
         public int IdTribo { get; set; }
         public string Logo { get; set; }
         public string Nome { get; set; }
-        public bool Status { get; set; }
+        public int Status { get; set; }
     }
 }
