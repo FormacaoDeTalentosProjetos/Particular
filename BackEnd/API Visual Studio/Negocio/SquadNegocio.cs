@@ -10,8 +10,14 @@ namespace Negocio
 {
     public class SquadNegocio : INegocioBase<Squad>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly SquadRepositorio _squadRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SquadNegocio()
         {
             _squadRepositorio = new SquadRepositorio();

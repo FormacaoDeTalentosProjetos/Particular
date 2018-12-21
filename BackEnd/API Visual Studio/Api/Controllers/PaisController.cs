@@ -14,7 +14,7 @@ namespace Api.Controllers
         /// <summary>
         /// Declara as regras de negócio para o país.
         /// </summary>
-        private PaisNegocio _paisNegocio;
+        private readonly PaisNegocio _paisNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.

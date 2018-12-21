@@ -4,6 +4,16 @@
         <name>Api</name>
     </assembly>
     <members>
+        <member name="F:Api.Controllers.LoginController._loginNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.LoginController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Api.Controllers.LoginController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTA DOS "LOGINS"
@@ -54,6 +64,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:Api.Controllers.MapaController._mapaNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MapaController.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Api.Controllers.MembroSquadController._membroNegocio">
             <summary>
@@ -171,6 +191,16 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="F:Api.Controllers.MentorSquadController._mentorSquadNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MentorSquadController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Api.Controllers.MentorSquadController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_SQUAD"
@@ -188,7 +218,7 @@
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
             </summary>
-            <param name="Input"></param>
+            <param name="input"></param>
             <returns></returns>
         </member>
         <member name="M:Api.Controllers.MentorSquadController.PutPapel(System.Int32,Api.Model.MentorSquadInput)">
@@ -205,6 +235,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:Api.Controllers.MentorTriboController._mentorTriboNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MentorTriboController.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Api.Controllers.MentorTriboController.Get">
             <summary>
@@ -223,7 +263,7 @@
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
             </summary>
-            <param name="Input"></param>
+            <param name="input"></param>
             <returns></returns>
         </member>
         <member name="M:Api.Controllers.MentorTriboController.PutPapel(System.Int32,Api.Model.MentorTriboInput)">
@@ -309,6 +349,16 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="F:Api.Controllers.PapelController._papelNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.PapelController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Api.Controllers.PapelController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTA DOS "PAPEIS"
@@ -350,6 +400,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:Api.Controllers.SquadController._squadNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.SquadController.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Api.Controllers.SquadController.Get">
             <summary>
@@ -408,6 +468,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:Api.Controllers.TriboController._triboNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.TriboController.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Api.Controllers.TriboController.Get">
             <summary>
@@ -526,6 +596,21 @@
             <returns></returns>
             <response code="200">OK</response>
             <response code="404">NotFound</response>
+        </member>
+        <member name="F:Api.Controllers.UserController._userNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Api.Controllers.UserController._loginNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.UserController.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:Api.Controllers.UserController.Get">
             <summary>

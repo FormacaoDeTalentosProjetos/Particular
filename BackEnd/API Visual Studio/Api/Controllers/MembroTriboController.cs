@@ -18,7 +18,7 @@ namespace Api.Controllers
         /// <summary>
         /// Declara as regras de negócio para o membroTribo.
         /// </summary>
-        private MembroTriboNegocio _membroNegocio;
+        private readonly MembroTriboNegocio _membroNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.

@@ -15,8 +15,14 @@ namespace Api.Controllers
     [Route("api/Squad")]
     public class SquadController : Controller
     {
-        private SquadNegocio _squadNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly SquadNegocio _squadNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SquadController()
         {
             _squadNegocio = new SquadNegocio();

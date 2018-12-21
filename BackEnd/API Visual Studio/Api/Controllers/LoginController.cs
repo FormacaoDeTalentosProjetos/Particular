@@ -13,10 +13,17 @@ namespace Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/Login")]
+    
     public class LoginController : Controller
     {
-        private LoginNegocio _loginNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly LoginNegocio _loginNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public LoginController()
         {
             _loginNegocio = new LoginNegocio();

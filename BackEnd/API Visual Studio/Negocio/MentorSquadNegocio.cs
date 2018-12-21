@@ -10,8 +10,14 @@ namespace Negocio
 {
     public class MentorSquadNegocio : INegocioBase<MentorSquad>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly MentorSquadRepositorio _mentorSquadRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MentorSquadNegocio()
         {
             _mentorSquadRepositorio = new MentorSquadRepositorio();

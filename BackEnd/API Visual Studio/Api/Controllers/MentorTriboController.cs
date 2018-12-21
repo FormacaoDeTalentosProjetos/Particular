@@ -15,8 +15,14 @@ namespace Api.Controllers
     [Route("api/MentorTribo")]
     public class MentorTriboController : Controller
     {
-        private MentorTriboNegocio _mentorTriboNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly MentorTriboNegocio _mentorTriboNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MentorTriboController()
         {
             _mentorTriboNegocio = new MentorTriboNegocio();
@@ -51,7 +57,7 @@ namespace Api.Controllers
         /// <summary>
         /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
         /// </summary>
-        /// <param name="Input"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorTribo), nameof(HttpStatusCode.Created))]

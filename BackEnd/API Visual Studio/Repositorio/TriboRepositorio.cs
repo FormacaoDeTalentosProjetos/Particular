@@ -21,7 +21,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var lista = connection.Query<Tribo>($"SELECT * " +
-                                                  $"FROM [TB_TRIBO]");
+                                                    $"FROM [TB_TRIBO]");
                 return lista;
             }
         }

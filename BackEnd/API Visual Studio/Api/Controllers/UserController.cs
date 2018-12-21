@@ -15,9 +15,19 @@ namespace Api.Controllers
     [Route("api/User")]
     public class UserController : Controller
     {
-        private UserNegocio _userNegocio;
-        private LoginNegocio _loginNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly UserNegocio _userNegocio;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly LoginNegocio _loginNegocio;
         
+        /// <summary>
+        /// 
+        /// </summary>
         public UserController()
         {
             _userNegocio = new UserNegocio();

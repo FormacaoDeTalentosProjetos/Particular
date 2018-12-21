@@ -14,7 +14,7 @@ namespace Api.Controllers
         /// <summary>
         /// Declara as regras de negócio para o membro.
         /// </summary>
-        private MembroSquadNegocio _membroNegocio;
+        private readonly MembroSquadNegocio _membroNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.

@@ -15,8 +15,14 @@ namespace Api.Controllers
     [Route("api/Tribo")]
     public class TriboController : Controller
     {
-        private TriboNegocio _triboNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly TriboNegocio _triboNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public TriboController()
         {
             _triboNegocio = new TriboNegocio();

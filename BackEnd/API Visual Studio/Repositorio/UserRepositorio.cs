@@ -50,8 +50,8 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<User>($"SELECT * " +
-                                                                $"FROM [TB_USER] " +
-                                                                $"WHERE ID = {id}");
+                                                               $"FROM [TB_USER] " +
+                                                               $"WHERE ID = {id}");
                 return obj;
             }
         }

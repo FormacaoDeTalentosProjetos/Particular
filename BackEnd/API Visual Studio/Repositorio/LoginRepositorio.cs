@@ -19,7 +19,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var lista = connection.Query<Login>($"SELECT * " +
-                                                  $"FROM [TB_LOGIN] ");
+                                                    $"FROM [TB_LOGIN] ");
                 return lista;
             }
         }

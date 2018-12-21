@@ -8,8 +8,14 @@ namespace Negocio
 {
     public class LoginNegocio
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly LoginRepositorio _loginRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public LoginNegocio()
         {
             _loginRepositorio = new LoginRepositorio();

@@ -18,7 +18,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var lista = connection.Query<MembroSquad>($"SELECT * " +
-                                                     $"FROM [TB_MEMBRO_SQUAD]");
+                                                          $"FROM [TB_MEMBRO_SQUAD]");
                 return lista;
             }
         }
@@ -33,8 +33,8 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<MembroSquad>($"SELECT * " +
-                                                                 $"FROM [TB_MEMBRO_SQUAD] " +
-                                                                 $"WHERE ID = {id}");
+                                                                      $"FROM [TB_MEMBRO_SQUAD] " +
+                                                                      $"WHERE ID = {id}");
                 return obj;
             }
         }
@@ -49,8 +49,8 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<MembroSquad>($"SELECT * " +
-                                                                 $"FROM [TB_MEMBRO_SQUAD] " +
-                                                                 $"WHERE IdUser = {idUser}");
+                                                                      $"FROM [TB_MEMBRO_SQUAD] " +
+                                                                      $"WHERE IdUser = {idUser}");
                 return obj;
             }
         }

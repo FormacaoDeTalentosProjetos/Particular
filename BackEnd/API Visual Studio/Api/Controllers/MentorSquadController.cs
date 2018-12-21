@@ -15,8 +15,14 @@ namespace Api.Controllers
     [Route("api/MentorSquad")]
     public class MentorSquadController : Controller
     {
-        private MentorSquadNegocio _mentorSquadNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly MentorSquadNegocio _mentorSquadNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MentorSquadController()
         {
             _mentorSquadNegocio = new MentorSquadNegocio();
@@ -51,7 +57,7 @@ namespace Api.Controllers
         /// <summary>
         /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
         /// </summary>
-        /// <param name="Input"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorSquad), nameof(HttpStatusCode.Created))]

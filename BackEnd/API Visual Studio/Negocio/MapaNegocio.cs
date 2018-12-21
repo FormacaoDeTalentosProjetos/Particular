@@ -9,8 +9,14 @@ namespace Negocio
 {
     public class MapaNegocio
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly MapaRepositorio _mapaRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MapaNegocio()
         {
             _mapaRepositorio = new MapaRepositorio();

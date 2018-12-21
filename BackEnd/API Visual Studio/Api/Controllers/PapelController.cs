@@ -15,8 +15,14 @@ namespace Api.Controllers
     [Route("api/Papel")]
     public class PapelController : Controller
     {
-        private PapelNegocio _papelNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly PapelNegocio _papelNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public PapelController()
         {
             _papelNegocio = new PapelNegocio();

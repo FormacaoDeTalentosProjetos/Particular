@@ -10,8 +10,14 @@ namespace Negocio
 {
     public class MentorTriboNegocio : INegocioBase<MentorTribo>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly MentorTriboRepositorio _mentorTriboRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MentorTriboNegocio()
         {
             _mentorTriboRepositorio = new MentorTriboRepositorio();

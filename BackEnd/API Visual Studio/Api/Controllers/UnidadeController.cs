@@ -14,7 +14,7 @@ namespace Api.Controllers
         /// <summary>
         /// Declara as regras de negócio para a unidade.
         /// </summary>
-        private UnidadeNegocio _unidadeNegocio;
+        private readonly UnidadeNegocio _unidadeNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.

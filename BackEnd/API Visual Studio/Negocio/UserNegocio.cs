@@ -9,9 +9,19 @@ namespace Negocio
 {
     public class UserNegocio
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly UserRepositorio _userRepositorio;
+
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly LoginRepositorio _loginRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public UserNegocio()
         {
             _userRepositorio = new UserRepositorio();

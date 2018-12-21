@@ -11,8 +11,14 @@ namespace Api.Controllers
     [Route("api/Mapa")]
     public class MapaController : Controller
     {
-        private MapaNegocio _mapaNegocio;
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly MapaNegocio _mapaNegocio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MapaController()
         {
             _mapaNegocio = new MapaNegocio();

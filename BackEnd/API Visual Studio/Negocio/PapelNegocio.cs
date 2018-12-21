@@ -11,8 +11,14 @@ namespace Negocio
 {
     public class PapelNegocio : INegocioBase<Papel>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly PapelRepositorio _papelRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public PapelNegocio()
         {
             _papelRepositorio = new PapelRepositorio();

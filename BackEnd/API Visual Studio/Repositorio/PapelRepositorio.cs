@@ -21,7 +21,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(dbConnection.GetConn()))
             {
                 var lista = connection.Query<Papel>($"SELECT * " +
-                                                  $"FROM [TB_PAPEL]");
+                                                    $"FROM [TB_PAPEL]");
                 return lista;
             }
         }

@@ -10,8 +10,14 @@ namespace Negocio
 {
     public class TriboNegocio : INegocioBase<Tribo>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly TriboRepositorio _triboRepositorio;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public TriboNegocio()
         {
             _triboRepositorio = new TriboRepositorio();
