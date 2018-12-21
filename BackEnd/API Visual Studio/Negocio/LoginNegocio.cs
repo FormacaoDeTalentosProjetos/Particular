@@ -114,6 +114,20 @@ namespace Negocio
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public Login AlterarAtivoInativo(int id, Login entity)
+        {
+            entity.ID = id;
+            _loginRepositorio.AlterarAtivoInativo(entity);
+
+            return _loginRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
 		/// 
 		/// </summary>
 		/// <param name="id"></param>

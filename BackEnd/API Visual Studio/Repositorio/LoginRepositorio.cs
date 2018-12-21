@@ -72,16 +72,12 @@ namespace Repositorio
                                                                 $"DECLARE @STATUS INT; " +
                                                                 $"SET @STATUS = (SELECT Status " +
                                                                 $"FROM [TB_LOGIN] " +
-                                                                $"INNER JOIN [TB_USER] ON " +
-                                                                $"TB_LOGIN.IdUser = TB_USER.ID " +
                                                                 $"WHERE Username = '{user}') " +
                                                                 $"SET @HASH = '{senha}' " +
                                                                 $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                                 $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                                 $"SELECT * " +
                                                                 $"FROM [TB_LOGIN] " +
-                                                                $"INNER JOIN [TB_USER] ON " +
-                                                                $"TB_LOGIN.IdUser = TB_USER.ID " +
                                                                 $"WHERE Username = '{user}' AND Senha = @HASH AND @STATUS = 1");
                 return obj;
             }
@@ -115,6 +111,23 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_LOGIN] " +
                                    $"SET Username = '{entity.Username}' " +
+                                   $"WHERE ID = {entity.ID}");
+            }
+        }
+
+        /// <summary>
+        /// ALTERA STATUS DO USUÁRIO (ATIVO/INATIVO)
+        /// </summary>
+        /// <param name="entity"></param>
+        public void AlterarAtivoInativo(Login entity)
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                connection.Execute($"UPDATE [TB_LOGIN] " +
+                                   $"SET Status = '{entity.Status}' " +
+                                   $"WHERE ID = {entity.ID}" +
+                                   $"UPDATE [TB_USER] " +
+                                   $"SET Status = '{entity.Status}' " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

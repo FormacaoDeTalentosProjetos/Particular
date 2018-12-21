@@ -129,6 +129,28 @@ namespace Api.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE ALTERA STATUS DO "LOGIN" POR {ID} (ATIVO/INATIVO)
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("AtivoInativo/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.Accepted, typeof(Login), nameof(HttpStatusCode.Accepted))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult PutAtivoInativo([FromRoute]int id, [FromBody]LoginInput input)
+        {
+            var objLogin = new Login()
+            {
+                Status = input.Status
+            };
+
+            var obj = _loginNegocio.AlterarAtivoInativo(id, objLogin);
+            return Accepted(obj);
+        }
+
+        /// <summary>
         /// MÉTODO QUE EXCLUI UM "LOGIN" POR {ID}
         /// </summary>
         /// <param name="id"></param>

@@ -175,39 +175,39 @@ DECLARE @HASH VARCHAR(32);
 SET @HASH = '123'
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
-INSERT INTO [TB_LOGIN](IdUser, Username, Senha)
-VALUES (38,'ggleber',@HASH)
+INSERT INTO [TB_LOGIN](IdUser, Username, Senha, [Status])
+VALUES (38,'ggleber', @HASH, 1)
 GO
 
 DECLARE @HASH VARCHAR(32);
 SET @HASH = '123'
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
-INSERT INTO [TB_LOGIN](IdUser, Username, Senha)
-VALUES (62,'mamaral',@HASH)
+INSERT INTO [TB_LOGIN](IdUser, Username, Senha, [Status])
+VALUES (62,'mamaral', @HASH, 1)
 GO
 
 DECLARE @HASH VARCHAR(32);
 SET @HASH = '123'
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
-INSERT INTO [TB_LOGIN](IdUser, Username, Senha)
-VALUES (25,'fconti',@HASH)
+INSERT INTO [TB_LOGIN](IdUser, Username, Senha, [Status])
+VALUES (25,'fconti', @HASH, 1)
 GO
 
 DECLARE @HASH VARCHAR(32);
 SET @HASH = '123'
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
-INSERT INTO [TB_LOGIN](IdUser, Username, Senha)
-VALUES (1,'abarletta',@HASH)
+INSERT INTO [TB_LOGIN](IdUser, Username, Senha, [Status])
+VALUES (1,'abarletta', @HASH, 1)
 GO
 
 DECLARE @HASH VARCHAR(32);
 SET @HASH = '123'
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
 SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)
-INSERT INTO [TB_LOGIN](IdUser, Username, Senha)
-VALUES (7,'ccaciano',@HASH)
+INSERT INTO [TB_LOGIN](IdUser, Username, Senha, [Status])
+VALUES (7,'ccaciano', @HASH, 1)
 GO
 
