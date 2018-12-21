@@ -1,0 +1,48 @@
+<<<<<<< Updated upstream
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+=======
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+>>>>>>> Stashed changes
