@@ -18,7 +18,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<MentorTribo> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<MentorTribo>($"SELECT * " +
                                                           $"FROM [TB_MENTOR_TRIBO]");
@@ -33,7 +33,7 @@ namespace Repositorio
         /// <returns></returns>
         public MentorTribo SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<MentorTribo>($"SELECT * " +
                                                                       $"FROM [TB_MENTOR_TRIBO] " +
@@ -49,7 +49,7 @@ namespace Repositorio
         /// <returns></returns>
         public int Inserir(MentorTribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_TRIBO] " +
@@ -67,7 +67,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void Alterar(MentorTribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_MENTOR_TRIBO] " +
                                    $"SET IdTribo = {entity.IdTribo}, " +
@@ -83,7 +83,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_MENTOR_TRIBO] " +

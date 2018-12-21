@@ -18,7 +18,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<Tribo> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Tribo>($"SELECT * " +
                                                     $"FROM [TB_TRIBO]");
@@ -33,7 +33,7 @@ namespace Repositorio
         /// <returns></returns>
         public Tribo SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Tribo>($"SELECT * " +
                                                                 $"FROM [TB_TRIBO] " +
@@ -49,7 +49,7 @@ namespace Repositorio
         /// <returns></returns>
         public Tribo SelecionarPorDescricao(string desc)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Tribo>($"SELECT * " +
                                                                 $"FROM [TB_TRIBO] " +
@@ -65,7 +65,7 @@ namespace Repositorio
         /// <returns></returns>
         public int Inserir(Tribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_TRIBO] " +
@@ -84,7 +84,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void Alterar(Tribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_TRIBO] " +
                                    $"SET Logo = '{entity.Logo}', " +
@@ -99,7 +99,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarAtivoInativo(Tribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_TRIBO] " +
                                    $"SET Status = '{entity.Status}' " +
@@ -114,7 +114,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_TRIBO] " +

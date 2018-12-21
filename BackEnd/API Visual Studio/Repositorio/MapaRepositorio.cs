@@ -17,7 +17,7 @@ namespace Repositorio
         /// <returns></returns>
         public Mapa SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Mapa>($"SELECT * " +
                                                                $"FROM [TB_PAPEL] " +
@@ -33,7 +33,7 @@ namespace Repositorio
         /// <returns></returns>
         public Mapa SelecionarPorDescricao(string desc)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Mapa>($"SELECT * " +
                                                                $"FROM [TB_PAPEL] " +

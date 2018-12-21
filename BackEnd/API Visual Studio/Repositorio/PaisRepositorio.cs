@@ -15,7 +15,7 @@ namespace Repositorio
         /// <returns>Todos os paises do Database.</returns>
         public IEnumerable<Pais> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Pais>($"SELECT * " +
                                                    $"FROM [TB_PAIS]");
@@ -30,7 +30,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados do pais selecionado.</returns>
         public Pais SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Pais>($"SELECT * " +
                                                                $"FROM [TB_PAIS] " +
@@ -46,7 +46,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados do pais selecionado.</returns>
         public Pais SelecionarPorNome(string nome)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Pais>($"SELECT * " +
                                                                $"FROM [TB_PAIS] " +
@@ -62,7 +62,7 @@ namespace Repositorio
         /// <returns>ID do país inserido no Database.</returns>
         public int Inserir(Pais entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_PAIS] " +
@@ -81,7 +81,7 @@ namespace Repositorio
         /// <param name="entity">Objeto que contêm os dados do país.</param>
         public void Alterar(Pais entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_PAIS] " +
                                    $"SET Nome = '{entity.Nome}', " +
@@ -96,7 +96,7 @@ namespace Repositorio
         /// <param name="id">Usado para selecionar o país no Database.</param>
         public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_PAIS] " +

@@ -18,7 +18,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<Squad> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Squad>($"SELECT * " +
                                                     $"FROM [TB_SQUAD]");
@@ -33,7 +33,7 @@ namespace Repositorio
         /// <returns></returns>
         public Squad SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Squad>($"SELECT * " +
                                                                 $"FROM [TB_SQUAD] " +
@@ -49,7 +49,7 @@ namespace Repositorio
         /// <returns></returns>
         public Squad SelecionarPorDescricao(string desc)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Squad>($"SELECT * " +
                                                                 $"FROM [TB_SQUAD] " +
@@ -65,7 +65,7 @@ namespace Repositorio
         /// <returns></returns>
         public int Inserir(Squad entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_SQUAD] " +
@@ -84,7 +84,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void Alterar(Squad entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_SQUAD] " +
                                    $"SET IdUnidade = {entity.IdUnidade}, " +
@@ -101,7 +101,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void SairDaTribo(Squad entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_SQUAD] " +
                                    $"SET Idtribo = NULL " +
@@ -115,7 +115,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarAtivoInativo(Squad entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_SQUAD] " +
                                    $"SET Status = '{entity.Status}' " +
@@ -130,7 +130,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_SQUAD] " +

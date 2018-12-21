@@ -17,7 +17,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<User> SelecionarTodos()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<User>($"SELECT * " +
                                                   $"FROM [TB_USER]");
@@ -31,7 +31,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<User> SelecionarAtivos()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<User>($"SELECT * " +
                                                   $"FROM [TB_USER] " +
@@ -47,7 +47,7 @@ namespace Repositorio
         /// <returns></returns>
         public User SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<User>($"SELECT * " +
                                                                $"FROM [TB_USER] " +
@@ -63,7 +63,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<User> SelecionarPorNome(string nome)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.Query<User>($"SELECT * " +
                                                  $"FROM [TB_USER] " +
@@ -81,7 +81,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<User> SelecionarPorPapel(int IdPapel)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.Query<User>($"SELECT * " +
                                                  $"FROM [TB_USER] " +
@@ -97,7 +97,7 @@ namespace Repositorio
         /// <returns></returns>
         public int Inserir(User entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @IDUser INT; " +
                                                       $"DECLARE @ID INT; " +
@@ -129,7 +129,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarPerfilUsuario(User entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_USER] " +
                                    $"SET IdPapel = {entity.IdPapel}, " +
@@ -146,7 +146,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarAtivoInativo(User entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_USER] " +
                                    $"SET Status = '{entity.Status}' " +
@@ -161,7 +161,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_USER] " +

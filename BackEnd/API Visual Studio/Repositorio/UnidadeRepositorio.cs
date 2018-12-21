@@ -15,7 +15,7 @@ namespace Repositorio
         /// <returns>Todos as unidades do Database.</returns>
         public IEnumerable<Unidade> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Unidade>($"SELECT * " +
                                                       $"FROM [TB_UNIDADE]");
@@ -30,7 +30,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados da unidade selecionada.</returns>
         public Unidade SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Unidade>($"SELECT * " +
                                                                   $"FROM [TB_UNIDADE] " +
@@ -46,7 +46,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados da unidade selecionada.</returns>
         public Unidade SelecionarPorNome(string nome)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Unidade>($"SELECT * " +
                                                                   $"FROM [TB_UNIDADE] " +
@@ -62,7 +62,7 @@ namespace Repositorio
         /// <returns>ID da unidade inserida no Database.</returns>
         public int Inserir(Unidade entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_UNIDADE] " +
@@ -81,7 +81,7 @@ namespace Repositorio
         /// <param name="entity">Objeto que contêm os dados da unidade.</param>
         public void Alterar(Unidade entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_UNIDADE] " +
                                    $"SET IdPais = {entity.IdPais}, " +
@@ -97,7 +97,7 @@ namespace Repositorio
         /// <param name="id">Usado para selecionar a unidade no Database.</param>
         public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_UNIDADE] " +

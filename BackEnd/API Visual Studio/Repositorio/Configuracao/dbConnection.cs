@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Repositorio.Configuracao
 {
-    public static class dbConnection
+    public static class DbConnection
     {
         private static string DataSource = "WKSJUN000105"; //DESKTOP-CGEHIFJ\\SQLEXPRESS      //WKSJUN000105
         private static string Catalog = "SCOPIO";

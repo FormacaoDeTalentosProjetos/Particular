@@ -16,7 +16,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<Login> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Login>($"SELECT * " +
                                                     $"FROM [TB_LOGIN] ");
@@ -31,7 +31,7 @@ namespace Repositorio
         /// <returns></returns>
         public Login SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Login>($"SELECT * " +
                                                                 $"FROM [TB_LOGIN] " +
@@ -47,7 +47,7 @@ namespace Repositorio
         /// <returns></returns>
         public Login SelecionarPorUser(string user)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Login>($"SELECT * " +
                                                                 $"FROM [TB_LOGIN] " +
@@ -66,7 +66,7 @@ namespace Repositorio
         /// <returns></returns>
         public Login EfetuarLoginUser(string user, string senha)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Login>($"DECLARE @HASH VARCHAR(32); " +
                                                                 $"DECLARE @STATUS INT; " +
@@ -93,7 +93,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarSenha(Login entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DECLARE @HASH VARCHAR(32); " +
                                    $"SET @HASH = '{entity.Senha}' " +
@@ -111,7 +111,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void AlterarUser(Login entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_LOGIN] " +
                                    $"SET Username = '{entity.Username}' " +
@@ -126,7 +126,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_LOGIN] " +

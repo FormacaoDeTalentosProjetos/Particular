@@ -17,7 +17,7 @@ namespace Repositorio
         /// <returns>Todos os membros do Database.</returns>
         public IEnumerable<MembroTribo> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<MembroTribo>($"SELECT * " +
                                                           $"FROM [TB_MEMBRO_TRIBO]");
@@ -32,7 +32,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados do membro selecionado.</returns>
         public MembroTribo SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<MembroTribo>($"SELECT * " +
                                                                       $"FROM [TB_MEMBRO_TRIBO] " +
@@ -48,7 +48,7 @@ namespace Repositorio
         /// <returns>Objeto com os dados do membro selecionado.</returns>
         public MembroTribo SelecionarPorIdUser(int idUser)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<MembroTribo>($"SELECT * " +
                                                                       $"FROM [TB_MEMBRO_TRIBO] " +
@@ -64,7 +64,7 @@ namespace Repositorio
         /// <returns>ID do membro inserido no Database.</returns>
         public int Inserir(MembroTribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MEMBRO_TRIBO] " +
@@ -83,7 +83,7 @@ namespace Repositorio
         /// <param name="entity">Objeto que contêm os dados do membro.</param>
         public void Alterar(MembroTribo entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_MEMBRO_TRIBO] " +
                                    $"SET IdUser = {entity.IdUser}, " +
@@ -98,7 +98,7 @@ namespace Repositorio
         /// <param name="id">Usado para selecionar o membro no Database.</param>
         public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_MEMBRO_TRIBO] " +

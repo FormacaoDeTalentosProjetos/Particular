@@ -18,7 +18,7 @@ namespace Repositorio
         /// <returns></returns>
         public IEnumerable<Papel> Selecionar()
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Papel>($"SELECT * " +
                                                     $"FROM [TB_PAPEL]");
@@ -33,7 +33,7 @@ namespace Repositorio
         /// <returns></returns>
         public Papel SelecionarPorId(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Papel>($"SELECT * " +
                                                                 $"FROM [TB_PAPEL] " +
@@ -49,7 +49,7 @@ namespace Repositorio
         /// <returns></returns>
         public Papel SelecionarPorDescricao(string desc)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Papel>($"SELECT * " +
                                                                 $"FROM [TB_PAPEL] " +
@@ -65,7 +65,7 @@ namespace Repositorio
         /// <returns></returns>
         public int Inserir(Papel entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_PAPEL] " +
@@ -84,7 +84,7 @@ namespace Repositorio
         /// <param name="entity"></param>
         public void Alterar(Papel entity)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_PAPEL] " +
                                    $"SET [Desc] = '{entity.Desc}', " +
@@ -101,7 +101,7 @@ namespace Repositorio
 		/// <returns></returns>
 		public void Deletar(int id)
         {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"DELETE " +
                                    $"FROM [TB_PAPEL] " +
