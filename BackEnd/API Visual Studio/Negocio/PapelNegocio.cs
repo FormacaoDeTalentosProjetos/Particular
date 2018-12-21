@@ -1,19 +1,21 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
+using Negocio.Abstracao;
 using Repositorio;
+using Repositorio.Abstracao;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Negocio
 {
-    public class PapelNegocio
+    public class PapelNegocio : INegocioBase<Papel>
     {
-        private readonly PapelDados _papelDados;
+        private readonly PapelRepositorio _papelRepositorio;
 
         public PapelNegocio()
         {
-            _papelDados = new PapelDados();
+            _papelRepositorio = new PapelRepositorio();
         }
 
         /// <summary>
@@ -22,7 +24,7 @@ namespace Negocio
         /// <returns></returns>
         public IEnumerable<Papel> Selecionar()
         {
-            var lista = _papelDados.Selecionar();
+            var lista = _papelRepositorio.Selecionar();
 
             if (lista == null)
                 throw new NaoEncontradoException();
@@ -37,7 +39,7 @@ namespace Negocio
         /// <returns></returns>
         public Papel SelecionarPorId(int id)
         {
-            var obj = _papelDados.SelecionarPorId(id);
+            var obj = _papelRepositorio.SelecionarPorId(id);
 
             if (obj == null)
                 throw new NaoEncontradoException();
@@ -52,7 +54,7 @@ namespace Negocio
         /// <returns></returns>
         public Papel SelecionarPorDescricao(string desc)
         {
-            var obj = _papelDados.SelecionarPorDescricao(desc);
+            var obj = _papelRepositorio.SelecionarPorDescricao(desc);
 
             if (obj == null)
                 throw new NaoEncontradoException();
@@ -67,14 +69,14 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Papel entity)
         {
-            var UserExistente = _papelDados.SelecionarPorDescricao(entity.Nome);
+            var UserExistente = _papelRepositorio.SelecionarPorDescricao(entity.Desc);
 
             if (UserExistente != null)
             {
-                throw new ConflitoException($"Já existe cadastrado o PAPEL {UserExistente.Nome}, cadastrado!");
+                throw new ConflitoException($"Já existe cadastrado o PAPEL {UserExistente.Desc}, cadastrado!");
             }
 
-            return _papelDados.Inserir(entity);
+            return _papelRepositorio.Inserir(entity);
         }
 
         /// <summary>
@@ -83,12 +85,12 @@ namespace Negocio
         /// <param name="id"></param>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public Papel AlterarPapel(int id, Papel entity)
+        public Papel Alterar(int id, Papel entity)
         {
             entity.ID = id;
-            _papelDados.AlterarPapel(entity);
+            _papelRepositorio.Alterar(entity);
 
-            return _papelDados.SelecionarPorId(id);
+            return _papelRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -97,9 +99,9 @@ namespace Negocio
         /// <param name="id"></param>
 		public void Deletar(int id)
         {
-            var obj = _papelDados.SelecionarPorId(id);
+            var obj = _papelRepositorio.SelecionarPorId(id);
 
-            _papelDados.Deletar(obj.ID);
+            _papelRepositorio.Deletar(obj.ID);
         }
     }
 }

@@ -51,15 +51,15 @@ namespace Api.Controllers
         /// <summary>
         /// MÉTODO QUE OBTÉM UM "PAPEL" PELO {NOME}
         /// </summary>
-        /// <param name="nome"></param>
+        /// <param name="desc"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("Descricao/{nome}")]
+        [Route("Descricao/{desc}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetUser(string nome)
+        public IActionResult GetPapel(string desc)
         {
-            return Ok(_papelNegocio.SelecionarPorDescricao(nome));
+            return Ok(_papelNegocio.SelecionarPorDescricao(desc));
         }
 
         /// <summary>
@@ -75,7 +75,8 @@ namespace Api.Controllers
         {
             var objPapel = new Papel()
             {
-                Nome = Input.Nome,
+                Desc = Input.Desc,
+                Sigla = Input.Sigla,
                 Nivel = Input.Nivel
             };
 
@@ -83,7 +84,6 @@ namespace Api.Controllers
             objPapel.ID = idPapel;
             return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPapel);
         }
-
 
         /// <summary>
         /// MÉTODO QUE ALTERA UM "PAPEL" POR {ID}
@@ -98,13 +98,14 @@ namespace Api.Controllers
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
         public IActionResult PutPapel([FromRoute]int id, [FromBody]PapelInput input)
         {
-            var objUser = new Papel()
+            var objPapel = new Papel()
             {
-                Nome = input.Nome,
+                Desc = input.Desc,
+                Sigla = input.Sigla,
                 Nivel = input.Nivel
             };
 
-            var obj = _papelNegocio.AlterarPapel(id, objUser);
+            var obj = _papelNegocio.Alterar(id, objPapel);
             return Accepted(obj);
         }
 

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Api\bin\Debug\netcoreapp2.1\Api.deps.json
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
@@ -86,3 +87,27 @@ C:\GIT PROJECTS\Scopio\LemuresMutualistas\Api\obj\Debug\netcoreapp2.1\Api.RazorT
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Api\obj\Debug\netcoreapp2.1\Api.csproj.CopyComplete
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Api\obj\Debug\netcoreapp2.1\Api.dll
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Api\obj\Debug\netcoreapp2.1\Api.pdb
+=======
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Api.deps.json
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.json
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Api.runtimeconfig.dev.json
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Api.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Api.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\LemuresMutualistas.Api.xml
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Negocio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Negocio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.csprojAssemblyReference.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.csproj.CoreCompileInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.RazorAssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfoInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.AssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.RazorTargetAssemblyInfo.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.csproj.CopyComplete
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Api\obj\Debug\netcoreapp2.1\Api.pdb
+>>>>>>> Stashed changes
