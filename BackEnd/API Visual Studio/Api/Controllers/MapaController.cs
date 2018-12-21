@@ -6,7 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
-{
+{/// <summary>
+/// 
+/// </summary>
     [Produces("application/json")]
     [Route("api/Mapa")]
     public class MapaController : Controller

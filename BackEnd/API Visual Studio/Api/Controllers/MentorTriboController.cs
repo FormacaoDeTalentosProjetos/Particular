@@ -10,7 +10,9 @@ using System.Net;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
-{
+{/// <summary>
+/// 
+/// </summary>
     [Produces("application/json")]
     [Route("api/MentorTribo")]
     public class MentorTriboController : Controller

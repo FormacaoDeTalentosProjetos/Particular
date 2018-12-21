@@ -6,7 +6,9 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Net;
 
 namespace Api.Controllers
-{
+{/// <summary>
+/// 
+/// </summary>
     [Produces("application/json")]
     [Route("api/Unidade")]
     public class UnidadeController: Controller
