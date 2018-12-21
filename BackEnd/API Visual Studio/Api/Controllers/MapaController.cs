@@ -18,6 +18,5 @@ namespace Api.Controllers
             _mapaNegocio = new MapaNegocio();
         }
 
-
     }
 }

@@ -15,20 +15,5 @@ namespace Negocio
         {
             _mapaRepositorio = new MapaRepositorio();
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="desc"></param>
-        /// <returns></returns>
-        public Mapa SelecionarPorDescricao(string desc)
-        {
-            var obj = _mapaRepositorio.SelecionarPorDescricao(desc);
-
-            if (obj == null)
-                throw new NaoEncontradoException();
-
-            return obj;
-        }
     }
 }

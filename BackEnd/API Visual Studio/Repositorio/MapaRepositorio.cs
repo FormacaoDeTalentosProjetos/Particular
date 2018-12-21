@@ -11,10 +11,9 @@ namespace Repositorio
     public class MapaRepositorio
     {
         /// <summary>
-        /// 
+        /// Método que seleciona todos o mapa do database.
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>Todos as unidades do Database.</returns>
         public Mapa SelecionarPorId(int id)
         {
             using (var connection = new SqlConnection(dbConnection.GetConn()))
@@ -26,20 +25,5 @@ namespace Repositorio
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="desc"></param>
-        /// <returns></returns>
-        public Mapa SelecionarPorDescricao(string desc)
-        {
-            using (var connection = new SqlConnection(dbConnection.GetConn()))
-            {
-                var obj = connection.QueryFirstOrDefault<Mapa>($"SELECT * " +
-                                                               $"FROM [TB_PAPEL] " +
-                                                               $"WHERE Nome = '{desc}'");
-                return obj;
-            }
-        }
     }
 }
