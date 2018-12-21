@@ -110,13 +110,12 @@ namespace Api.Controllers
                 IdPapel = Input.IdPapel,
                 Nome = Input.Nome,
                 Email = Input.Email,
-                Tel = Input.Tel,
-                Status = Input.Status
+                Tel = Input.Tel
             };
 
-            var idLogin = _userNegocio.Inserir(objUser);
-            objUser.ID = idLogin;
-            return CreatedAtRoute(nameof(GetId), new { id = idLogin }, objUser);
+            var idUser = _userNegocio.Inserir(objUser);
+            objUser.ID = idUser;
+            return CreatedAtRoute(nameof(GetId), new { id = idUser }, objUser);
         }
 
 
