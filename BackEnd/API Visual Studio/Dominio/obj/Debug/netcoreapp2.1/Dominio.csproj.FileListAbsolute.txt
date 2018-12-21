@@ -46,3 +46,12 @@ C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
 >>>>>>> Stashed changes
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb

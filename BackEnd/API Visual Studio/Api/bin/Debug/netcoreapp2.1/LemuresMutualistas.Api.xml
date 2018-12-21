@@ -4,6 +4,11 @@
         <name>Api</name>
     </assembly>
     <members>
+        <member name="T:Api.Controllers.LoginController">
+            <summary>
+             
+            </summary>
+        </member>
         <member name="F:Api.Controllers.LoginController._loginNegocio">
             <summary>
             
@@ -73,12 +78,22 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Api.Controllers.MapaController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.MapaController._mapaNegocio">
             <summary>
             
             </summary>
         </member>
         <member name="M:Api.Controllers.MapaController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Controllers.MembroSquadController">
             <summary>
             
             </summary>
@@ -141,6 +156,11 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="T:Api.Controllers.MembroTriboController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.MembroTriboController._membroNegocio">
             <summary>
             Declara as regras de negócio para o membroTribo.
@@ -199,6 +219,11 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="T:Api.Controllers.MentorSquadController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.MentorSquadController._mentorSquadNegocio">
             <summary>
             
@@ -244,6 +269,11 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Api.Controllers.MentorTriboController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.MentorTriboController._mentorTriboNegocio">
             <summary>
             
@@ -288,6 +318,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.PaisController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Api.Controllers.PaisController._paisNegocio">
             <summary>
@@ -357,6 +392,11 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="T:Api.Controllers.PapelController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.PapelController._papelNegocio">
             <summary>
             
@@ -408,6 +448,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.SquadController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Api.Controllers.SquadController._squadNegocio">
             <summary>
@@ -477,6 +522,11 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Api.Controllers.TriboController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:Api.Controllers.TriboController._triboNegocio">
             <summary>
             
@@ -536,6 +586,11 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:Api.Controllers.UnidadeController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Api.Controllers.UnidadeController._unidadeNegocio">
             <summary>
@@ -604,6 +659,11 @@
             <returns></returns>
             <response code="200">OK</response>
             <response code="404">NotFound</response>
+        </member>
+        <member name="T:Api.Controllers.UserController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="F:Api.Controllers.UserController._userNegocio">
             <summary>

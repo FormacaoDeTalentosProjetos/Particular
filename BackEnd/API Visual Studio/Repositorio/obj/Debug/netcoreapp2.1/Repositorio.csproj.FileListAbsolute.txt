@@ -61,3 +61,15 @@ C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreap
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
 >>>>>>> Stashed changes
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\mamaral\Documents\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb

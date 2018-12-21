@@ -79,14 +79,14 @@ namespace Api.Controllers
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(Squad), nameof(HttpStatusCode.Created))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]SquadInput input)
+        public IActionResult Post([FromBody]SquadInput Input)
         {
             var objSquad = new Squad()
             {
-                IdUnidade = input.IdUnidade,
-                IdTribo = input.IdTribo,
-                Logo = input.Logo,
-                Nome = input.Nome
+                IdUnidade = Input.IdUnidade,
+                IdTribo = Input.IdTribo,
+                Logo = Input.Logo,
+                Nome = Input.Nome
             };
 
             var idSquad = _squadNegocio.Inserir(objSquad);
