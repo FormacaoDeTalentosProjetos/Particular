@@ -3,9 +3,7 @@ using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Negocio.Validacoes;
 using Repositorio;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Negocio
 {
@@ -25,9 +23,9 @@ namespace Negocio
         }
 
         /// <summary>
-        /// Seleciona todas as vinculações entre Membros e Squads do Database.
+        /// Seleciona todas as vinculações entre Membro e Tribo do Database.
         /// </summary>
-        /// <returns>Lista de vinculações entre membros e squads.</returns>
+        /// <returns>Lista de vinculações entre membros e tribo.</returns>
         public IEnumerable<MembroTribo> Selecionar()
         {
             return _membroTriboRepositorio.Selecionar();
@@ -50,40 +48,13 @@ namespace Negocio
 
         /// <summary>
         /// Verifica se existem campos obrigatórios que não estão preenchidos.
-        /// Antes de inserir uma vinculação entre Membro e Squad.
+        /// Antes de inserir uma vinculação entre Membro e Tribo.
         /// </summary>
         /// <param name="entity">Objeto com os dados do membro.</param>
         /// <returns>ID do membro inserido no Database ou gera alguma exceção.</returns>
         public int Inserir(MembroTribo entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
-
-            //Verifica se o Id da Squad é válido.
-            var _squadRepositorio = new SquadRepositorio();
-            if (_squadRepositorio.SelecionarPorId(entity.IdTribo) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
-                                                 $"com o ID: {entity.IdTribo}");
-            }
-
-            //Verifica se o Id do Usuário é válido.
-            var _userRepositorio = new UserRepositorio();
-            if (_userRepositorio.SelecionarPorId(entity.IdTribo) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
-                                                 $"com o ID: {entity.IdUser}");
-            }
-
-            //Verifica se o usuário já esta vinculado a uma Squad
-            if (_membroTriboRepositorio.SelecionarPorIdUser(entity.IdUser) != null)
-            {
-                throw new ConflitoException($"O usuário com ID: {entity.IdUser}, " +
-                                            $"já está vinculado a uma Squad");
-            }
+            ValidacoesMembroTribo(entity);
 
             return _membroTriboRepositorio.Inserir(entity);
         }
@@ -96,26 +67,13 @@ namespace Negocio
         /// <returns>ID do membro inserido no Database ou gera alguma exceção.</returns>
         public MembroTribo Alterar(int id, MembroTribo entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
+            ValidacoesMembroTribo(entity);
 
-            //Verifica se o Id da Squad é válido.
-            var _squadRepositorio = new SquadRepositorio();
-            if (_squadRepositorio.SelecionarPorId(entity.IdTribo) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
-                                                 $"com o ID: {entity.IdTribo}");
-            }
-
-            //Verifica se o Id do Usuário é válido.
-            var _userRepositorio = new UserRepositorio();
-            if (_userRepositorio.SelecionarPorId(entity.IdTribo) == null)
+            //Verifica se o Id do membro é válido.
+            if (_membroTriboRepositorio.SelecionarPorId(id) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
-                                                 $"com o ID: {entity.IdUser}");
+                                                 $"com o ID: {id}");
             }
 
             entity.Id = id;
@@ -137,6 +95,31 @@ namespace Negocio
                 throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
             }
             _membroTriboRepositorio.Deletar(obj.Id);
+        }
+
+        public void ValidacoesMembroTribo(MembroTribo entity)
+        {
+            //Verifica se existem campos vazios.
+            if (CamposVazios.Verificar(entity))
+            {
+                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
+            }
+
+            //Verifica se o Id da Tribo é válido.
+            var _triboRepositorio = new TriboRepositorio();
+            if (_triboRepositorio.SelecionarPorId(entity.IdTribo) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma Tribo " +
+                                                 $"com o ID: {entity.IdTribo}");
+            }
+
+            //Verifica se o Id do Usuário é válido.
+            var _userRepositorio = new UserRepositorio();
+            if (_userRepositorio.SelecionarPorId(entity.IdTribo) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
+                                                 $"com o ID: {entity.IdUser}");
+            }
         }
     }
 }

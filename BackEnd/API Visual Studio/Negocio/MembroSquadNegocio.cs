@@ -54,34 +54,15 @@ namespace Negocio
         /// <returns>ID do membro inserido no Database ou gera alguma exceção.</returns>
         public int Inserir(MembroSquad entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
-
-            //Verifica se o Id da Squad é válido.
-            var _squadRepositorio = new SquadRepositorio();
-            if (_squadRepositorio.SelecionarPorId(entity.IdSquad) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
-                                                 $"com o ID: {entity.IdSquad}");
-            }
-
-            //Verifica se o Id do Usuário é válido.
-            var _userRepositorio = new UserRepositorio();
-            if (_userRepositorio.SelecionarPorId(entity.IdSquad) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
-                                                 $"com o ID: {entity.IdUser}");
-            }
+            ValidacoesMembroSquad(entity);
 
             //Verifica se o usuário já esta vinculado a uma Squad
-            if(_membroSquadRepositorio.SelecionarPorIdUser(entity.IdUser) != null)
+            if (_membroSquadRepositorio.SelecionarPorIdUser(entity.IdUser) != null)
             {
                 throw new ConflitoException($"O usuário com ID: {entity.IdUser}, " +
                                             $"já está vinculado a uma Squad");
             }
+
 
             return _membroSquadRepositorio.Inserir(entity);
         }
@@ -94,26 +75,13 @@ namespace Negocio
         /// <returns>ID do membro inserido no Database ou gera alguma exceção.</returns>
         public MembroSquad Alterar(int id, MembroSquad entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
+            ValidacoesMembroSquad(entity);
 
-            //Verifica se o Id da Squad é válido.
-            var _squadRepositorio = new SquadRepositorio();
-            if (_squadRepositorio.SelecionarPorId(entity.IdSquad) == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
-                                                 $"com o ID: {entity.IdSquad}");
-            }
-
-            //Verifica se o Id do Usuário é válido.
-            var _userRepositorio = new UserRepositorio();
-            if (_userRepositorio.SelecionarPorId(entity.IdSquad) == null)
+            //Verifica se o Id do membro é válido.
+            if (_membroSquadRepositorio.SelecionarPorId(id) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
-                                                 $"com o ID: {entity.IdUser}");
+                                                 $"com o ID: {id}");
             }
 
             entity.Id = id;
@@ -135,6 +103,32 @@ namespace Negocio
                 throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
             }
             _membroSquadRepositorio.Deletar(obj.Id);
+        }
+
+        public void ValidacoesMembroSquad(MembroSquad entity)
+        {
+            //Verifica se existem campos vazios.
+            if (CamposVazios.Verificar(entity))
+            {
+                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
+            }
+
+            //Verifica se o Id da Squad é válido.
+            var _squadRepositorio = new SquadRepositorio();
+            if (_squadRepositorio.SelecionarPorId(entity.IdSquad) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
+                                                 $"com o ID: {entity.IdSquad}");
+            }
+
+            //Verifica se o Id do Usuário é válido.
+            var _userRepositorio = new UserRepositorio();
+            if (_userRepositorio.SelecionarPorId(entity.IdSquad) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
+                                                 $"com o ID: {entity.IdUser}");
+            }
+
         }
     }
 }
