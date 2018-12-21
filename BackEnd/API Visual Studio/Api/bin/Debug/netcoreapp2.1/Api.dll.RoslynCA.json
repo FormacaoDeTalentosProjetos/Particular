@@ -12,48 +12,6 @@
       },
       "results": [
         {
-          "ruleId": "CS1572",
-          "level": "warning",
-          "message": "Comentário XML tem uma marga param para \"Input\", mas não há parâmetro por esse nome",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 76,
-                  "startColumn": 26,
-                  "endLine": 76,
-                  "endColumn": 31
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 2
-          }
-        },
-        {
-          "ruleId": "CS1573",
-          "level": "warning",
-          "message": "Parâmetro \"input\" não tem marca param correspondente no comentário XML para \"SquadController.Post(SquadInput)\" (mas outros parâmetros têm)",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 82,
-                  "startColumn": 56,
-                  "endLine": 82,
-                  "endColumn": 61
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 4
-          }
-        },
-        {
           "ruleId": "CS1591",
           "level": "warning",
           "message": "Comentário XML ausente para tipo publicamente visível ou membro \"ErroFiltro\"",
@@ -1383,1308 +1341,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 30,
-                  "endLine": 42,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4823",
-          "level": "warning",
-          "message": "Make sure that command line arguments are used safely here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Program.cs",
-                "region": {
-                  "startLine": 15,
-                  "startColumn": 28,
-                  "endLine": 15,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 30,
-                  "endLine": 56,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 70,
-                  "startColumn": 30,
-                  "endLine": 70,
-                  "endColumn": 42
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 85,
-                  "startColumn": 30,
-                  "endLine": 85,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
-                "region": {
-                  "startLine": 38,
-                  "startColumn": 30,
-                  "endLine": 38,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 30,
-                  "endLine": 42,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
-                "region": {
-                  "startLine": 55,
-                  "startColumn": 30,
-                  "endLine": 55,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 30,
-                  "endLine": 59,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 101,
-                  "startColumn": 30,
-                  "endLine": 101,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
-                "region": {
-                  "startLine": 72,
-                  "startColumn": 30,
-                  "endLine": 72,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
-                "region": {
-                  "startLine": 76,
-                  "startColumn": 30,
-                  "endLine": 76,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 123,
-                  "startColumn": 30,
-                  "endLine": 123,
-                  "endColumn": 42
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 30,
-                  "endLine": 40,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 145,
-                  "startColumn": 30,
-                  "endLine": 145,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 30,
-                  "endLine": 54,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
-                "region": {
-                  "startLine": 165,
-                  "startColumn": 30,
-                  "endLine": 165,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 30,
-                  "endLine": 68,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 30,
-                  "endLine": 40,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 30,
-                  "endLine": 54,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
-                "region": {
-                  "startLine": 92,
-                  "startColumn": 30,
-                  "endLine": 92,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
-                "region": {
-                  "startLine": 103,
-                  "startColumn": 30,
-                  "endLine": 103,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
-                "region": {
-                  "startLine": 113,
-                  "startColumn": 30,
-                  "endLine": 113,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 30,
-                  "endLine": 126,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 30,
-                  "endLine": 68,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 38,
-                  "startColumn": 30,
-                  "endLine": 38,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 30,
-                  "endLine": 40,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
-                "region": {
-                  "startLine": 92,
-                  "startColumn": 30,
-                  "endLine": 92,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 55,
-                  "startColumn": 30,
-                  "endLine": 55,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 30,
-                  "endLine": 54,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
-                "region": {
-                  "startLine": 113,
-                  "startColumn": 30,
-                  "endLine": 113,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 30,
-                  "endLine": 68,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 72,
-                  "startColumn": 30,
-                  "endLine": 72,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 30,
-                  "endLine": 40,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 89,
-                  "startColumn": 30,
-                  "endLine": 89,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 82,
-                  "startColumn": 30,
-                  "endLine": 82,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 30,
-                  "endLine": 54,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 30,
-                  "endLine": 68,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 116,
-                  "startColumn": 30,
-                  "endLine": 116,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 107,
-                  "startColumn": 30,
-                  "endLine": 107,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
-                "region": {
-                  "startLine": 139,
-                  "startColumn": 30,
-                  "endLine": 139,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
-                "region": {
-                  "startLine": 129,
-                  "startColumn": 30,
-                  "endLine": 129,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 82,
-                  "startColumn": 30,
-                  "endLine": 82,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 30,
-                  "endLine": 40,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 38,
-                  "startColumn": 30,
-                  "endLine": 38,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 108,
-                  "startColumn": 30,
-                  "endLine": 108,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 54,
-                  "startColumn": 30,
-                  "endLine": 54,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 55,
-                  "startColumn": 30,
-                  "endLine": 55,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 68,
-                  "startColumn": 30,
-                  "endLine": 68,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 72,
-                  "startColumn": 30,
-                  "endLine": 72,
-                  "endColumn": 37
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 133,
-                  "startColumn": 30,
-                  "endLine": 133,
-                  "endColumn": 44
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 82,
-                  "startColumn": 30,
-                  "endLine": 82,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 152,
-                  "startColumn": 30,
-                  "endLine": 152,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 89,
-                  "startColumn": 30,
-                  "endLine": 89,
-                  "endColumn": 34
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
-                "region": {
-                  "startLine": 172,
-                  "startColumn": 30,
-                  "endLine": 172,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 106,
-                  "startColumn": 30,
-                  "endLine": 106,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 117,
-                  "startColumn": 30,
-                  "endLine": 117,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
-                "region": {
-                  "startLine": 141,
-                  "startColumn": 30,
-                  "endLine": 141,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 129,
-                  "startColumn": 30,
-                  "endLine": 129,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
-                "region": {
-                  "startLine": 149,
-                  "startColumn": 30,
-                  "endLine": 149,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
-                "region": {
-                  "startLine": 99,
-                  "startColumn": 30,
-                  "endLine": 99,
-                  "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
-                "region": {
-                  "startLine": 122,
-                  "startColumn": 30,
-                  "endLine": 122,
-                  "endColumn": 36
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4529",
-          "level": "warning",
-          "message": "Make sure that exposing this HTTP endpoint is safe here.",
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UserController.cs",
                 "region": {
                   "startLine": 145,
@@ -2742,6 +1398,720 @@
           }
         },
         {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 30,
+                  "endLine": 38,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 30,
+                  "endLine": 55,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 30,
+                  "endLine": 72,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 30,
+                  "endLine": 89,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 117,
+                  "startColumn": 30,
+                  "endLine": 117,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/UnidadeController.cs",
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 30,
+                  "endLine": 141,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 30,
+                  "endLine": 42,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 30,
+                  "endLine": 40,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 30,
+                  "endLine": 56,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 30,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 30,
+                  "endLine": 70,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 30,
+                  "endLine": 68,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 30,
+                  "endLine": 85,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 30,
+                  "endLine": 82,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 30,
+                  "endLine": 101,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 123,
+                  "startColumn": 30,
+                  "endLine": 123,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 30,
+                  "endLine": 106,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 30,
+                  "endLine": 145,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 30,
+                  "endLine": 129,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/LoginController.cs",
+                "region": {
+                  "startLine": 165,
+                  "startColumn": 30,
+                  "endLine": 165,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/TriboController.cs",
+                "region": {
+                  "startLine": 149,
+                  "startColumn": 30,
+                  "endLine": 149,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 30,
+                  "endLine": 40,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 30,
+                  "endLine": 38,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 30,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 30,
+                  "endLine": 55,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 30,
+                  "endLine": 68,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 30,
+                  "endLine": 72,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 30,
+                  "endLine": 82,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 30,
+                  "endLine": 99,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 30,
+                  "endLine": 108,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroSquadController.cs",
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 30,
+                  "endLine": 122,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 30,
+                  "endLine": 133,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 30,
+                  "endLine": 42,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 152,
+                  "startColumn": 30,
+                  "endLine": 152,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S1075",
           "level": "warning",
           "message": "Refactor your code not to use hardcoded absolute paths or URIs.",
@@ -2761,22 +2131,597 @@
           "properties": {
             "warningLevel": 1
           }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 30,
+                  "endLine": 59,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/SquadController.cs",
+                "region": {
+                  "startLine": 172,
+                  "startColumn": 30,
+                  "endLine": 172,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 30,
+                  "endLine": 76,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4823",
+          "level": "warning",
+          "message": "Make sure that command line arguments are used safely here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Program.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 28,
+                  "endLine": 15,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 30,
+                  "endLine": 40,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 30,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 30,
+                  "endLine": 103,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 30,
+                  "endLine": 68,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MembroTriboController.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 30,
+                  "endLine": 126,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 30,
+                  "endLine": 82,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 30,
+                  "endLine": 40,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 30,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 107,
+                  "startColumn": 30,
+                  "endLine": 107,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 30,
+                  "endLine": 68,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PapelController.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 30,
+                  "endLine": 129,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 30,
+                  "endLine": 38,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 30,
+                  "endLine": 92,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 30,
+                  "endLine": 55,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorSquadController.cs",
+                "region": {
+                  "startLine": 113,
+                  "startColumn": 30,
+                  "endLine": 113,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 30,
+                  "endLine": 72,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 30,
+                  "endLine": 40,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 30,
+                  "endLine": 89,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 30,
+                  "endLine": 54,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 116,
+                  "startColumn": 30,
+                  "endLine": 116,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 30,
+                  "endLine": 68,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/PaisController.cs",
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 30,
+                  "endLine": 139,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 30,
+                  "endLine": 92,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4529",
+          "level": "warning",
+          "message": "Make sure that exposing this HTTP endpoint is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/mamaral/Documents/GIT%20PROJECTS/Scopio/BackEnd/API%20Visual%20Studio/Api/Controllers/MentorTriboController.cs",
+                "region": {
+                  "startLine": 113,
+                  "startColumn": 30,
+                  "endLine": 113,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
         }
       ],
       "rules": {
-        "CS1572": {
-          "id": "CS1572",
-          "shortDescription": "O comentário XML tem uma marca param, mas não há nenhum parâmetro com esse nome",
-          "defaultLevel": "warning",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
         "CS1573": {
           "id": "CS1573",
           "shortDescription": "O parâmetro não tem nenhuma marca param correspondente no comentário XML (mas outros parâmetros têm)",
