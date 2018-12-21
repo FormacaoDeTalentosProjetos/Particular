@@ -10,10 +10,10 @@ namespace Negocio
     public class MembroSquadNegocio : INegocioBase<MembroSquad>
     {
         /// <summary>
-        /// Declara o repositório do membro.
+        /// 
         /// </summary>
         private readonly MembroSquadRepositorio _membroSquadRepositorio;
-
+        
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
