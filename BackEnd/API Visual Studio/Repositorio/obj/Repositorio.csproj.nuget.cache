@@ -1,5 +1,9 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "dgSpecHash": "d8/NQ+qbC9BKjQZtuvSmnkLMRc9n84+Tx1A34JOWx/Y6Na+MmkgHU0q38AMSzSZXnOhpt3yD0vOsmisF/lIsEA==",
+=======
+  "dgSpecHash": "SP/x42kPVWT4RpxfR3Mc2baGtnYILEdB2XA7mMMz4Lxx+2U9FqnysV5AY0kD4lgMzVucW1fY39/ZWvS3CgyFzw==",
+>>>>>>> BackEnd
   "success": true
 }
