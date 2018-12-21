@@ -67,8 +67,9 @@
     <Build Include="DBO\Unidade.sql" />
     <Build Include="DBO\Tribo.sql" />
     <Build Include="DBO\Squad.sql" />
-    <Build Include="DBO\Membro.sql" />
+    <Build Include="DBO\MembroSquad.sql" />
     <Build Include="DBO\MentorTribo.sql" />
     <Build Include="DBO\MentorSquad.sql" />
+    <Build Include="DBO\MembroTribo.sql" />
   </ItemGroup>
 </Project>

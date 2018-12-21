@@ -55,17 +55,17 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="F:Api.Controllers.MembroController._membroNegocio">
+        <member name="F:Api.Controllers.MembroSquadController._membroNegocio">
             <summary>
             Declara as regras de negócio para o membro.
             </summary>
         </member>
-        <member name="M:Api.Controllers.MembroController.#ctor">
+        <member name="M:Api.Controllers.MembroSquadController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
         </member>
-        <member name="M:Api.Controllers.MembroController.Get">
+        <member name="M:Api.Controllers.MembroSquadController.Get">
             <summary>
             Método que obtêm todos as vinculações entre Membro e Squad.
             </summary>
@@ -73,7 +73,7 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-        <member name="M:Api.Controllers.MembroController.GetId(System.Int32)">
+        <member name="M:Api.Controllers.MembroSquadController.GetId(System.Int32)">
             <summary>
             Método que obtêm uma vinculação entre Membro e Squad.
             </summary>
@@ -83,7 +83,7 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-        <member name="M:Api.Controllers.MembroController.Post(Api.Model.MembroInput)">
+        <member name="M:Api.Controllers.MembroSquadController.Post(Api.Model.MembroSquadInput)">
             <summary>
             Método que insere uma vinculação entre Membro e Squad.
             </summary>
@@ -93,7 +93,7 @@
             <response code="400">BadRequest</response>
             <response code="500">InternalServerError</response>
         </member>
-        <member name="M:Api.Controllers.MembroController.Put(System.Int32,Api.Model.MembroInput)">
+        <member name="M:Api.Controllers.MembroSquadController.Put(System.Int32,Api.Model.MembroSquadInput)">
             <summary>
             Método que altera os dados de uma vinculação entre Membro e Squad.
             </summary>
@@ -104,9 +104,67 @@
             <response code="400">BadRequest</response>
             <response code="500">InternalServerError</response>
         </member>
-        <member name="M:Api.Controllers.MembroController.Delete(System.Int32)">
+        <member name="M:Api.Controllers.MembroSquadController.Delete(System.Int32)">
             <summary>
             Método que deleta uma vinculação entre Membro e Squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
+        </member>
+        <member name="F:Api.Controllers.MembroTriboController._membroNegocio">
+            <summary>
+            Declara as regras de negócio para o membroTribo.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.Get">
+            <summary>
+            Método que obtêm todos as vinculações entre Membro e Tribo.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm uma vinculação entre Membro e Tribo.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e Tribo através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.Post(Api.Model.MembroTriboInput)">
+            <summary>
+            Método que insere uma vinculação entre Membro e Tribo.
+            </summary>
+            <param name="input">Objeto com os dados da vinculação.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.Put(System.Int32,Api.Model.MembroTriboInput)">
+            <summary>
+            Método que altera os dados de uma vinculação entre Membro e Tribo.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <param name="input">Objeto que contêm os dados a serem alterados.</param>
+            <returns></returns>
+            <response code="202">Accepted</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Api.Controllers.MembroTriboController.Delete(System.Int32)">
+            <summary>
+            Método que deleta uma vinculação entre Membro e Tribo.
             </summary>
             <param name="id">Usado para selecionar a vinculação.</param>
             <returns></returns>

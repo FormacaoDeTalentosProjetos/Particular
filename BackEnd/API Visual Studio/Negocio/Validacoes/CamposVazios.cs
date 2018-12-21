@@ -38,15 +38,32 @@ namespace Negocio.Validacoes
         }
         #endregion
 
-        #region Membro
+        #region MembroSquad
         /// <summary>
         /// Verifica se os campos obrigátorios não foram preenchidos.
         /// </summary>
         /// <param name="entity">Objeto com os campos a serem verificados.</param>
         /// <returns>True se os campos obrigátorios não foram preenchidos ou False se eles foram.</returns>
-        public static bool Verificar(Membro entity)
+        public static bool Verificar(MembroSquad entity)
         {
             if (string.IsNullOrWhiteSpace(Convert.ToString(entity.IdSquad)) ||
+                string.IsNullOrWhiteSpace(Convert.ToString(entity.IdUser)))
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
+
+        #region MembroTribo
+        /// <summary>
+        /// Verifica se os campos obrigátorios não foram preenchidos.
+        /// </summary>
+        /// <param name="entity">Objeto com os campos a serem verificados.</param>
+        /// <returns>True se os campos obrigátorios não foram preenchidos ou False se eles foram.</returns>
+        public static bool Verificar(MembroTribo entity)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(entity.IdTribo)) ||
                 string.IsNullOrWhiteSpace(Convert.ToString(entity.IdUser)))
             {
                 return true;
