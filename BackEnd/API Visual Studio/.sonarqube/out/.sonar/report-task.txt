@@ -1,6 +1,0 @@
-projectKey=scopio
-serverUrl=http://localhost:9000
-serverVersion=7.5.0.20543
-dashboardUrl=http://localhost:9000/dashboard?id=scopio
-ceTaskId=AWfSD7caICQi-8GTwfdo
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AWfSD7caICQi-8GTwfdo

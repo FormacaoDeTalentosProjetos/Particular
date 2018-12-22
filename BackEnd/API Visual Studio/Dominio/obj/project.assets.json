@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mamaral\\.nuget\\packages\\": {},
+    "C:\\Users\\caleo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
-      "packagesPath": "C:\\Users\\mamaral\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
+      "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mamaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

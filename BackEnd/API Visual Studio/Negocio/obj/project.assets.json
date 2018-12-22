@@ -504,12 +504,10 @@
   },
   "libraries": {
     "Dapper/1.50.5": {
-      "sha512": "AzAdZ9fEzUtav3Sbc5CMgz5O2oYkc5g1r+g1h/Vn+wqcInII+xtNEfyZryeW90Wq72bxjEBJhe18j+2SrGrc5A==",
+      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
       "type": "package",
       "path": "dapper/1.50.5",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
         "dapper.1.50.5.nupkg.sha512",
         "dapper.nuspec",
         "lib/net451/Dapper.dll",
@@ -1035,7 +1033,6 @@
       "type": "package",
       "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
-        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -1162,7 +1159,6 @@
       "type": "package",
       "path": "system.io/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1242,7 +1238,6 @@
       "type": "package",
       "path": "system.reflection/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1410,7 +1405,6 @@
       "type": "package",
       "path": "system.reflection.primitives/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1462,12 +1456,10 @@
       ]
     },
     "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "BWYdrACMy1Sbq7Kh1oISS+2qKX1dHhXNpRByG3c6M9i2fhU9BZqO3nFYIabmbZuQwd7svR5zfxNHgmgv2XkkIg==",
+      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
       "type": "package",
       "path": "system.reflection.typeextensions/4.4.0",
       "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -1530,7 +1522,6 @@
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1701,7 +1692,6 @@
       "type": "package",
       "path": "system.text.encoding/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1816,7 +1806,6 @@
       "type": "package",
       "path": "system.threading.tasks/4.3.0",
       "files": [
-        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1896,23 +1885,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mamaral\\.nuget\\packages\\": {},
+    "C:\\Users\\caleo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj",
-      "packagesPath": "C:\\Users\\mamaral\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Negocio\\obj\\",
+      "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Negocio\\Negocio.csproj",
+      "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mamaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1925,8 +1914,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj": {
-              "projectPath": "C:\\Users\\mamaral\\Documents\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj"
+            "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj": {
+              "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj"
             }
           }
         }

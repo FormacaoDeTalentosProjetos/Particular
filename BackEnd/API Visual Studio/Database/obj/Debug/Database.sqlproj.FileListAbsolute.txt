@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Database\bin\Debug\Database.dacpac
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Database\bin\Debug\Database.dll
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Database\bin\Debug\Database.pdb
@@ -31,15 +30,3 @@ C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\bin\Debug\Database.pdb
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.dll
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.pdb
-=======
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.dacpac
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.dll
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.pdb
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Model.xml
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\refactor.xml
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\postdeploy.sql
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\predeploy.sql
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Database.dll
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Database.pdb
->>>>>>> Stashed changes
