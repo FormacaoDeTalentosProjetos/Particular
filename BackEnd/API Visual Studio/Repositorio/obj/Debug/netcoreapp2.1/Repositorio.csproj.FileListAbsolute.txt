@@ -46,15 +46,3 @@ C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Re
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
-C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
