@@ -47,7 +47,6 @@ namespace Negocio.Validacoes
         public static bool Verificar(NivelPapel entity)
         {
             if (string.IsNullOrWhiteSpace(Convert.ToString(entity.Id)) ||
-                string.IsNullOrWhiteSpace(Convert.ToString(entity.Id)) ||
                 string.IsNullOrWhiteSpace(entity.Descricao))
             {
                 return true;

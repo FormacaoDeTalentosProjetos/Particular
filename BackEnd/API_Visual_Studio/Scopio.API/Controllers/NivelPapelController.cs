@@ -12,12 +12,9 @@ using System.Threading.Tasks;
 namespace Scopio.API.Controllers
 {
     /// <summary>
-    /// Tipo de dado a ser retornado pela API.
+    /// Tipo de dado a ser retornado e rota da API.
     /// </summary>
     [Produces("application/json")]
-    /// <summary>
-    /// Rota da API.
-    /// </summary>
     [Route("api/NivelPapel")]
     public class NivelPapelController: Controller
     {

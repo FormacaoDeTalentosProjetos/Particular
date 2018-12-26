@@ -306,7 +306,7 @@
         </member>
         <member name="T:Scopio.API.Controllers.NivelPapelController">
             <summary>
-            Tipo de dado a ser retornado pela API.
+            Tipo de dado a ser retornado e rota da API.
             </summary>
         </member>
         <member name="F:Scopio.API.Controllers.NivelPapelController._nivelPapelNegocio">
@@ -647,7 +647,7 @@
         </member>
         <member name="T:Scopio.API.Controllers.UnidadeController">
             <summary>
-            Tipo de dado a ser retornado pela API.
+            Tipo de dado a ser retornado e rota da API.
             </summary>
         </member>
         <member name="F:Scopio.API.Controllers.UnidadeController._unidadeNegocio">
@@ -1056,7 +1056,7 @@
         </member>
         <member name="T:Scopio.API.Program">
             <summary>
-            
+            Classe principal da Solução
             </summary>
         </member>
         <member name="M:Scopio.API.Program.Main(System.String[])">
