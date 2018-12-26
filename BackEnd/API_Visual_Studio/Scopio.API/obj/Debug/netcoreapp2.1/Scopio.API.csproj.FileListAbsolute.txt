@@ -41,3 +41,4 @@ C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.csproj.CopyComplete
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.dll
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.csprojAssemblyReference.cache

@@ -11,9 +11,9 @@ using Microsoft.Extensions.Logging;
 namespace Scopio.API
 {
     /// <summary>
-    /// 
+    /// Classe principal da Solução
     /// </summary>
-    public class Program
+    public static class Program
     {
         /// <summary>
         /// 
