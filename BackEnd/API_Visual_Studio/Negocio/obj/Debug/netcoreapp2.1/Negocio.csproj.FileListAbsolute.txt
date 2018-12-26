@@ -12,3 +12,17 @@ C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csproj.CopyComplete
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.dll
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.pdb
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.deps.json
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.dll
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.pdb
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csprojAssemblyReference.cache
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.AssemblyInfoInputs.cache
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.AssemblyInfo.cs
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csproj.CopyComplete
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.dll
+C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.pdb

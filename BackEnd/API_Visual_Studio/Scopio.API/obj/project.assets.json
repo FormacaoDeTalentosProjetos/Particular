@@ -5372,7 +5372,7 @@
   },
   "libraries": {
     "Dapper/1.50.5": {
-      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
+      "sha512": "AzAdZ9fEzUtav3Sbc5CMgz5O2oYkc5g1r+g1h/Vn+wqcInII+xtNEfyZryeW90Wq72bxjEBJhe18j+2SrGrc5A==",
       "type": "package",
       "path": "dapper/1.50.5",
       "files": [
@@ -9403,7 +9403,7 @@
       ]
     },
     "Swashbuckle.AspNetCore/2.4.0": {
-      "sha512": "zsFkF1NPnRk41NQ3B/SOhp2zhF+AiCitWALqgEP+jy2fgIyslBLNSZMtBctKnJKqzGgyiye3no7GJrJ0MTHXdg==",
+      "sha512": "hjEZYUZIATgfF4d+8NZyOSmGIMPOIJFHStAJW4zSEkS32rAJNC+2h/87p4/n1mEEm7Nxpu+Mo8vs9JqwJxT6UA==",
       "type": "package",
       "path": "swashbuckle.aspnetcore/2.4.0",
       "files": [
@@ -9416,7 +9416,7 @@
       ]
     },
     "Swashbuckle.AspNetCore.Swagger/2.4.0": {
-      "sha512": "gO+t8uBCQUDNjgAK5Mg56C5Pj88Z9WHBacm1njuMeDvbpEvFluNg8ocnDNYnwMcg1EcK8S+u+Xijzzf7PtpeXg==",
+      "sha512": "bXOp/c+heBmwKUYEDU9CK1Ce2P7UaVUn2Zs8Rf3xBGM9oMaNBtnbzQMtWaQs06F4ZQVMKM7Kt1mj5CxIVxXJ5g==",
       "type": "package",
       "path": "swashbuckle.aspnetcore.swagger/2.4.0",
       "files": [
@@ -9431,7 +9431,7 @@
       ]
     },
     "Swashbuckle.AspNetCore.SwaggerGen/2.4.0": {
-      "sha512": "dDaKa1kLGjVNYHnTtv3BT+yg8fVHf3HRgpY4bjhRcjtJJtCHejPFWUF3DoIDB4c5mmlZoAvqn6iOtQW+Qj4wOg==",
+      "sha512": "gGbsrIFaQHk4t6+TKRvoSMDLEtJT/6oiF/Ds5rlp8dy3Fy+r5iFMZQEgCsYk7fZMyWv/9ZBVJ7+96oiNgqAA9Q==",
       "type": "package",
       "path": "swashbuckle.aspnetcore.swaggergen/2.4.0",
       "files": [
@@ -9446,7 +9446,7 @@
       ]
     },
     "Swashbuckle.AspNetCore.SwaggerUI/2.4.0": {
-      "sha512": "TwnD/Ibviaxvuemq1YssHruRuEQBoJFuWaONClth6ZSae9YcFyy00bWCjvXJvrlbmIDw3UKZwWQ5f+zGFIjaqw==",
+      "sha512": "TKG1Isv9MRAhJn3inDmXZvoiijdTxN6xEg3qEBj1XgYU0RP7OuurOoV7PojohvZiA/GcgITM9dlHVyC2jEa/UA==",
       "type": "package",
       "path": "swashbuckle.aspnetcore.swaggerui/2.4.0",
       "files": [
@@ -11851,7 +11851,7 @@
       ]
     },
     "System.Reflection.TypeExtensions/4.4.0": {
-      "sha512": "dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "sha512": "BWYdrACMy1Sbq7Kh1oISS+2qKX1dHhXNpRByG3c6M9i2fhU9BZqO3nFYIabmbZuQwd7svR5zfxNHgmgv2XkkIg==",
       "type": "package",
       "path": "system.reflection.typeextensions/4.4.0",
       "files": [
@@ -14271,23 +14271,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
+    "C:\\Users\\mamaral\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "projectUniqueName": "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "projectName": "Scopio.API",
-      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
-      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
+      "projectPath": "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "packagesPath": "C:\\Users\\mamaral\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mamaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14300,11 +14300,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
+            "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
             },
-            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
+            "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\mamaral\\Documents\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
             }
           }
         }
