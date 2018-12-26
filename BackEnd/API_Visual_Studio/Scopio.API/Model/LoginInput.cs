@@ -1,5 +1,6 @@
 ﻿namespace Scopio.API.Model
-{   /// <summary>
+{
+    /// <summary>
     ///Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Login. 
     /// </summary>
     public class LoginInput
