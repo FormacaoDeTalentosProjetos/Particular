@@ -1884,11 +1884,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj",
+      "projectUniqueName": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj",
       "projectName": "Repositorio",
-      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj",
+      "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj",
       "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\obj\\",
+      "outputPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1907,8 +1907,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
+            "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
             }
           }
         }
