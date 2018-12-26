@@ -8,6 +8,8 @@ namespace Dominio
     {
         public int ID { get; set; }
         public int IdPapel { get; set; }
+        public int IdNivel { get; set; }
+        public string Avatar { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Tel { get; set; }

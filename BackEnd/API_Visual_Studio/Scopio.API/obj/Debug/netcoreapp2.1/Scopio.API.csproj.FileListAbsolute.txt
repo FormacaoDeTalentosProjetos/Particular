@@ -20,6 +20,7 @@ C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Scopio.API\bin\Debug\netcoreapp
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Scopio.API\bin\Debug\netcoreapp2.1\Repositorio.pdb
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.csproj.CopyComplete
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Scopio.API\bin\Debug\netcoreapp2.1\Scopio.API.xml
+<<<<<<< Updated upstream
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\bin\Debug\netcoreapp2.1\Scopio.API.deps.json
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\bin\Debug\netcoreapp2.1\Scopio.API.runtimeconfig.json
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\bin\Debug\netcoreapp2.1\Scopio.API.runtimeconfig.dev.json
@@ -42,3 +43,5 @@ C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.dll
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.pdb
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Scopio.API\obj\Debug\netcoreapp2.1\Scopio.API.csprojAssemblyReference.cache
+=======
+>>>>>>> Stashed changes

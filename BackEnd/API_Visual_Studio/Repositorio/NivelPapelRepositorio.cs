@@ -69,7 +69,7 @@ namespace Repositorio
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TBNVPAPEL] " +
                                                       $"([Desc], Nivel) " +
-                                                      $"VALUES ({entity.Descricao}, " +
+                                                      $"VALUES ('{entity.Desc}', " +
                                                       $"{entity.Nivel})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
@@ -86,9 +86,9 @@ namespace Repositorio
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 connection.Execute($"UPDATE [TB_NVPAPEL] " +
-                                   $"SET [Desc] = {entity.Descricao}, " +
+                                   $"SET [Desc] = '{entity.Desc}', " +
                                    $"Nivel = {entity.Nivel} " +
-                                   $"WHERE ID = {entity.Id}");
+                                   $"WHERE ID = {entity.ID}");
             }
         }
 
@@ -105,6 +105,5 @@ namespace Repositorio
                                    $"WHERE ID = {id}");
             }
         }
-
     }
 }

@@ -107,16 +107,18 @@ namespace Scopio.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]UserInput Input)
+        public IActionResult Post([FromBody]UserInput input)
         {
             var objUser = new User()
             {
-                Username = Input.Username,
-                Senha = Input.Senha,
-                IdPapel = Input.IdPapel,
-                Nome = Input.Nome,
-                Email = Input.Email,
-                Tel = Input.Tel
+                Username = input.Username,
+                Senha = input.Senha,
+                IdPapel = input.IdPapel,
+                IdNivel = input.IdNivel,
+                Avatar = input.Avatar,
+                Nome = input.Nome,
+                Email = input.Email,
+                Tel = input.Tel
             };
 
             var idUser = _userNegocio.Inserir(objUser);
@@ -141,6 +143,8 @@ namespace Scopio.API.Controllers
             var objUser = new User()
             {
                 IdPapel = input.IdPapel,
+                IdNivel = input.IdNivel,
+                Avatar = input.Avatar,
                 Nome = input.Nome,
                 Email = input.Email,
                 Tel = input.Tel
