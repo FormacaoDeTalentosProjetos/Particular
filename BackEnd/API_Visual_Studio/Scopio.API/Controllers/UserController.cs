@@ -10,12 +10,13 @@ using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Scopio.API.Controllers
-{/// <summary>
-/// 
-/// </summary>
+{
+    /// <summary>
+    /// 
+    /// </summary>
     [Produces("application/json")]
     [Route("api/User")]
-    public class UserController : Controller
+    public class UserController: Controller
     {
         /// <summary>
         /// 
@@ -101,7 +102,7 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// MÉTODO QUE INSERE UM "USUÁRIO"
         /// </summary>
-        /// <param name="Input"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]

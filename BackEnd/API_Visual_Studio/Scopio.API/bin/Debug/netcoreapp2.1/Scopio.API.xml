@@ -770,7 +770,7 @@
             <summary>
             MÉTODO QUE INSERE UM "USUÁRIO"
             </summary>
-            <param name="Input"></param>
+            <param name="input"></param>
             <returns></returns>
         </member>
         <member name="M:Scopio.API.Controllers.UserController.PutPerfil(System.Int32,Scopio.API.Model.UserInput)">

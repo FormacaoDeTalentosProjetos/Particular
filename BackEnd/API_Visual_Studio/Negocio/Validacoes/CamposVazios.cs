@@ -46,14 +46,8 @@ namespace Negocio.Validacoes
         /// <returns>True se os campos obrigátorios não foram preenchidos ou False se eles foram.</returns>
         public static bool Verificar(NivelPapel entity)
         {
-//<<<<<<< Updated upstream
             if (string.IsNullOrWhiteSpace(Convert.ToString(entity.ID)) ||
                 string.IsNullOrWhiteSpace(entity.Desc))
-//=======
-            if (string.IsNullOrWhiteSpace(Convert.ToString(entity.ID)) ||
-                string.IsNullOrWhiteSpace(Convert.ToString(entity.ID)) ||
-                string.IsNullOrWhiteSpace(entity.Desc))
-//>>>>>>> Stashed changes
             {
                 return true;
             }
