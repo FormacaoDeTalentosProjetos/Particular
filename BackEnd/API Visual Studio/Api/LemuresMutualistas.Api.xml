@@ -78,21 +78,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="T:Api.Controllers.MapaController">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:Api.Controllers.MapaController._mapaNegocio">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Api.Controllers.MapaController.#ctor">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:Api.Controllers.MembroSquadController">
             <summary>
             
@@ -670,11 +655,6 @@
             
             </summary>
         </member>
-        <member name="F:Api.Controllers.UserController._loginNegocio">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="M:Api.Controllers.UserController.#ctor">
             <summary>
             
@@ -743,6 +723,272 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Api.Filtros.ErroFiltro">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Filtros.ErroFiltro.Invoke(Microsoft.AspNetCore.Http.HttpContext,System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Model.LoginInput">
+             <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Login. 
+             </summary>
+        </member>
+        <member name="P:Api.Model.LoginInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.LoginInput.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.LoginInput.Senha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.LoginInput.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.MembroSquadInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do MembroSquad.
+            </summary>
+        </member>
+        <member name="P:Api.Model.MembroSquadInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.MembroSquadInput.IdSquad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.MembroTriboInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do MembroInput.
+            </summary>
+        </member>
+        <member name="P:Api.Model.MembroTriboInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.MembroTriboInput.IdTribo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.MentorSquadInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do MentorSquad.
+            </summary>
+        </member>
+        <member name="P:Api.Model.MentorSquadInput.IdSquad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.MentorSquadInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.MentorTriboInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do MentorTriboInput.
+            </summary>
+        </member>
+        <member name="P:Api.Model.MentorTriboInput.IdTribo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.MentorTriboInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.PaisInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do País.
+            </summary>
+        </member>
+        <member name="P:Api.Model.PaisInput.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.PaisInput.Sigla">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.PapelInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Papel. 
+            </summary>
+        </member>
+        <member name="P:Api.Model.PapelInput.Desc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.PapelInput.Sigla">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.PapelInput.Nivel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.SquadInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Squad 
+            </summary>
+        </member>
+        <member name="P:Api.Model.SquadInput.IdUnidade">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.SquadInput.IdTribo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.SquadInput.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.SquadInput.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.SquadInput.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.TriboInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Tribo. 
+            </summary>
+        </member>
+        <member name="P:Api.Model.TriboInput.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.TriboInput.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.TriboInput.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.UnidadeInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Unidade. 
+            </summary>
+        </member>
+        <member name="P:Api.Model.UnidadeInput.IdPais">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UnidadeInput.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UnidadeInput.EstSigla">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Model.UserInput">
+            <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do User. 
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.IdPapel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Tel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Api.Model.UserInput.Senha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Api.Program.BuildWebHost(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             
@@ -766,6 +1012,7 @@
             </summary>
             <param name="app"></param>
             <param name="env"></param>
+            <param name="serviceFactory"></param>
         </member>
     </members>
 </doc>

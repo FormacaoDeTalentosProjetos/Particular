@@ -2,7 +2,7 @@
 
 namespace Negocio.Validacoes
 {
-    public class ExcedeLimiteDeCaracteres
+    public static class ExcedeLimiteDeCaracteres
     {
        #region Pais
         /// <summary>

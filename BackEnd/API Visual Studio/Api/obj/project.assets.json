@@ -6771,7 +6771,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.1": {
-      "sha512": "BOK5fckW9v7xWjpEI6bPGwkjw10OPVASZcAa8HoWJo/0Mmg4Azddj92v8noU+YgvD/6zNZ9o/RiRXXKxk5rYwQ==",
+      "sha512": "1XHObHLx6A0/57ZmLG9gfKMO/Z/gQjRXPFWQDMlPZGYwcfgufvSdmI2+RYvR5DGkbba9HIHC35ClNQ2yVNIohw==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.1",
       "hasTools": true,
@@ -7182,7 +7182,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/2.6.1": {
-      "sha512": "x9MfOXfTj/tdgm3rV15niL/J0T36ZPiVrIfO3Tax9Lv4fLGnVZJXSQatZezJ+tX+YYk2ZAPbq87vnSFwh1Je9w==",
+      "sha512": "VsT6gg2SPeToP8SK7PEcsH6Ftryb7aOqnXh9xg11zBeov05+63gP3k/TvrR+v85XIa8Nn0y3+qNl4M+qzNLBfw==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/2.6.1",
       "hasTools": true,
@@ -7201,7 +7201,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Common/2.10.0": {
-      "sha512": "M+AwpCR1YPzTaqSQugn/v7PftRTMp1x6zhpDpfoIocNgruweJTQBlpwcNyQVGvRZHgnrd5P/xcUMhA9MoYS2Pg==",
+      "sha512": "w57ebW3QIRFPoFFX6GCa6eF2FmuHYaWEJ/sMMHq+PBnHB51dEzLIoAQft1Byqe5nrSo4UUV6v4tad8fkTrKl8w==",
       "type": "package",
       "path": "microsoft.codeanalysis.common/2.10.0",
       "files": [
@@ -14521,7 +14521,7 @@
       ]
     },
     "System.ValueTuple/4.4.0": {
-      "sha512": "6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
+      "sha512": "hBl0/yPqtMnwrsqCYSxYr4Abvo9hSVYmf+55EniEMyCEPJRM1VGr8o+kHeHJdEqgr6wrQMhZ7HowYmejruXStg==",
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
@@ -14943,7 +14943,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cacaciano\\.nuget\\packages\\": {},
+    "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -14952,14 +14952,14 @@
       "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\Api.csproj",
       "projectName": "Api",
       "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\Api.csproj",
-      "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
       "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cacaciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -15031,12 +15031,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Api\\obj\\Api.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1608",
       "level": "Warning",

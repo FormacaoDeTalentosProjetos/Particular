@@ -21,11 +21,6 @@ namespace Api.Controllers
         /// 
         /// </summary>
         private readonly UserNegocio _userNegocio;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private readonly LoginNegocio _loginNegocio;
         
         /// <summary>
         /// 
@@ -33,7 +28,6 @@ namespace Api.Controllers
         public UserController()
         {
             _userNegocio = new UserNegocio();
-            _loginNegocio = new LoginNegocio();
         }
         
         /// <summary>

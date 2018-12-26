@@ -3,7 +3,7 @@ using System;
 
 namespace Negocio.Validacoes
 {
-    public class CamposVazios
+    public static class CamposVazios
     {
         #region Pais
         /// <summary>

@@ -69,23 +69,7 @@ namespace Negocio
         /// <returns>ID do país inserido no Database ou gera alguma exceção.</returns>
         public int Inserir(Pais entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
-
-            //Verifica se nenhum campo do objeto entity excede o limite de caracteres estipulado no Database.
-            if (ExcedeLimiteDeCaracteres.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
-            }
-
-            //Verifica se o pais já foi cadastrado.
-            if (_paisRepositorio.SelecionarPorNome(entity.Nome) != null)
-            {
-                throw new ConflitoException($"O país: \"{entity.Nome}\", já foi cadastrado!");
-            }
+            Validacoes(entity);
 
             return _paisRepositorio.Inserir(entity);
         }
@@ -97,6 +81,36 @@ namespace Negocio
         /// <param name="entity">Objeto com os dados do país.</param>
         /// <returns>ID do país inserido no Database ou gera alguma exceção.</returns>
         public Pais Alterar(int id, Pais entity)
+        {
+            Validacoes(entity);
+
+            if(_paisRepositorio.SelecionarPorId(id) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhum país com este ID: { id }");
+            }
+
+            entity.Id = id;
+            _paisRepositorio.Alterar(entity);
+
+            return _paisRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
+        /// Verifica se o país existe no Database antes de deleta-lo.
+        /// </summary>
+        /// <param name="id">Usado para buscar o país no Database.</param>
+        public void Deletar(int id)
+        {
+            var obj = _paisRepositorio.SelecionarPorId(id);
+
+            if (obj == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhum país com este ID: { id }");
+            }
+            _paisRepositorio.Deletar(obj.Id);
+        }
+
+        public void Validacoes(Pais entity)
         {
             //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
@@ -111,30 +125,10 @@ namespace Negocio
             }
 
             ////Verifica se o pais já foi cadastrado.
-            //if (_paisRepositorio.SelecionarPorNome(entity.Nome) != null)
-            //{
-            //    throw new ConflitoException($"O país: \"{entity.Nome}\", já foi cadastrado!");
-            //}
-
-            entity.Id = id;
-            _paisRepositorio.Alterar(entity);
-
-            return _paisRepositorio.SelecionarPorId(id);
-        }
-
-        /// <summary>
-        /// Verifica se o país existe no Database antes de deleta-lo.
-        /// </summary>
-        /// <param name="id">Usado para buscar o país no Database.</param>
-        public void Deletar(int id)
-        {
-            var obj = SelecionarPorId(id);
-
-            if (obj == null)
+            if (_paisRepositorio.SelecionarPorNome(entity.Nome) != null)
             {
-                throw new NaoEncontradoException($"Não foi encontrado nenhum país com este ID: { id }");
+                throw new ConflitoException($"O país: \"{entity.Nome}\", já foi cadastrado!");
             }
-            _paisRepositorio.Deletar(obj.Id);
         }
     }
 }

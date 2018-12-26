@@ -9,8 +9,17 @@ using System.Threading.Tasks;
 
 namespace Api.Filtros
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ErroFiltro
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="next"></param>
+        /// <returns></returns>
         public async Task Invoke(HttpContext context, Func<Task> next)
         {
             try
