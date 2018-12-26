@@ -520,11 +520,10 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -688,7 +687,11 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\caleo\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -696,15 +699,25 @@
     "restore": {
       "projectUniqueName": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
+<<<<<<< Updated upstream
       "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
       "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
+=======
+      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
