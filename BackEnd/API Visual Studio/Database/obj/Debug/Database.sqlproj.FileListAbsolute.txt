@@ -30,3 +30,8 @@ C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\bin\Debug\Database.pdb
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.dll
 C:\GIT PROJECTS\Scopio\LemuresMutualistas\Database\obj\Debug\Database.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.dacpac
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\bin\Debug\Database.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Database.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Database\obj\Debug\Database.pdb

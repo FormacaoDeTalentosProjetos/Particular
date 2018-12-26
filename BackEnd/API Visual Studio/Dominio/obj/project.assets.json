@@ -688,17 +688,22 @@
   },
   "packageFolders": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\caleo\\.nuget\\packages\\": {},
 =======
     "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
+=======
+    "C:\\Users\\cacaciano\\.nuget\\packages\\": {},
 >>>>>>> Stashed changes
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
       "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
@@ -708,15 +713,24 @@
       "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
       "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
 >>>>>>> Stashed changes
+=======
+      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
         "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
+=======
+        "C:\\Users\\cacaciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

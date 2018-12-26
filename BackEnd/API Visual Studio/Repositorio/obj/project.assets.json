@@ -495,7 +495,12 @@
       "path": "dapper/1.50.5",
       "files": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+        ".signature.p7s",
+>>>>>>> Stashed changes
+=======
+        ".nupkg.metadata",
         ".signature.p7s",
 >>>>>>> Stashed changes
         "dapper.1.50.5.nupkg.sha512",
@@ -851,9 +856,13 @@
     },
     "Microsoft.Win32.Registry/4.4.0": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "sha512": "LJh1PSoqdugrCv7t+k2B919GGdq4PyrntPVlMCMrcz59nsjOstYmtGWSCiFZ3UNpxv2dlsZdcLzJ847uyOlaEA==",
 =======
       "sha512": "dA36TlNVn/XfrZtmf0fiI/z1nd3Wfp2QVzTdj26pqgP9LFWq0i1hYEUAW50xUjGFYn1+/cP3KGuxT2Yn1OUNBQ==",
+>>>>>>> Stashed changes
+=======
+      "sha512": "LsK5GyV3JEhOJGigiVOQVkWPHHWXNJrwK/HrILIN1WhO3LJPW7b69qWtK5sDMp68Uw4cF21nZr5ylRc5s8iawg==",
 >>>>>>> Stashed changes
       "type": "package",
       "path": "microsoft.win32.registry/4.4.0",
@@ -1024,6 +1033,7 @@
       "type": "package",
       "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
+        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -1078,7 +1088,7 @@
       ]
     },
     "System.Data.SqlClient/4.4.0": {
-      "sha512": "yuMDT9o4j0n3XnH7o7EYliyjUYPQ4RBo9tTNA+M6/KQKMcKXKGqHoq2gCb2sEHCRs5HjTwRlwT/F1JVdYaNaDA==",
+      "sha512": "fxb9ghn1k1Ua7FFdlvtiBOD4/PsQvD/fk2KnhS+FK7VC6OggEx6P+lP1P0+KMb5V2dqS1+FbR7HCenoqzJMNIA==",
       "type": "package",
       "path": "system.data.sqlclient/4.4.0",
       "files": [
@@ -1149,6 +1159,7 @@
       "type": "package",
       "path": "system.io/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1228,6 +1239,7 @@
       "type": "package",
       "path": "system.reflection/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1395,6 +1407,7 @@
       "type": "package",
       "path": "system.reflection.primitives/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1451,7 +1464,12 @@
       "path": "system.reflection.typeextensions/4.4.0",
       "files": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+        ".signature.p7s",
+>>>>>>> Stashed changes
+=======
+        ".nupkg.metadata",
         ".signature.p7s",
 >>>>>>> Stashed changes
         "LICENSE.TXT",
@@ -1516,6 +1534,7 @@
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1641,9 +1660,13 @@
     },
     "System.Security.Principal.Windows/4.4.0": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "sha512": "ynC5BKYwhgON6WH/yPM5ZLKc19wqC13A5fl4hZa5Lf8pQwv1YmbCPKGualWSRhEoOVWH2FzZhOXauER6al4Upg==",
 =======
       "sha512": "pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==",
+>>>>>>> Stashed changes
+=======
+      "sha512": "yNxhQZ5oJb2Q7VqNj1Af6e+9KXzHcXJdv+eE+1Lp2+FYBwmVLQs2LfQpeSfz5RxorwlV0EpNbkLatPScb+XEWw==",
 >>>>>>> Stashed changes
       "type": "package",
       "path": "system.security.principal.windows/4.4.0",
@@ -1686,6 +1709,7 @@
       "type": "package",
       "path": "system.text.encoding/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1749,9 +1773,13 @@
     },
     "System.Text.Encoding.CodePages/4.4.0": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "sha512": "FpAgMC+BX6OOCiRebYqHP3r3aYU7o0lopPOo4zKyGc5LWXFEYRUaKtoXXvAJ3sP+IDOK/KBxZaiVAdi+QdZ0TA==",
 =======
       "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
+>>>>>>> Stashed changes
+=======
+      "sha512": "epF1P00AFbqPy5jZx3fpEn5qwlBDZ+dck71xYc/jLibfY6BtoFKOqoj84YHcQWV9HcWb7M13aVJ61XCdK8/3XA==",
 >>>>>>> Stashed changes
       "type": "package",
       "path": "system.text.encoding.codepages/4.4.0",
@@ -1802,6 +1830,7 @@
       "type": "package",
       "path": "system.threading.tasks/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1878,17 +1907,22 @@
   },
   "packageFolders": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\caleo\\.nuget\\packages\\": {},
 =======
     "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
+>>>>>>> Stashed changes
+=======
+    "C:\\Users\\cacaciano\\.nuget\\packages\\": {},
 >>>>>>> Stashed changes
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj",
+      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj",
       "projectName": "Repositorio",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj",
       "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
@@ -1898,15 +1932,24 @@
       "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
       "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\obj\\",
 >>>>>>> Stashed changes
+=======
+      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\Repositorio.csproj",
+      "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Repositorio\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
         "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
+=======
+        "C:\\Users\\cacaciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1920,8 +1963,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\caleo\\Desktop\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj"
+            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API Visual Studio\\Dominio\\Dominio.csproj"
             }
           }
         }
