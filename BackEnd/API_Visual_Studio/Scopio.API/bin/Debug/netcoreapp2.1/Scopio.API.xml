@@ -304,6 +304,79 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:Scopio.API.Controllers.NivelPapelController">
+            <summary>
+            Tipo de dado a ser retornado pela API.
+            </summary>
+        </member>
+        <member name="F:Scopio.API.Controllers.NivelPapelController._nivelPapelNegocio">
+            <summary>
+            Declara as regras de negócio para os niveis de papel.
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.Get">
+            <summary>
+            Método que obtêm todos os niveis de papel.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm um nível de papel.
+            </summary>
+            <param name="id">Usado para selecionar o nível de papel.</param>
+            <returns></returns>
+            <remarks>Obtêm um nível de papel através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.GetNome(System.String)">
+            <summary>
+            Método que obtêm um nível de papel.
+            </summary>
+            <param name="nome">Usado para selecionar o nível de papel.</param>
+            <returns></returns>
+            <remarks>Obtêm um nível de papel através do Nome informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.Post(Scopio.API.Model.NivelPapelInput)">
+            <summary>
+            Método que insere um nivel de papel.
+            </summary>
+            <param name="input">Objeto com os dados do nível de papel.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.Put(System.Int32,Scopio.API.Model.NivelPapelInput)">
+            <summary>
+            Método que altera os dados de um nível de papel.
+            </summary>
+            <param name="id">Usado para selecionar o nível de papel.</param>
+            <param name="input">Objeto que contêm os dados a serem alterados.</param>
+            <returns></returns>
+            <response code="202">Accepted</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.NivelPapelController.Delete(System.Int32)">
+            <summary>
+            Método que deleta um nível de papel.
+            </summary>
+            <param name="id">Usado para selecionar o nível de papel.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
+        </member>
         <member name="T:Scopio.API.Controllers.PaisController">
             <summary>
             
@@ -574,7 +647,7 @@
         </member>
         <member name="T:Scopio.API.Controllers.UnidadeController">
             <summary>
-            
+            Tipo de dado a ser retornado pela API.
             </summary>
         </member>
         <member name="F:Scopio.API.Controllers.UnidadeController._unidadeNegocio">
@@ -819,6 +892,21 @@
         <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:Scopio.API.Model.NivelPapelInput">
+             <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do nível de papel. 
+             </summary>
+        </member>
+        <member name="P:Scopio.API.Model.NivelPapelInput.Descricao">
+            <summary>
+            Atributo Descrição.
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.NivelPapelInput.Nivel">
+            <summary>
+            Atributo Nível.
             </summary>
         </member>
         <member name="T:Scopio.API.Model.PaisInput">

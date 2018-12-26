@@ -38,6 +38,24 @@ namespace Negocio.Validacoes
         }
         #endregion
 
+        #region Nível Papel
+        /// <summary>
+        /// Verifica se os campos obrigátorios não foram preenchidos.
+        /// </summary>
+        /// <param name="entity">Objeto com os campos a serem verificados.</param>
+        /// <returns>True se os campos obrigátorios não foram preenchidos ou False se eles foram.</returns>
+        public static bool Verificar(NivelPapel entity)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(entity.Id)) ||
+                string.IsNullOrWhiteSpace(Convert.ToString(entity.Id)) ||
+                string.IsNullOrWhiteSpace(entity.Descricao))
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
+
         #region MembroSquad
         /// <summary>
         /// Verifica se os campos obrigátorios não foram preenchidos.

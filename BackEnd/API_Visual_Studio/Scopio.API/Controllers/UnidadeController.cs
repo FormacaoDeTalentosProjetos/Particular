@@ -10,10 +10,14 @@ using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Scopio.API.Controllers
-{/// <summary>
-/// 
-/// </summary>
+{   
+    /// <summary>
+    /// Tipo de dado a ser retornado pela API.
+    /// </summary>
     [Produces("application/json")]
+    /// <summary>
+    /// Rota da API.
+    /// </summary>
     [Route("api/Unidade")]
     public class UnidadeController: Controller
     {

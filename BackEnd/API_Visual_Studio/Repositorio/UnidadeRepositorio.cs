@@ -23,7 +23,7 @@ namespace Repositorio
             }
         }
 
-        // <summary>
+        /// <summary>
         /// Método que seleciona uma unidade do database.
         /// </summary>
         /// <param name="id">Id a ser buscado no Database.</param>
@@ -39,7 +39,7 @@ namespace Repositorio
             }
         }
 
-        // <summary>
+        /// <summary>
         /// Método que seleciona uma unidade do database.
         /// </summary>
         /// <param name="nome">Nome da unidade a ser buscada no Database.</param>
