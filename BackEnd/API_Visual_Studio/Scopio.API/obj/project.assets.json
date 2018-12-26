@@ -14277,19 +14277,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "projectName": "Scopio.API",
-      "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
-=======
-      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
-      "projectName": "Scopio.API",
-      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
-      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
->>>>>>> BackEnd
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14308,19 +14300,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
-=======
-            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
-            },
-            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
->>>>>>> BackEnd
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
             }
           }
         }

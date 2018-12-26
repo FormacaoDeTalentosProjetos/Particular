@@ -1902,19 +1902,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
       "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\obj\\",
-=======
-      "projectUniqueName": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
-      "projectName": "Negocio",
-      "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
-      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\obj\\",
->>>>>>> BackEnd
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1933,13 +1925,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
-              "projectPath": "C:\\Users\\gschiavo\\Desktop\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
-=======
-            "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
-              "projectPath": "C:\\GIT PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
->>>>>>> BackEnd
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
             }
           }
         }
