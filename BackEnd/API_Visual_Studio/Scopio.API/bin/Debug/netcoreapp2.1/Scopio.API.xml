@@ -899,7 +899,7 @@
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio do nível de papel. 
              </summary>
         </member>
-        <member name="P:Scopio.API.Model.NivelPapelInput.Descricao">
+        <member name="P:Scopio.API.Model.NivelPapelInput.Desc">
             <summary>
             Atributo Descrição.
             </summary>
@@ -930,11 +930,6 @@
             </summary>
         </member>
         <member name="P:Scopio.API.Model.PapelInput.Desc">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Scopio.API.Model.PapelInput.Sigla">
             <summary>
             
             </summary>
@@ -1020,6 +1015,16 @@
             </summary>
         </member>
         <member name="P:Scopio.API.Model.UserInput.IdPapel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.UserInput.IdNivel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.UserInput.Avatar">
             <summary>
             
             </summary>
