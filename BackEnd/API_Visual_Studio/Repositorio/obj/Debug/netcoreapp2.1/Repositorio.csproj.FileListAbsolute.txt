@@ -1,3 +1,4 @@
+<<<<<<< HEAD:BackEnd/API_Visual_Studio/Repositorio/obj/Debug/netcoreapp2.1/Repositorio.csproj.FileListAbsolute.txt
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
 C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
@@ -58,3 +59,65 @@ C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreap
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
 C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+=======
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\cacaciano\Documents\Visual Studio Projetos\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\caleo\Desktop\Lemures Mutualistas\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\Users\cacaciano\Desktop\Projeto\DEV\LemureMutualista\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT PROJECTS\Scopio\LemuresMutualistas\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT PROJECTS\Scopio\BackEnd\API Visual Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+>>>>>>> BackEnd:BackEnd/API Visual Studio/Repositorio/obj/Debug/netcoreapp2.1/Repositorio.csproj.FileListAbsolute.txt
