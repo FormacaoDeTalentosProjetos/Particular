@@ -43,5 +43,25 @@ namespace Negocio.Validacoes
             return false;
         }
         #endregion
+
+       #region Nivel Papel
+        /// <summary>
+        /// Verifica se o tamanho do campo nome excede o limite estabelecido no banco de dados.
+        /// </summary>
+        /// <param name="entity">Contêm os dados do campo.</param>
+        /// <returns>
+        /// True se o campo nome possuir mais caracteres do que o limite declarado no banco de dados ou
+        /// False caso todos o campo respeite esta especificação.
+        /// </returns>
+        public static bool Verificar(NivelPapel entity)
+        {
+            if (entity.Descricao.Length > 15)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        #endregion
     }
 }

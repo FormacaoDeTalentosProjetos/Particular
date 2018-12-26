@@ -3,9 +3,7 @@ using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Negocio.Validacoes;
 using Repositorio;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Negocio
 {
@@ -68,7 +66,7 @@ namespace Negocio
         /// os limites de caracteres especificados no Database. Antes de inserir uma unidade.
         /// </summary>
         /// <param name="entity">Objeto com os dados da unidade.</param>
-        /// <returns>ID da unuidade inserida no Database ou gera alguma exceção.</returns>
+        /// <returns>ID da unidade inserida no Database ou gera alguma exceção.</returns>
         public int Inserir(Unidade entity)
         {
             //Verifica se existem campos vazios.
