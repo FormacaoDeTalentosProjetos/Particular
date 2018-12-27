@@ -1,6 +1,5 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
@@ -15,17 +14,11 @@ namespace Negocio
         private readonly UserRepositorio _userRepositorio;
 
         /// <summary>
-        /// Declara o repositório do login.
-        /// </summary>
-        private readonly LoginRepositorio _loginRepositorio;
-
-        /// <summary>
         /// Construtor que instancia os repositórios
         /// </summary>
         public UserNegocio()
         {
             _userRepositorio = new UserRepositorio();
-            _loginRepositorio = new LoginRepositorio();
         }
 
         /// <summary>
@@ -76,17 +69,17 @@ namespace Negocio
         /// </summary>
         /// <param name="IdPapel">Usado para buscar o papel no Database.</param>
         /// <returns>Seleciona uma lista usuários ou gera uma exceção.</returns>
-        public IEnumerable<User> SelecionarPorPapel(int IdPapel)
+        public IEnumerable<User> SelecionarPorPapel(int idPapel)
         {
             //repositório do papel
             var _papelRepositorio = new PapelRepositorio();
 
-            if (_papelRepositorio == null)
+            if (_papelRepositorio.SelecionarPorId(idPapel) == null)
             {
                 throw new NaoEncontradoException();
             }
 
-            return _userRepositorio.SelecionarPorPapel(IdPapel);
+            return _userRepositorio.SelecionarPorPapel(idPapel);
         }
 
         /// <summary>
