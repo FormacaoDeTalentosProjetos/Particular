@@ -73,5 +73,6 @@
     <Build Include="dbo\User.sql" />
     <Build Include="dbo\NivelPapel.sql" />
     <Build Include="dbo\Mentor.sql" />
+    <Build Include="dbo\Mentor.sql" />
   </ItemGroup>
 </Project>

@@ -217,6 +217,66 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
+        <member name="T:Scopio.API.Controllers.MentorController">
+            <summary>
+            Tipo de dado a ser retornado e rota da API.
+            </summary>
+        </member>
+        <member name="F:Scopio.API.Controllers.MentorController._mentorNegocio">
+            <summary>
+            Declara as regras de negócio para o mentor.
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.#ctor">
+            <summary>
+            Construtor para instanciar as regras de negócio.
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.Get">
+            <summary>
+            Método que obtêm todos os mentores.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.GetId(System.Int32)">
+            <summary>
+            Método que obtêm um mentor.
+            </summary>
+            <param name="id">Usado para selecionar o mentor.</param>
+            <returns></returns>
+            <remarks>Obtêm um mentor através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.GetAtivos">
+            <summary>
+            Método que obtêm todos os mentores ativos.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.Post(Scopio.API.Model.MentorInput)">
+            <summary>
+            Método que insere um mentor.
+            </summary>
+            <param name="input">Objeto com os dados do mentor.</param>
+            <returns></returns>
+            <response code="201">Created</response>
+            <response code="400">BadRequest</response>
+            <response code="500">InternalServerError</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorController.Delete(System.Int32)">
+            <summary>
+            Método que deleta um mentor.
+            </summary>
+            <param name="id">Usado para selecionar o mentor.</param>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFound</response>
+        </member>
         <member name="T:Scopio.API.Controllers.MentorSquadController">
             <summary>
             
@@ -568,7 +628,7 @@
         </member>
         <member name="M:Scopio.API.Controllers.SquadController.GetSquadIdTribo(System.Int32)">
             <summary>
-            MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
+            MÉTODO QUE OBTÉM UMA LISTA DE "SQUADS" PELO {IdTribo}
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -866,7 +926,7 @@
         </member>
         <member name="P:Scopio.API.Model.LoginInput.IdUser">
             <summary>
-            P0ropriedade IdUser
+            Propriedade IdUser
             </summary>
         </member>
         <member name="P:Scopio.API.Model.LoginInput.Username">
@@ -912,6 +972,16 @@
         <member name="P:Scopio.API.Model.MembroTriboInput.IdTribo">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:Scopio.API.Model.MentorInput">
+             <summary>
+            Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Mentor. 
+             </summary>
+        </member>
+        <member name="P:Scopio.API.Model.MentorInput.IdUser">
+            <summary>
+            Propriedade do IdUser
             </summary>
         </member>
         <member name="T:Scopio.API.Model.MentorSquadInput">

@@ -57,7 +57,7 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
+        /// MÉTODO QUE OBTÉM UMA LISTA DE "SQUADS" PELO {IdTribo}
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
