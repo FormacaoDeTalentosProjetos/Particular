@@ -620,7 +620,7 @@
         </member>
         <member name="M:Scopio.API.Controllers.SquadController.GetSquadIdTribo(System.Int32)">
             <summary>
-            MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
+            MÉTODO QUE OBTÉM UMA LISTA DE "SQUADS" PELO {IdTribo}
             </summary>
             <param name="id"></param>
             <returns></returns>
