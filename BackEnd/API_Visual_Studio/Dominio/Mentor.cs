@@ -2,7 +2,7 @@
 {
     public class Mentor
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public int IdUser { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Dominio;
+using Dominio.dto;
 using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Repositorio
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var lista = connection.Query<Mentor>($"SELECT * " +
-                                                      $"FROM [TB_MENTOR]");
+                                                     $"FROM [TB_MENTOR]");
                 return lista;
             }
         }
@@ -33,9 +34,30 @@ namespace Repositorio
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QueryFirstOrDefault<Mentor>($"SELECT * " +
-                                                                  $"FROM [TB_MENTOR] " +
-                                                                  $"WHERE ID = {id}");
+                                                                 $"FROM [TB_MENTOR] " +
+                                                                 $"WHERE ID = {id}");
                 return obj;
+            }
+        }
+
+        /// <summary>
+        /// Método que seleciona todos os mentores do database.
+        /// </summary>
+        /// <returns>Todos os mentores do Database.</returns>
+        public IEnumerable<MentorDto> SelecionarAtivos()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var lista = connection.Query<MentorDto>($"SELECT [TB_MENTOR].[ID], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
+                                                     $"FROM [TB_MENTOR] " +
+                                                     $"INNER JOIN TB_USER ON " +
+                                                     $"[IdUser] = [TB_USER].[ID] " +
+                                                     $"INNER JOIN TB_PAPEL ON " +
+                                                     $"[IdPapel] = [TB_PAPEL].[ID] " +
+                                                     $"INNER JOIN TB_NVPAPEL ON " +
+                                                     $"[IdNivel] = [TB_NVPAPEL].[ID] " +
+                                                     $"WHERE [TB_USER].[Status] = 1");
+                return lista;
             }
         }
 
@@ -50,8 +72,7 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR] " +
-                                                      $"(IdUser) " +
-                                                      $"VALUES ({entity.IdUser}) " +
+                                                      $"([IdUser]) VALUES ({entity.IdUser}) " +
                                                       $"SET @ID = SCOPE_IDENTITY(); " +
                                                       $"SELECT @ID");
                 return obj;

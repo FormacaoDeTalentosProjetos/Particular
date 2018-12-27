@@ -250,6 +250,14 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
+        <member name="M:Scopio.API.Controllers.MentorController.GetAtivos">
+            <summary>
+            Método que obtêm todos os mentores ativos.
+            </summary>
+            <returns></returns>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
         <member name="M:Scopio.API.Controllers.MentorController.Post(Scopio.API.Model.MentorInput)">
             <summary>
             Método que insere um mentor.

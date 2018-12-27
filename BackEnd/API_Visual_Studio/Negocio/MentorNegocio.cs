@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.dto;
 using Dominio.Excecoes;
 using Repositorio;
 using System.Collections.Generic;
@@ -46,6 +47,15 @@ namespace Negocio
         }
 
         /// <summary>
+        /// Seleciona todas os mentores ativos do Database.
+        /// </summary>
+        /// <returns>Lista de mentores.</returns>
+        public IEnumerable<MentorDto> SelecionarAtivos()
+        {
+            return _mentorRepositorio.SelecionarAtivos();
+        }
+
+        /// <summary>
         /// Verifica se o campo IdUser é válido.
         /// </summary>
         /// <param name="entity">Objeto com os dados do mentor.</param>
@@ -70,7 +80,7 @@ namespace Negocio
                 throw new NaoEncontradoException($"Não foi encontrado nenhum mentor com este ID: { id }");
             }
 
-            _mentorRepositorio.Deletar(obj.Id);
+            _mentorRepositorio.Deletar(obj.ID);
         }
 
         public void Validacao(Mentor entity)

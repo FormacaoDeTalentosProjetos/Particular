@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Dominio;
+using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
 using Scopio.API.Model;
@@ -64,6 +65,21 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que obtêm todos os mentores ativos.
+        /// </summary>
+        /// <returns></returns>
+        /// <response code="200">OK</response>
+        /// <response code="404">NotFoud</response>
+        [HttpGet]
+        [Route("MentoresAtivos")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorDto), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetAtivos()
+        {
+            return Ok(_mentorNegocio.SelecionarAtivos());
+        }
+
+        /// <summary>
         /// Método que insere um mentor.
         /// </summary>
         /// <param name="input">Objeto com os dados do mentor.</param>
@@ -83,7 +99,7 @@ namespace Scopio.API.Controllers
             };
 
             var idMentor = _mentorNegocio.Inserir(objMentor);
-            objMentor.Id = idMentor;
+            objMentor.ID = idMentor;
 
             return CreatedAtRoute(routeName: "MentorGetId", routeValues: new { id = idMentor }, value: objMentor);
         }
