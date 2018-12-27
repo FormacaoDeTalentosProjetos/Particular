@@ -101,6 +101,20 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Squad> SquadSemTribo()
+        {
+            var lista = _squadRepositorio.SquadSemTribo();
+
+            if (lista == null)
+                throw new NaoEncontradoException();
+
+            return lista;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="id"></param>
         /// <param name="entity"></param>
         /// <returns></returns>

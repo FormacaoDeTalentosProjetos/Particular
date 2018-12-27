@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Dominio;
+using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
 using Scopio.API.Model;
@@ -59,6 +60,23 @@ namespace Scopio.API.Controllers
         public IActionResult GetId(int id)
         {
             return Ok(_membroNegocio.SelecionarPorId(id));
+        }
+
+        /// <summary>
+        /// Método que retorna lista de membros de uma squad.
+        /// </summary>
+        /// <param name="id">Usado para selecionar a vinculação.</param>
+        /// <returns></returns>
+        /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+        /// <response code="200">OK</response>
+        /// <response code="404">NotFoud</response>
+        [HttpGet]
+        [Route("IdSquad/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MembroSquadDto), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetIdSquad(int id)
+        {
+            return Ok(_membroNegocio.SelecionarPorIdSquad(id));
         }
 
         /// <summary>

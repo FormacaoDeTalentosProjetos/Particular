@@ -55,6 +55,20 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Tribo> SelecionarTribosAtivas()
+        {
+            var lista = _triboRepositorio.SelecionarTribosAtivas();
+
+            if (lista == null)
+                throw new NaoEncontradoException();
+
+            return lista;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="desc"></param>
         /// <returns></returns>
         public Tribo SelecionarPorDescricao(string desc)

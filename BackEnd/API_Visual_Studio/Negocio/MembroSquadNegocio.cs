@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.dto;
 using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Negocio.Validacoes;
@@ -39,6 +40,21 @@ namespace Negocio
         public MembroSquad SelecionarPorId(int id)
         {
             var obj = _membroSquadRepositorio.SelecionarPorId(id);
+
+            if (obj == null)
+                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
+
+            return obj;
+        }
+
+        /// <summary>
+        /// Seleciona um membro do Database.
+        /// </summary>
+        /// <param name="id">Usado para buscar um membro no Database.</param>
+        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
+        public IEnumerable<MembroSquadDto> SelecionarPorIdSquad(int id)
+        {
+            var obj = _membroSquadRepositorio.SelecionarPorIdSquad(id);
 
             if (obj == null)
                 throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
@@ -105,6 +121,10 @@ namespace Negocio
             _membroSquadRepositorio.Deletar(obj.Id);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity"></param>
         public void ValidacoesMembroSquad(MembroSquad entity)
         {
             //Verifica se existem campos vazios.
@@ -128,7 +148,6 @@ namespace Negocio
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +
                                                  $"com o ID: {entity.IdUser}");
             }
-
         }
     }
 }
