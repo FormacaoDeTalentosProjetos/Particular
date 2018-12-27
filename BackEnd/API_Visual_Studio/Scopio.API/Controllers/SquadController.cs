@@ -120,6 +120,19 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE OBTÉM UMA LISTA DAS "SQUADS" SEM TRIBO
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("SquadSemTribo")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetSquadSemTribo()
+        {
+            return Ok(_squadNegocio.SquadSemTribo());
+        }
+
+        /// <summary>
         /// MÉTODO QUE RETIRA ASSOCIÇÃO COM "TRIBO" POR {ID}
         /// </summary>
         /// <param name="id"></param>
