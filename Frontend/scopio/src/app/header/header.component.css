@@ -1,0 +1,17 @@
+.h-responsive {
+    width: 100%;
+    height: 10vh;
+}
+
+header img {
+    width: 8vh;
+    height: 8vh;
+}
+
+h1 {
+    font-family: "MedievalSharp";
+}
+
+.brand   {
+    font-size: 6vh;
+}
