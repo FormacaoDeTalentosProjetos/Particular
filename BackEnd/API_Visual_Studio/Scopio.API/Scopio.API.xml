@@ -917,7 +917,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorSquadInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorSquadInput.IdMentor">
             <summary>
             
             </summary>
@@ -932,7 +932,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorTriboInput.IdMentor">
             <summary>
             
             </summary>

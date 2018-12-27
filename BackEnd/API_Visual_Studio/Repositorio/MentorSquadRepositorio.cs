@@ -54,6 +54,8 @@ namespace Repositorio
             {
                 var obj = connection.Query<MentorSquadDto>($"SELECT [TB_MENTOR_SQUAD].[ID], [IdSquad], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
                                                            $"FROM [TB_MENTOR_SQUAD] " +
+                                                           $"INNER JOIN TB_MENTOR ON " +
+                                                           $"IdMentor = [TB_USER].[ID] " +
                                                            $"INNER JOIN TB_USER ON " +
                                                            $"[IdUser] = [TB_USER].[ID] " +
                                                            $"INNER JOIN TB_PAPEL ON " +
@@ -76,8 +78,8 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_SQUAD] " +
-                                                      $"(IdSquad, IdUser) " +
-                                                      $"VALUES ({entity.IdSquad}, {entity.IdUser})" +
+                                                      $"(IdSquad, IdMentor) " +
+                                                      $"VALUES ({entity.IdSquad}, {entity.IdMentor})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
@@ -94,7 +96,7 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_MENTOR_SQUAD] " +
                                    $"SET IdSquad = {entity.IdSquad}, " +
-                                   $"IdUser = {entity.IdUser} " +
+                                   $"IdMentor = {entity.IdMentor} " +
                                    $"WHERE ID = {entity.ID}");
             }
         }
