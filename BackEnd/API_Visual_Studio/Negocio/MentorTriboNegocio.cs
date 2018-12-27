@@ -56,15 +56,11 @@ namespace Negocio
         /// <summary>
         /// Seleciona um membro do Database.
         /// </summary>
-        /// <param name="id">Usado para buscar um membro no Database.</param>
         /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarPorIdTribo(int id)
+        public IEnumerable<MentorTriboDto> SelecionarTribos()
         {
-            var obj = _mentorTriboRepositorio.SelecionarPorIdTribo(id);
-
-            if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma tribo com este ID: { id }");
-
+            var obj = _mentorTriboRepositorio.SelecionarTribos();
+            
             return obj;
         }
 

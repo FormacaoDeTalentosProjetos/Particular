@@ -60,18 +60,17 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Método que retorna lista de membros de uma Tribo.
         /// </summary>
-        /// <param name="id">Usado para selecionar a vinculação.</param>
         /// <returns></returns>
         /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("IdTribo/{id}")]
+        [Route("Tribos")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorTriboDto), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetIdSquad(int id)
+        public IActionResult GetIdSquad()
         {
-            return Ok(_mentorTriboNegocio.SelecionarPorIdTribo(id));
+            return Ok(_mentorTriboNegocio.SelecionarTribos());
         }
 
         /// <summary>

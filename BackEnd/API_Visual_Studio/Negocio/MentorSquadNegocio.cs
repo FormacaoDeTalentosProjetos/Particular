@@ -56,14 +56,10 @@ namespace Negocio
         /// <summary>
         /// Seleciona um membro do Database.
         /// </summary>
-        /// <param name="id">Usado para buscar um membro no Database.</param>
         /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorSquadDto> SelecionarPorIdSquad(int id)
+        public IEnumerable<MentorSquadDto> SelecionarSquads()
         {
-            var obj = _mentorSquadRepositorio.SelecionarPorIdSquad(id);
-
-            if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma squad com este ID: { id }");
+            var obj = _mentorSquadRepositorio.SelecionarSquads();
 
             return obj;
         }

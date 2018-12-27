@@ -48,7 +48,7 @@ namespace Repositorio
         /// </summary>
         /// <param name="idSquad">IdUser a ser buscado no Database.</param>
         /// <returns>Objeto com os dados do membro selecionado.</returns>
-        public IEnumerable<MentorSquadDto> SelecionarPorIdSquad(int idSquad)
+        public IEnumerable<MentorSquadDto> SelecionarSquads()
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -60,7 +60,7 @@ namespace Repositorio
                                                            $"[IdPapel] = [TB_PAPEL].[ID] " +
                                                            $"INNER JOIN TB_NVPAPEL ON " +
                                                            $"[IdNivel] = [TB_NVPAPEL].[ID] " +
-                                                           $"WHERE IdSquad = {idSquad} AND [TB_USER].[Status] = 1");
+                                                           $"WHERE [TB_USER].[Status] = 1");
                 return obj;
             }
         }

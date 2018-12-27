@@ -252,11 +252,10 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad(System.Int32)">
+        <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad">
             <summary>
             Método que retorna lista de mentores de uma squad.
             </summary>
-            <param name="id">Usado para selecionar a vinculação.</param>
             <returns></returns>
             <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
             <response code="200">OK</response>
@@ -312,11 +311,10 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad(System.Int32)">
+        <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad">
             <summary>
             Método que retorna lista de membros de uma Tribo.
             </summary>
-            <param name="id">Usado para selecionar a vinculação.</param>
             <returns></returns>
             <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
             <response code="200">OK</response>

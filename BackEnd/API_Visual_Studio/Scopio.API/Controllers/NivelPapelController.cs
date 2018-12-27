@@ -54,7 +54,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "NvPapelGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(NivelPapel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -101,7 +101,7 @@ namespace Scopio.API.Controllers
 
             var idNivelPapel = _nivelPapelNegocio.Inserir(objNivelPapel);
             objNivelPapel.ID = idNivelPapel;
-            return CreatedAtRoute(nameof(GetId), new { id = idNivelPapel }, objNivelPapel);
+            return CreatedAtRoute(routeName: "NvPapelGetId", routeValues: new { id = idNivelPapel }, value: objNivelPapel);
         }
 
         /// <summary>

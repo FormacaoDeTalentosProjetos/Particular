@@ -46,9 +46,8 @@ namespace Repositorio
         /// <summary>
         /// Método que seleciona membros de uma squad.
         /// </summary>
-        /// <param name="idTribo">IdUser a ser buscado no Database.</param>
         /// <returns>Objeto com os dados do membro selecionado.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarPorIdTribo(int idTribo)
+        public IEnumerable<MentorTriboDto> SelecionarTribos()
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -60,7 +59,7 @@ namespace Repositorio
                                                            $"[IdPapel] = [TB_PAPEL].[ID] " +
                                                            $"INNER JOIN TB_NVPAPEL ON " +
                                                            $"[IdNivel] = [TB_NVPAPEL].[ID] " +
-                                                           $"WHERE [IdTribo] = {idTribo} AND [TB_USER].[Status] = 1");
+                                                           $"WHERE [TB_USER].[Status] = 1");
                 return obj;
             }
         }
