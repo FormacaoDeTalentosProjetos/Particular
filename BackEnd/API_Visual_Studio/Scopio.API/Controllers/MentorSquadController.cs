@@ -87,7 +87,7 @@ namespace Scopio.API.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdUser = input.IdUser
+                IdMentor = input.IdMentor
             };
 
             var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
@@ -111,7 +111,7 @@ namespace Scopio.API.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdUser = input.IdUser
+                IdMentor = input.IdMentor
             };
 
             var obj = _mentorSquadNegocio.Alterar(id, objMentorSquad);

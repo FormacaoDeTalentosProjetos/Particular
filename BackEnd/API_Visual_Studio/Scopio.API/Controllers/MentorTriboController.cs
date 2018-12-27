@@ -87,7 +87,7 @@ namespace Scopio.API.Controllers
             var objMentorTribo = new MentorTribo()
             {
                 IdTribo = input.IdTribo,
-                IdUser = input.IdUser
+                IdMentor = input.IdMentor
             };
 
             var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
@@ -111,7 +111,7 @@ namespace Scopio.API.Controllers
             var objMentorTribo = new MentorTribo()
             {
                 IdTribo = input.IdTribo,
-                IdUser = input.IdUser
+                IdMentor = input.IdMentor
             };
 
             var obj = _mentorTriboNegocio.Alterar(id, objMentorTribo);

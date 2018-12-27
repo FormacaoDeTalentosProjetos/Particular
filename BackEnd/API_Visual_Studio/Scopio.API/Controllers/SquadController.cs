@@ -59,6 +59,20 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
         /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("IdTribo/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetSquadIdTribo(int id)
+        {
+            return Ok(_squadNegocio.SelecionarPorIdTribo(id));
+        }
+
+        /// <summary>
+        /// MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
+        /// </summary>
         /// <param name="nome"></param>
         /// <returns></returns>
         [HttpGet]

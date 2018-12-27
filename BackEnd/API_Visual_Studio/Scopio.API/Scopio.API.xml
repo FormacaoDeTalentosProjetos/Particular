@@ -618,6 +618,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Scopio.API.Controllers.SquadController.GetSquadIdTribo(System.Int32)">
+            <summary>
+            MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Scopio.API.Controllers.SquadController.GetSquad(System.String)">
             <summary>
             MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
@@ -979,7 +986,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorSquadInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorSquadInput.IdMentor">
             <summary>
             
             </summary>
@@ -994,7 +1001,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorTriboInput.IdMentor">
             <summary>
             
             </summary>
