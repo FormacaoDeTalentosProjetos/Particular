@@ -13849,7 +13849,7 @@
       ]
     },
     "System.ValueTuple/4.4.0": {
-      "sha512": "hBl0/yPqtMnwrsqCYSxYr4Abvo9hSVYmf+55EniEMyCEPJRM1VGr8o+kHeHJdEqgr6wrQMhZ7HowYmejruXStg==",
+      "sha512": "6FvjECwwsvwtdnm2uD91MlFEgId6C2SWsdZk23gFpynHQ9x5ruqjsfEadb0VNzpkEHDQ6cq31CXUv3ouT09EHA==",
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
@@ -14271,7 +14271,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gschiavo\\.nuget\\packages\\": {},
+    "C:\\Users\\cacaciano\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -14280,14 +14280,14 @@
       "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "projectName": "Scopio.API",
       "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
-      "packagesPath": "C:\\Users\\gschiavo\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
       "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gschiavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cacaciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

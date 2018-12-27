@@ -54,7 +54,7 @@ namespace Repositorio
                 var obj = connection.Query<MentorTriboDto>($"SELECT [TB_MENTOR_TRIBO].[ID], [IdTribo], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
                                                            $"FROM [TB_MENTOR_TRIBO] " +
                                                            $"INNER JOIN TB_MENTOR ON " +
-                                                           $"IdMentor = [TB_USER].[ID] " +
+                                                           $"IdMentor = [TB_MENTOR].[ID] " +
                                                            $"INNER JOIN TB_USER ON " +
                                                            $"[IdUser] = [TB_USER].[ID] " +
                                                            $"INNER JOIN TB_PAPEL ON " +
@@ -116,3 +116,4 @@ namespace Repositorio
         }
     }
 }
+
