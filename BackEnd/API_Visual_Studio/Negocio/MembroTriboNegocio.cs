@@ -57,7 +57,7 @@ namespace Negocio
             var obj = _membroTriboRepositorio.SelecionarPorIdTribo(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma tribo com este ID: { id }");
 
             return obj;
         }

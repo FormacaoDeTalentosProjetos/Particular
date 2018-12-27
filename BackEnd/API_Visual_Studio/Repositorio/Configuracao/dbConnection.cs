@@ -2,7 +2,11 @@
 {
     public static class DbConnection
     {
+<<<<<<< HEAD
         private  static string DataSource = "WKSJUN000351"; //DESKTOP-CGEHIFJ\\SQLEXPRESS   //WKSJUN000105
+=======
+        private static string DataSource = "WKSJUN000105"; //"WKSJUN000105" //WKSJUN000356 //DESKTOP-CGEHIFJ\\SQLEXPRESS
+>>>>>>> FrontEnd
         private static string Catalog = "SCOPIO";
         private static string User = "sa";
         private static string code = "123Aa321";
