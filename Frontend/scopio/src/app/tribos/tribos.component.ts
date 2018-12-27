@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TriboService } from '../tribo.service';
+import { TriboService } from '../services/tribo.service';
 import { Route, Router } from '@angular/router';
 import { Navigation } from 'selenium-webdriver';
 
@@ -27,8 +27,8 @@ export class TribosComponent implements OnInit {
     this.triboService.listar().subscribe(dados => this.tribos = dados);
   } 
 
-  acessar(tribo){
-    this.router.navigate(['squads-from-tribe'])
-  }
+//  acessar(tribo){
+//    this.router.navigate(['squads-from-tribe'])
+//  }
 
 }

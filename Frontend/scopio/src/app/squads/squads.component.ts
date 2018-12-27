@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SquadService } from '../squad.service';
+import { SquadService } from '../services/squad.service';
 
 @Component({
   selector: 'app-squads',

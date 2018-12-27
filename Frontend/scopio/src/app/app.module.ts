@@ -9,11 +9,13 @@ import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TribosComponent } from './tribos/tribos.component';
-import { TriboService } from './tribo.service';
+import { TriboService } from './services/tribo.service';
 import { SquadsComponent } from './squads/squads.component';
-import { SquadService } from './squad.service';
-import { SquadsFromTribeComponent } from './squads-from-tribe/squads-from-tribe.component';
-import { SquadFromTribeService } from './squad-from-tribe.service';
+import { SquadService } from './services/squad.service';
+import { MentorsComponent } from './mentors/mentors.component';
+import { MentorService } from './services/mentor.service';
+import { MembersComponent } from './members/members.component';
+import { MemberService } from './services/member.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { SquadFromTribeService } from './squad-from-tribe.service';
     FooterComponent,
     TribosComponent,
     SquadsComponent,
-    SquadsFromTribeComponent
+    MentorsComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { SquadFromTribeService } from './squad-from-tribe.service';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [TriboService, SquadService, SquadFromTribeService],
+  providers: [TriboService, SquadService, MentorService, MemberService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,14 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'
 import { Routes, RouterModule } from '@angular/router';
 
 import { MapComponent } from './map/map.component';
-import { SquadsFromTribeComponent } from './squads-from-tribe/squads-from-tribe.component';
+import { TribosComponent } from './tribos/tribos.component';
+import { SquadsComponent } from './squads/squads.component';
+import { MentorsComponent } from './mentors/mentors.component';
+import { MembersComponent } from './members/members.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: MapComponent
-  },
-  {
-    path: 'squads-from-tribe',
-    component: SquadsFromTribeComponent
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
