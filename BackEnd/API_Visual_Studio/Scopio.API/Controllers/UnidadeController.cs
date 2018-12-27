@@ -54,7 +54,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "UnidadeGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Unidade), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -102,7 +102,7 @@ namespace Scopio.API.Controllers
 
             var idUnidade = _unidadeNegocio.Inserir(objUnidade);
             objUnidade.Id = idUnidade;
-            return CreatedAtRoute(nameof(GetId), new { id = idUnidade }, objUnidade);
+            return CreatedAtRoute(routeName: "UnidadeGetId", routeValues: new { id = idUnidade }, value: objUnidade);
         }
 
         /// <summary>

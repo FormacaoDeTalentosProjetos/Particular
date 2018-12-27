@@ -32,13 +32,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.LoginController.GetLoginUser(System.String)">
-            <summary>
-            MÉTODO QUE OBTÉM UM "LOGIN" POR {USERNAME}
-            </summary>
-            <param name="unsername"></param>
-            <returns></returns>
-        </member>
         <member name="M:Scopio.API.Controllers.LoginController.GetLogin(System.String,System.String)">
             <summary>
             MÉTODO QUE VALIDA O LOGIN POR {USERNAME}) E {SENHA}
@@ -252,6 +245,15 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad">
+            <summary>
+            Método que retorna lista de mentores de uma squad.
+            </summary>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
         <member name="M:Scopio.API.Controllers.MentorSquadController.Post(Scopio.API.Model.MentorSquadInput)">
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
@@ -301,6 +303,15 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad">
+            <summary>
+            Método que retorna lista de membros de uma Tribo.
+            </summary>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
         </member>
         <member name="M:Scopio.API.Controllers.MentorTriboController.Post(Scopio.API.Model.MentorTriboInput)">
             <summary>
@@ -551,6 +562,13 @@
         <member name="M:Scopio.API.Controllers.SquadController.GetId(System.Int32)">
             <summary>
             MÉTODO QUE OBTÉM UMA "SQUAD" POR {ID}
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.SquadController.GetSquadIdTribo(System.Int32)">
+            <summary>
+            MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -906,7 +924,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorSquadInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorSquadInput.IdMentor">
             <summary>
             
             </summary>
@@ -921,7 +939,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
+        <member name="P:Scopio.API.Model.MentorTriboInput.IdMentor">
             <summary>
             
             </summary>
@@ -983,7 +1001,7 @@
         </member>
         <member name="P:Scopio.API.Model.SquadInput.IdTribo">
             <summary>
-            
+            Variavél que recebe o IdTribo, permitindo que ele seja null
             </summary>
         </member>
         <member name="P:Scopio.API.Model.SquadInput.Logo">

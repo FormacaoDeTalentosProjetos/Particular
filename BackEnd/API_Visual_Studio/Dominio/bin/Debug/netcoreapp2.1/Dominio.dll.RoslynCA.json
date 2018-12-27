@@ -18,7 +18,44 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add a 'protected' constructor 'ConflitoException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 18,
@@ -31,7 +68,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -42,7 +79,7 @@
             },
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
                 "region": {
                   "startLine": 5,
                   "startColumn": 12,
@@ -67,44 +104,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 18,
-                  "endLine": 8,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 12,
-                  "endLine": 8,
-                  "endColumn": 17
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Add a 'protected' constructor 'ConflitoException(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
-          "ruleId": "S3925",
-          "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/NaoEncontradoException.cs",
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/NaoEncontradoException.cs",
                 "region": {
                   "startLine": 8,
                   "startColumn": 18,
@@ -117,7 +117,7 @@
           "relatedLocations": [
             {
               "physicalLocation": {
-                "uri": "file:///C:/Users/mamaral/Documents/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/NaoEncontradoException.cs",
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/NaoEncontradoException.cs",
                 "region": {
                   "startLine": 8,
                   "startColumn": 12,
