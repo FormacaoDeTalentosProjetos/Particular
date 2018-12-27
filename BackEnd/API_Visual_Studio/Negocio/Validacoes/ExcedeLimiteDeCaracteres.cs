@@ -55,7 +55,7 @@ namespace Negocio.Validacoes
         /// </returns>
         public static bool Verificar(NivelPapel entity)
         {
-            if (entity.Descricao.Length > 15)
+            if (entity.Desc.Length > 15)
             {
                 return true;
             }

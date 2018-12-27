@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.dto;
 using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Negocio.Validacoes;
@@ -39,6 +40,21 @@ namespace Negocio
         public MembroTribo SelecionarPorId(int id)
         {
             var obj = _membroTriboRepositorio.SelecionarPorId(id);
+
+            if (obj == null)
+                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
+
+            return obj;
+        }
+
+        /// <summary>
+        /// Seleciona um membro do Database.
+        /// </summary>
+        /// <param name="id">Usado para buscar um membro no Database.</param>
+        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
+        public IEnumerable<MembroTriboDto> SelecionarPorIdTribo(int id)
+        {
+            var obj = _membroTriboRepositorio.SelecionarPorIdTribo(id);
 
             if (obj == null)
                 throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");

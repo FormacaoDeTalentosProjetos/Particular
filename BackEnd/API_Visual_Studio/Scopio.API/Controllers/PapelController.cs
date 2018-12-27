@@ -84,7 +84,6 @@ namespace Scopio.API.Controllers
             var objPapel = new Papel()
             {
                 Desc = Input.Desc,
-                Sigla = Input.Sigla,
                 Nivel = Input.Nivel
             };
 
@@ -109,7 +108,6 @@ namespace Scopio.API.Controllers
             var objPapel = new Papel()
             {
                 Desc = input.Desc,
-                Sigla = input.Sigla,
                 Nivel = input.Nivel
             };
 

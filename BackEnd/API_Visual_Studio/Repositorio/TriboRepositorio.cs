@@ -43,6 +43,21 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// PESQUISA TRIBOS ATIVAS
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Tribo> SelecionarTribosAtivas()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.Query<Tribo>($"SELECT * " +
+                                                  $"FROM [TB_TRIBO] " +
+                                                  $"WHERE [Status] = 1");
+                return obj;
+            }
+        }
+
+        /// <summary>
         /// PESQUISA TRIBO POR NOME
         /// </summary>
         /// <param name="desc"></param>
