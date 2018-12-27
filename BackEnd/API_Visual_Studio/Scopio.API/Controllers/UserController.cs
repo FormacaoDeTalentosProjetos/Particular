@@ -40,7 +40,7 @@ namespace Scopio.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult Get()
         {
-            return Ok(_userNegocio.SelecionarTodos());
+            return Ok(_userNegocio.Selecionar());
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace Scopio.API.Controllers
         {
             var objUser = new User()
             {
-                Username = input.Username,
+                UserName = input.Username,
                 Senha = input.Senha,
                 IdPapel = input.IdPapel,
                 IdNivel = input.IdNivel,
