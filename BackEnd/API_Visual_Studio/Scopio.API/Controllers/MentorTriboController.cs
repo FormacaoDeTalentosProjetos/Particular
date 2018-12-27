@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Dominio;
+using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
 using Scopio.API.Model;
@@ -48,12 +49,29 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "MentorTriboGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorTribo), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
         {
             return Ok(_mentorTriboNegocio.SelecionarPorId(id));
+        }
+
+        /// <summary>
+        /// Método que retorna lista de membros de uma Tribo.
+        /// </summary>
+        /// <param name="id">Usado para selecionar a vinculação.</param>
+        /// <returns></returns>
+        /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+        /// <response code="200">OK</response>
+        /// <response code="404">NotFoud</response>
+        [HttpGet]
+        [Route("IdTribo/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorTriboDto), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetIdSquad(int id)
+        {
+            return Ok(_mentorTriboNegocio.SelecionarPorIdTribo(id));
         }
 
         /// <summary>
@@ -75,7 +93,7 @@ namespace Scopio.API.Controllers
 
             var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
             objMentorTribo.ID = idMentorTribo;
-            return CreatedAtRoute(nameof(GetId), new { id = idMentorTribo }, objMentorTribo);
+            return CreatedAtRoute(routeName: "MentorTriboGetId", routeValues: new { id = idMentorTribo }, value: objMentorTribo);
         }
 
         /// <summary>

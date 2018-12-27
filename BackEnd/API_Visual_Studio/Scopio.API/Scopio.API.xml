@@ -252,6 +252,16 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad(System.Int32)">
+            <summary>
+            Método que retorna lista de mentores de uma squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
         <member name="M:Scopio.API.Controllers.MentorSquadController.Post(Scopio.API.Model.MentorSquadInput)">
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
@@ -301,6 +311,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad(System.Int32)">
+            <summary>
+            Método que retorna lista de membros de uma Tribo.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
         </member>
         <member name="M:Scopio.API.Controllers.MentorTriboController.Post(Scopio.API.Model.MentorTriboInput)">
             <summary>

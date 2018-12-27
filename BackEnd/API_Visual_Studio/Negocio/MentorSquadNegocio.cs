@@ -1,4 +1,5 @@
 ﻿using Dominio;
+using Dominio.dto;
 using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Repositorio;
@@ -48,6 +49,21 @@ namespace Negocio
 
             if (obj == null)
                 throw new NaoEncontradoException();
+
+            return obj;
+        }
+
+        /// <summary>
+        /// Seleciona um membro do Database.
+        /// </summary>
+        /// <param name="id">Usado para buscar um membro no Database.</param>
+        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
+        public IEnumerable<MentorSquadDto> SelecionarPorIdSquad(int id)
+        {
+            var obj = _mentorSquadRepositorio.SelecionarPorIdSquad(id);
+
+            if (obj == null)
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma squad com este ID: { id }");
 
             return obj;
         }
