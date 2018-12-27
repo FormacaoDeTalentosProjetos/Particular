@@ -21,5 +21,4 @@ export class SquadsComponent implements OnInit {
   listar () {
     this.squadService.listar().subscribe(dados => this.squads = dados);
   }
-
 }

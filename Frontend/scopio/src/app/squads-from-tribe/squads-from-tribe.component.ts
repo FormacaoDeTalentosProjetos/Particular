@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SquadFromTribeService } from '../squad-from-tribe.service';
 
 @Component({
   selector: 'app-squads-from-tribe',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SquadsFromTribeComponent implements OnInit {
 
-  constructor() { }
+  squadsfromtribe : Array<any>;
+
+  public squadFromTribeImageUrl = "././assets/images/brasao.png"
+
+  constructor(private squadFromTribeService) { }
 
   ngOnInit() {
+    this.listar();
   }
 
+  listar () {
+    this.squadFromTribeService.listar().subscribe(dados => this.squadsfromtribe = dados);
+  }
 }

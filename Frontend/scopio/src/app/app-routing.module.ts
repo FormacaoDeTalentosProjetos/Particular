@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TribosComponent } from './tribos/tribos.component';
+import { MapComponent } from './map/map.component';
 import { SquadsFromTribeComponent } from './squads-from-tribe/squads-from-tribe.component';
 
 const routes: Routes = [
   {
-    path: 'http://localhost:5000/api/Tribo/',
-    component: TribosComponent
+    path: '',
+    component: MapComponent
   },
   {
-    path: '',
+    path: 'squads-from-tribe',
     component: SquadsFromTribeComponent
   }
 ];
