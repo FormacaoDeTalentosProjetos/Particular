@@ -12,10 +12,6 @@
         /// <summary>
         /// 
         /// </summary>
-        public string Sigla { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
         public int Nivel { get; set; }
     }
 }

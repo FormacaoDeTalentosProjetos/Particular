@@ -95,12 +95,12 @@ namespace Scopio.API.Controllers
         {
             var objNivelPapel = new NivelPapel()
             {
-                Descricao = input.Descricao,
+                Desc = input.Desc,
                 Nivel = input.Nivel
             };
 
             var idNivelPapel = _nivelPapelNegocio.Inserir(objNivelPapel);
-            objNivelPapel.Id = idNivelPapel;
+            objNivelPapel.ID = idNivelPapel;
             return CreatedAtRoute(nameof(GetId), new { id = idNivelPapel }, objNivelPapel);
         }
 
@@ -122,7 +122,7 @@ namespace Scopio.API.Controllers
         {
             var objNivelPapel = new NivelPapel()
             {
-                Descricao = input.Descricao,
+                Desc = input.Desc,
                 Nivel = input.Nivel
             };
 

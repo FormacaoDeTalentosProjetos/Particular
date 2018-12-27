@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -8,7 +7,7 @@
     <Name>Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{b5187ce0-9e06-48a1-9085-b9ccc2df5750}</ProjectGuid>
+    <ProjectGuid>{68041a88-8392-4a40-a04e-d865f92224a1}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -58,96 +57,20 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="DBO" />
+    <Folder Include="dbo" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="DBO\Login.sql" />
-    <Build Include="DBO\User.sql" />
-    <Build Include="DBO\Papel.sql" />
-    <Build Include="DBO\Pais.sql" />
-    <Build Include="DBO\Unidade.sql" />
-    <Build Include="DBO\Tribo.sql" />
-    <Build Include="DBO\Squad.sql" />
-    <Build Include="DBO\MembroSquad.sql" />
-    <Build Include="DBO\MentorTribo.sql" />
-    <Build Include="DBO\MentorSquad.sql" />
-    <Build Include="DBO\MembroTribo.sql" />
+    <Build Include="dbo\Login.sql" />
+    <Build Include="dbo\MembroSquad.sql" />
+    <Build Include="dbo\MembroTribo.sql" />
+    <Build Include="dbo\MentorSquad.sql" />
+    <Build Include="dbo\MentorTribo.sql" />
+    <Build Include="dbo\Pais.sql" />
+    <Build Include="dbo\Papel.sql" />
+    <Build Include="dbo\Squad.sql" />
+    <Build Include="dbo\Tribo.sql" />
+    <Build Include="dbo\Unidade.sql" />
+    <Build Include="dbo\User.sql" />
+    <Build Include="dbo\NivelPapel.sql" />
   </ItemGroup>
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Database</Name>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{b5187ce0-9e06-48a1-9085-b9ccc2df5750}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
-    <OutputType>Database</OutputType>
-    <RootPath>
-    </RootPath>
-    <RootNamespace>Database</RootNamespace>
-    <AssemblyName>Database</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
-    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
-    <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetLanguage>CS</TargetLanguage>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <SqlServerVerification>False</SqlServerVerification>
-    <IncludeCompositeObjects>True</IncludeCompositeObjects>
-    <TargetDatabaseSet>True</TargetDatabaseSet>
-    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
-    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
-    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
-  </PropertyGroup>
-  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
-  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
-  <ItemGroup>
-    <Folder Include="Properties" />
-    <Folder Include="DBO" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="DBO\Login.sql" />
-    <Build Include="DBO\User.sql" />
-    <Build Include="DBO\Papel.sql" />
-    <Build Include="DBO\Pais.sql" />
-    <Build Include="DBO\Unidade.sql" />
-    <Build Include="DBO\Tribo.sql" />
-    <Build Include="DBO\Squad.sql" />
-    <Build Include="DBO\MembroSquad.sql" />
-    <Build Include="DBO\MentorTribo.sql" />
-    <Build Include="DBO\MentorSquad.sql" />
-    <Build Include="DBO\MembroTribo.sql" />
-  </ItemGroup>
->>>>>>> Stashed changes
 </Project>

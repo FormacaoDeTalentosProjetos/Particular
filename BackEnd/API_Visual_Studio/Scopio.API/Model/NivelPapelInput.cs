@@ -8,7 +8,7 @@
         /// <summary>
         /// Atributo Descrição.
         /// </summary>
-        public string Descricao { get; set; }
+        public string Desc { get; set; }
         
         /// <summary>
         /// Atributo Nível.

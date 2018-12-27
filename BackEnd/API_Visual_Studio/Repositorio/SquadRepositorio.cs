@@ -14,7 +14,6 @@ namespace Repositorio
         /// <summary>
         /// PESQUISA SQUAD
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
         public IEnumerable<Squad> Selecionar()
         {
@@ -92,6 +91,21 @@ namespace Repositorio
                                    $"Logo = '{entity.Logo}', " +
                                    $"Nome = '{entity.Nome}' " +
                                    $"WHERE ID = {entity.ID}");
+            }
+        }
+
+        /// <summary>
+        /// Pesquisa Squads sem Associação de Tribo
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Squad> SquadSemTribo()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var lista = connection.Query<Squad>($"SELECT * " +
+                                                    $"FROM [TB_SQUAD] " +
+                                                    $"WHERE [IdTribo] IS NULL AND [Status] = 1");
+                return lista;
             }
         }
 

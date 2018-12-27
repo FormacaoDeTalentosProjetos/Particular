@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Dominio;
+using Dominio.dto;
 using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System;
@@ -53,6 +54,28 @@ namespace Repositorio
                 var obj = connection.QueryFirstOrDefault<MembroTribo>($"SELECT * " +
                                                                       $"FROM [TB_MEMBRO_TRIBO] " +
                                                                       $"WHERE IdUser = {idUser}");
+                return obj;
+            }
+        }
+
+        /// <summary>
+        /// Método que seleciona membros de uma squad.
+        /// </summary>
+        /// <param name="idTribo">IdUser a ser buscado no Database.</param>
+        /// <returns>Objeto com os dados do membro selecionado.</returns>
+        public IEnumerable<MembroTriboDto> SelecionarPorIdTribo(int idTribo)
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.Query<MembroTriboDto>($"SELECT [TB_MEMBRO_TRIBO].[ID], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
+                                                           $"FROM [TB_MEMBRO_TRIBO] " +
+                                                           $"INNER JOIN TB_USER ON " +
+                                                           $"[IdUser] = [TB_USER].[ID] " +
+                                                           $"INNER JOIN TB_PAPEL ON " +
+                                                           $"[IdPapel] = [TB_PAPEL].[ID] " +
+                                                           $"INNER JOIN TB_NVPAPEL ON " +
+                                                           $"[IdNivel] = [TB_NVPAPEL].[ID] " +
+                                                           $"WHERE [IdTribo] = {idTribo} AND [TB_USER].[Status] = 1");
                 return obj;
             }
         }
