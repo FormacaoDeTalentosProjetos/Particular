@@ -15,7 +15,7 @@ namespace Repositorio
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IEnumerable<User> SelecionarTodos()
+        public IEnumerable<User> Selecionar()
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -65,12 +65,12 @@ namespace Repositorio
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var obj = connection.Query<User>($"SELECT * " +
+                var lista = connection.Query<User>($"SELECT * " +
                                                  $"FROM [TB_USER] " +
                                                  $"WHERE Nome LIKE '%{nome}' " +
                                                  $"OR Nome Like '{nome}%' " +
                                                  $"OR Nome Like '%{nome}%'");
-                return obj;
+                return lista;
             }
         }
 
@@ -115,7 +115,7 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_LOGIN] " +
                                                       $"(IdUser, Username, Senha) " +
                                                       $"VALUES (@IDUser, " +
-                                                      $"'{entity.Username}', " +
+                                                      $"'{entity.UserName}', " +
                                                       $"@HASH)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
