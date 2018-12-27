@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
   "$schema": "http://json.schemastore.org/sarif-1.0.0",
   "version": "1.0.0",
@@ -14,4 +15,177 @@
       ]
     }
   ]
+=======
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador do Microsoft (R) Visual C#",
+        "version": "2.10.0.0",
+        "fileVersion": "2.10.0.0 (45b37117)",
+        "semanticVersion": "2.10.0",
+        "language": "pt-BR"
+      },
+      "results": [
+        {
+          "ruleId": "S1764",
+          "level": "warning",
+          "message": "Correct one of the identical expressions on both sides of operator '||'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 17,
+                  "endLine": 54,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 17,
+                  "endLine": 53,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3973",
+          "level": "warning",
+          "message": "Use curly braces or indentation to denote the code conditionally executed by this 'if'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 13,
+                  "endLine": 51,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 13,
+                  "endLine": 53,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1066",
+          "level": "warning",
+          "message": "Merge this if statement with the enclosing one.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 13,
+                  "endLine": 53,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Negocio/Validacoes/CamposVazios.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 13,
+                  "endLine": 50,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "S1066": {
+          "id": "S1066",
+          "shortDescription": "Collapsible \"if\" statements should be merged",
+          "fullDescription": "Merging collapsible if statements increases the code's readability.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1066",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S1764": {
+          "id": "S1764",
+          "shortDescription": "Identical expressions should not be used on both sides of a binary operator",
+          "fullDescription": "Using the same value on either side of a binary operator is almost always a mistake. In the case of logical operators, it is either a copy/paste error and therefore a bug, or it is simply wasted code, and should be simplified. In the case of bitwise operators and most binary mathematical operators, having the same value on both sides of an operator yields predictable results, and should be simplified.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1764",
+          "properties": {
+            "category": "Major Bug",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        },
+        "S3973": {
+          "id": "S3973",
+          "shortDescription": "A conditionally executed single line should be denoted by indentation",
+          "fullDescription": "In the absence of enclosing curly braces, the line immediately after a conditional is the one that is conditionally executed. By both convention and good practice, such lines are indented. In the absence of both curly braces and indentation the intent of the original programmer is entirely unclear and perhaps not actually what is executed. Additionally, such code is highly likely to be confusing to maintainers.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3973",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "SonarWay",
+              "MainSourceScope",
+              "TestSourceScope"
+            ]
+          }
+        }
+      }
+    }
+  ]
+>>>>>>> Stashed changes
 }

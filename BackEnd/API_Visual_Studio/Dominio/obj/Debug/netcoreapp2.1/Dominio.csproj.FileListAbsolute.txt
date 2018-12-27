@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
 C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
@@ -16,3 +17,14 @@ C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio
 C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
 C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
 C:\Users\mamaral\Documents\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+=======
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
+>>>>>>> Stashed changes
