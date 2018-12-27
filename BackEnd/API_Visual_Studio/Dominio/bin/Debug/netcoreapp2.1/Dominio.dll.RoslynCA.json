@@ -18,43 +18,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 18,
-                  "endLine": 8,
-                  "endColumn": 35
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
-                "region": {
-                  "startLine": 8,
-                  "startColumn": 12,
-                  "endLine": 8,
-                  "endColumn": 17
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": "Add a 'protected' constructor 'ConflitoException(SerializationInfo, StreamingContext)'."
-            }
-          }
-        },
-        {
-          "ruleId": "S3925",
-          "level": "warning",
-          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/DadoInvalidoException.cs",
                 "region": {
                   "startLine": 5,
@@ -94,6 +57,43 @@
             "customProperties": {
               "0": "Add 'System.SerializableAttribute' attribute on 'DadoInvalidoException' because it implements 'ISerializable'.",
               "1": "Add a 'protected' constructor 'DadoInvalidoException(SerializationInfo, StreamingContext)'."
+            }
+          }
+        },
+        {
+          "ruleId": "S3925",
+          "level": "warning",
+          "message": "Update this implementation of 'ISerializable' to conform to the recommended serialization pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GIT_PROJECTS/Scopio/BackEnd/API_Visual_Studio/Dominio/Excecoes/ConflitoException.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 17
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Add a 'protected' constructor 'ConflitoException(SerializationInfo, StreamingContext)'."
             }
           }
         },

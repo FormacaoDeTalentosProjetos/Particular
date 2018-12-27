@@ -72,6 +72,10 @@
     <Build Include="dbo\Unidade.sql" />
     <Build Include="dbo\User.sql" />
     <Build Include="dbo\NivelPapel.sql" />
+<<<<<<< HEAD
+    <Build Include="DBO\Mentor.sql" />
+=======
     <Build Include="dbo\Mentor.sql" />
+>>>>>>> BackEnd
   </ItemGroup>
 </Project>
