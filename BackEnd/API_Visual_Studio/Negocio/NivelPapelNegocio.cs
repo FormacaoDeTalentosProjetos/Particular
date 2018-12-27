@@ -89,12 +89,12 @@ namespace Negocio
             Validacoes(entity);
 
             //Verifica se a unidade já foi cadastrada.
-            if (_nivelPapelRepositorio.SelecionarPorNome(entity.Descricao) != null)
+            if (_nivelPapelRepositorio.SelecionarPorNome(entity.Desc) != null)
             {
-                throw new ConflitoException($"O nível de papel: \"{entity.Descricao}\", já foi cadastrada!");
+                throw new ConflitoException($"O nível de papel: \"{entity.Desc}\", já foi cadastrada!");
             }
 
-            entity.Id = id;
+            entity.ID = id;
             _nivelPapelRepositorio.Alterar(entity);
 
             return _nivelPapelRepositorio.SelecionarPorId(id);
@@ -112,7 +112,7 @@ namespace Negocio
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum nível de papel com este ID: { id }");
             }
-            _nivelPapelRepositorio.Deletar(obj.Id);
+            _nivelPapelRepositorio.Deletar(obj.ID);
         }
 
         /// <summary>

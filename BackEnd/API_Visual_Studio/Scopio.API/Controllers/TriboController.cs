@@ -57,6 +57,19 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE OBTÉM UMA LISTA DAS "TRIBOS" ATIVAS
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("TriboAtiva")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetTribosAtivas()
+        {
+            return Ok(_triboNegocio.SelecionarTribosAtivas());
+        }
+
+        /// <summary>
         /// MÉTODO QUE OBTÉM UMA "TRIBO" PELO {NOME}
         /// </summary>
         /// <param name="nome"></param>

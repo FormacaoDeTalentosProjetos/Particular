@@ -102,9 +102,9 @@ namespace Repositorio
                 var obj = connection.QuerySingle<int>($"DECLARE @IDUser INT; " +
                                                       $"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_USER] " +
-                                                      $"(IdPapel, Nome, Email, Tel, Status) " +
-                                                      $"VALUES ({entity.IdPapel}, " +
-                                                      $"'{entity.Nome}', '{entity.Email}', " +
+                                                      $"(IdPapel, IdNivel, Avatar, Nome, Email, Tel, Status) " +
+                                                      $"VALUES ({entity.IdPapel}, {entity.IdNivel}, " +
+                                                      $"'{entity.Avatar}', '{entity.Nome}', '{entity.Email}', " +
                                                       $"'{entity.Tel}', 1)" +
                                                       $"SET @IDUser = SCOPE_IDENTITY();" +
                                                       $"SELECT @IDUser " +
@@ -133,6 +133,8 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_USER] " +
                                    $"SET IdPapel = {entity.IdPapel}, " +
+                                   $"IdNivel = {entity.IdNivel}, " +
+                                   $"Avatar = '{entity.Avatar}', " +
                                    $"Nome = '{entity.Nome}', " +
                                    $"Email = '{entity.Email}', " +
                                    $"Tel = '{entity.Tel}' " +

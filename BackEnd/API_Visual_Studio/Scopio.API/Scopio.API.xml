@@ -111,6 +111,16 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
+        <member name="M:Scopio.API.Controllers.MembroSquadController.GetIdSquad(System.Int32)">
+            <summary>
+            Método que retorna lista de membros de uma squad.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
         <member name="M:Scopio.API.Controllers.MembroSquadController.Post(Scopio.API.Model.MembroSquadInput)">
             <summary>
             Método que insere uma vinculação entre Membro e Squad.
@@ -171,6 +181,16 @@
             <param name="id">Usado para selecionar a vinculação.</param>
             <returns></returns>
             <remarks>Obtêm uma vinculação entre membro e Tribo através do Id informado.</remarks>
+            <response code="200">OK</response>
+            <response code="404">NotFoud</response>
+        </member>
+        <member name="M:Scopio.API.Controllers.MembroTriboController.GetIdSquad(System.Int32)">
+            <summary>
+            Método que retorna lista de membros de uma Tribo.
+            </summary>
+            <param name="id">Usado para selecionar a vinculação.</param>
+            <returns></returns>
+            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
@@ -557,6 +577,12 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:Scopio.API.Controllers.SquadController.GetSquadSemTribo">
+            <summary>
+            MÉTODO QUE OBTÉM UMA LISTA DAS "SQUADS" SEM TRIBO
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Scopio.API.Controllers.SquadController.PutRemoveTribo(System.Int32,Scopio.API.Model.SquadInput)">
             <summary>
             MÉTODO QUE RETIRA ASSOCIÇÃO COM "TRIBO" POR {ID}
@@ -606,6 +632,12 @@
             MÉTODO QUE OBTÉM UMA "TRIBO" POR {ID}
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.TriboController.GetTribosAtivas">
+            <summary>
+            MÉTODO QUE OBTÉM UMA LISTA DAS "TRIBOS" ATIVAS
+            </summary>
             <returns></returns>
         </member>
         <member name="M:Scopio.API.Controllers.TriboController.GetTribo(System.String)">
@@ -770,7 +802,7 @@
             <summary>
             MÉTODO QUE INSERE UM "USUÁRIO"
             </summary>
-            <param name="Input"></param>
+            <param name="input"></param>
             <returns></returns>
         </member>
         <member name="M:Scopio.API.Controllers.UserController.PutPerfil(System.Int32,Scopio.API.Model.UserInput)">
@@ -899,7 +931,7 @@
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio do nível de papel. 
              </summary>
         </member>
-        <member name="P:Scopio.API.Model.NivelPapelInput.Descricao">
+        <member name="P:Scopio.API.Model.NivelPapelInput.Desc">
             <summary>
             Atributo Descrição.
             </summary>
@@ -930,11 +962,6 @@
             </summary>
         </member>
         <member name="P:Scopio.API.Model.PapelInput.Desc">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Scopio.API.Model.PapelInput.Sigla">
             <summary>
             
             </summary>
@@ -1020,6 +1047,16 @@
             </summary>
         </member>
         <member name="P:Scopio.API.Model.UserInput.IdPapel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.UserInput.IdNivel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.UserInput.Avatar">
             <summary>
             
             </summary>

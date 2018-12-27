@@ -13,6 +13,14 @@
         /// <summary>
         /// 
         /// </summary>
+        public int IdNivel { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Avatar { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Nome { get; set; }
         /// <summary>
         /// 

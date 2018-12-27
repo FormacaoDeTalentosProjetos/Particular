@@ -69,9 +69,8 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_PAPEL] " +
-                                                      $"([Desc], Sigla, Nivel) " +
-                                                      $"VALUES ('{entity.Desc}', " +
-                                                      $"'{entity.Sigla}', {entity.Nivel})" +
+                                                      $"([Desc], Nivel) " +
+                                                      $"VALUES ('{entity.Desc}', {entity.Nivel})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
@@ -88,7 +87,6 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_PAPEL] " +
                                    $"SET [Desc] = '{entity.Desc}', " +
-                                   $"Sigla = '{entity.Sigla}', " +
                                    $"Nivel = {entity.Nivel} " +
                                    $"WHERE ID = {entity.ID}");
             }

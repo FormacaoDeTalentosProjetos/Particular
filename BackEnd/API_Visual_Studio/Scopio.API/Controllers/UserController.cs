@@ -10,12 +10,13 @@ using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Scopio.API.Controllers
-{/// <summary>
-/// 
-/// </summary>
+{
+    /// <summary>
+    /// 
+    /// </summary>
     [Produces("application/json")]
     [Route("api/User")]
-    public class UserController : Controller
+    public class UserController: Controller
     {
         /// <summary>
         /// 
@@ -101,22 +102,24 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// MÉTODO QUE INSERE UM "USUÁRIO"
         /// </summary>
-        /// <param name="Input"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]
         [SwaggerResponse((int)HttpStatusCode.BadRequest)]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]UserInput Input)
+        public IActionResult Post([FromBody]UserInput input)
         {
             var objUser = new User()
             {
-                Username = Input.Username,
-                Senha = Input.Senha,
-                IdPapel = Input.IdPapel,
-                Nome = Input.Nome,
-                Email = Input.Email,
-                Tel = Input.Tel
+                Username = input.Username,
+                Senha = input.Senha,
+                IdPapel = input.IdPapel,
+                IdNivel = input.IdNivel,
+                Avatar = input.Avatar,
+                Nome = input.Nome,
+                Email = input.Email,
+                Tel = input.Tel
             };
 
             var idUser = _userNegocio.Inserir(objUser);
@@ -141,6 +144,8 @@ namespace Scopio.API.Controllers
             var objUser = new User()
             {
                 IdPapel = input.IdPapel,
+                IdNivel = input.IdNivel,
+                Avatar = input.Avatar,
                 Nome = input.Nome,
                 Email = input.Email,
                 Tel = input.Tel
