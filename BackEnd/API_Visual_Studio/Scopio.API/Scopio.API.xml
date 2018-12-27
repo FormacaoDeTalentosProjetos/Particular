@@ -32,13 +32,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.LoginController.GetLoginUser(System.String)">
-            <summary>
-            MÉTODO QUE OBTÉM UM "LOGIN" POR {USERNAME}
-            </summary>
-            <param name="unsername"></param>
-            <returns></returns>
-        </member>
         <member name="M:Scopio.API.Controllers.LoginController.GetLogin(System.String,System.String)">
             <summary>
             MÉTODO QUE VALIDA O LOGIN POR {USERNAME}) E {SENHA}
@@ -1001,7 +994,7 @@
         </member>
         <member name="P:Scopio.API.Model.SquadInput.IdTribo">
             <summary>
-            
+            Variavél que recebe o IdTribo, permitindo que ele seja null
             </summary>
         </member>
         <member name="P:Scopio.API.Model.SquadInput.Logo">

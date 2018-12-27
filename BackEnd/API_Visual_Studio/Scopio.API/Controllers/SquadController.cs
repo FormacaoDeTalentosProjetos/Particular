@@ -48,7 +48,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "SquadGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -91,7 +91,7 @@ namespace Scopio.API.Controllers
 
             var idSquad = _squadNegocio.Inserir(objSquad);
             objSquad.ID = idSquad;
-            return CreatedAtRoute(nameof(GetId), new { id = idSquad }, objSquad);
+            return CreatedAtRoute(routeName: "SquadGetId", routeValues: new { id = idSquad }, value: objSquad);
         }
 
         /// <summary>
