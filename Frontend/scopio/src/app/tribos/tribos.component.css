@@ -2,11 +2,10 @@
     display: flex;
     flex-wrap: wrap;
 }
-  
-.flex-container > div {
-    width: 100px;
-    margin: 10px;
+
+.label {
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    color:black;
+    font-size: 2vh;
+    font-weight: bold;
 }

@@ -8,8 +8,12 @@ import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TribosComponent } from './tribos/tribos.component';
-import { TriboService } from './tribo.service'
+import { TriboService } from './tribo.service';
+import { SquadsComponent } from './squads/squads.component';
+import { SquadService } from './squad.service';
+
 import { HttpClientModule } from '@angular/common/http';
+import { SquadsFromTribeComponent } from './squads-from-tribe/squads-from-tribe.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     MapComponent,
     HeaderComponent,
     FooterComponent,
-    TribosComponent
+    TribosComponent,
+    SquadsComponent,
+    SquadsFromTribeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [TriboService],
+  providers: [TriboService, SquadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

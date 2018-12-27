@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TriboService {
 
-  /* API adress */
+  /* API ADRESS */
   tribosUrl = 'http://localhost:5000/api/Tribo/';
 
   constructor(private http: HttpClient) { }
