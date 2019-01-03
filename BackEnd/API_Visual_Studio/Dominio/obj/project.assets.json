@@ -688,7 +688,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cacaciano\\.nuget\\packages\\": {},
+    "C:\\Users\\caleo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -697,14 +697,14 @@
       "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
       "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
-      "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\caleo\\.nuget\\packages\\",
       "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cacaciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\caleo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
