@@ -1,13 +1,13 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Abstracao;
+using Dominio.Repositorio;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class UnidadeRepositorio: IRepositorioBase<Unidade>
+    public class UnidadeRepositorio : IUnidadeRepositorio
     {
         /// <summary>
         /// Método que seleciona todos as unidades do database.

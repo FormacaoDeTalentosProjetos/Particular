@@ -1,14 +1,14 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
+using Negocio.Interface;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class MembroTriboNegocio : INegocioBase<MembroTribo>
+    public class MembroTriboNegocio : IMembroTriboNegocio
     {
         /// <summary>
         /// Declara o repositório do membro.

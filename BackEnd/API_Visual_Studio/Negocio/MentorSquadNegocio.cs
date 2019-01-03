@@ -1,7 +1,7 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
+using Negocio.Interface;
 using Repositorio;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Negocio
 {
-    public class MentorSquadNegocio : INegocioBase<MentorSquad>
+    public class MentorSquadNegocio : IMentorSquadNegocio
     {
         /// <summary>
         /// 

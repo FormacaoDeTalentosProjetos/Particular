@@ -1891,6 +1891,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Dominio >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Repositorio >= 1.0.0"
     ]
@@ -1925,6 +1926,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
+            },
             "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
               "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
             }

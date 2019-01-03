@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Abstracao;
+using Dominio.Repositorio;
 using Repositorio.Configuracao;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class SquadRepositorio : IRepositorioBase<Squad>
+    public class SquadRepositorio : ISquadRepositorio
     {
         /// <summary>
         /// PESQUISA SQUAD

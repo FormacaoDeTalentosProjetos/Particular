@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -22,14 +23,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly LoginNegocio _loginNegocio;
+        private readonly ILoginNegocio _loginNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public LoginController()
+        public LoginController(ILoginNegocio loginNegocio)
         {
-            _loginNegocio = new LoginNegocio();
+            _loginNegocio = loginNegocio;
         }
 
         /// <summary>

@@ -1,13 +1,13 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
+using Negocio.Interface;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class UnidadeNegocio: INegocioBase<Unidade>
+    public class UnidadeNegocio : IUnidadeNegocio
     {
         /// <summary>
         /// Declara o repositório da unidade.
