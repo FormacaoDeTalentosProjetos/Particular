@@ -1,6 +1,6 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Negocio
     /// <summary>
     /// Regras de Negocio para o Nível de Papel
     /// </summary>
-    public class NivelPapelNegocio : INivelPapelNegocio
+    public class NivelPapelNegocio : INegocioBase<NivelPapel>
     {
         /// <summary>
         /// Declara o repositório do nível de papel.

@@ -7,7 +7,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
-using Infra.IOC;
 
 namespace Scopio.API
 {
@@ -60,7 +59,7 @@ namespace Scopio.API
                 c.IncludeXmlComments(xmlPath);
 
             });
-            RegisterServices(services);
+
             //services.AddScoped<ErroFiltro>();
         }
 
@@ -96,9 +95,6 @@ namespace Scopio.API
 
             app.UseMvc();
         }
-        void RegisterServices(IServiceCollection services)
-        {
-            new RootBootstrapper().ChildServiceRegister(services);
-        }
+
     }
 }

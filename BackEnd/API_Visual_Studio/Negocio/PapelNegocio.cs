@@ -1,13 +1,13 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class PapelNegocio : IPapelNegocio
+    public class PapelNegocio : INegocioBase<Papel>
     {
         /// <summary>
         /// Declara o repositório do papel. 

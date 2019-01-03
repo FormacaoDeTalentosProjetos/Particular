@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Dominio;
-using Dominio.Repositorio;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class PapelRepositorio : IPapelRepositorio
+    public class PapelRepositorio : IRepositorioBase<Papel>
     {
         /// <summary>
         /// PESQUISA PAPEIS

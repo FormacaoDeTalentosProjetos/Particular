@@ -1,7 +1,7 @@
 ﻿using Dapper;
 using Dominio;
 using Dominio.dto;
-using Dominio.Repositorio;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class MentorTriboRepositorio : IMentorTriboRepositorio
+    public class MentorTriboRepositorio : IRepositorioBase<MentorTribo>
     {
         /// <summary>
         /// PESQUISA ASSOCIAÇÕES MENTOR_TRIBO

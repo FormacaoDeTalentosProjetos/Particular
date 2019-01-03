@@ -14,7 +14,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.LoginController.#ctor(Negocio.Interface.ILoginNegocio)">
+        <member name="M:Scopio.API.Controllers.LoginController.#ctor">
             <summary>
             
             </summary>

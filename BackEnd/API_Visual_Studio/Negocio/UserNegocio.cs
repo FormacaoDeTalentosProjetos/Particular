@@ -1,13 +1,12 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
 using Negocio.Validacoes;
 using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class UserNegocio : IUserNegocio
+    public class UserNegocio
     {
         /// <summary>
         /// Declara o repositório do usuário.

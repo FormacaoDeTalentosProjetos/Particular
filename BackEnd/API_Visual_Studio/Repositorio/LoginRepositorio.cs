@@ -1,14 +1,13 @@
 ﻿using Dapper;
 using Dominio;
 using Repositorio.Configuracao;
-using Dominio.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class LoginRepositorio : ILoginRepositorio
+    public class LoginRepositorio
     {
         /// <summary>
         /// PESQUISA LOGINS

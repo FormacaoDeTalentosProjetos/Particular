@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using Dominio;
-using Dominio.Repositorio;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,7 +9,7 @@ namespace Repositorio
     /// <summary>
     /// Claase que acessa a tabela Nivel Papel do database
     /// </summary>
-    public class NivelPapelRepositorio : INivelPapelRepositorio
+    public class NivelPapelRepositorio: IRepositorioBase<NivelPapel>
     {
         /// <summary>
         /// Método que seleciona todos os níveis de cada papel do database.

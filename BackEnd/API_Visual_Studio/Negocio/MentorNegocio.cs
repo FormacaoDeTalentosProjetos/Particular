@@ -1,14 +1,13 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Interface;
 using Repositorio;
 using System.Collections.Generic;
 
 
 namespace Negocio
 {
-    public class MentorNegocio : IMentorNegocio
+    public class MentorNegocio
     {
         /// <summary>
         /// Declara o repositório do mentor.

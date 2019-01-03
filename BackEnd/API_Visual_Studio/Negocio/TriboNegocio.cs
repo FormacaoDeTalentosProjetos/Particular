@@ -1,6 +1,6 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Repositorio;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Negocio
 {
-    public class TriboNegocio : ITriboNegocio
+    public class TriboNegocio : INegocioBase<Tribo>
     {
         /// <summary>
         /// 

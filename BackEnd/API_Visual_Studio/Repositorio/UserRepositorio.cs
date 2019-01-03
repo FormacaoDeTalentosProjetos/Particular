@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Dominio;
 using Repositorio.Configuracao;
-using Dominio.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,7 +8,7 @@ using System.Text;
 
 namespace Repositorio
 {
-    public class UserRepositorio : IUserRepositorio
+    public class UserRepositorio
     {
         /// <summary>
         /// PESQUISA TODOS OS USUÁRIOS

@@ -1,6 +1,6 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Repositorio;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Negocio
 {
-    public class SquadNegocio : ISquadNegocio
+    public class SquadNegocio : INegocioBase<Squad>
     {
         /// <summary>
         /// 
