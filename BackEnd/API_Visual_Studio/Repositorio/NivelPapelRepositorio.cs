@@ -1,9 +1,10 @@
 ﻿using Dapper;
 using Dominio;
-using Dominio.Repositorio;
+using Repositorio.Interface;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+
 namespace Repositorio
 {
     /// <summary>

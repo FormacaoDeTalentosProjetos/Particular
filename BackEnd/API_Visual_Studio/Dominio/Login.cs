@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Dominio
+﻿namespace Dominio
 {
     public class Login
     {

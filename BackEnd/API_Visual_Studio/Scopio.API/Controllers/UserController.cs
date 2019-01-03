@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -21,14 +17,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly UserNegocio _userNegocio;
+        private readonly IUserNegocio _userNegocio;
         
         /// <summary>
         /// 
         /// </summary>
-        public UserController()
+        public UserController(IUserNegocio userNegocio)
         {
-            _userNegocio = new UserNegocio();
+            _userNegocio = userNegocio;
         }
         
         /// <summary>

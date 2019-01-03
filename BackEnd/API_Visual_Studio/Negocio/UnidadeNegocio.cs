@@ -2,7 +2,7 @@
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio;
+using Repositorio.Interface;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -12,14 +12,14 @@ namespace Negocio
         /// <summary>
         /// Declara o repositório da unidade.
         /// </summary>
-        private readonly UnidadeRepositorio _unidadeRepositorio;
+        private readonly IUnidadeRepositorio _unidadeRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public UnidadeNegocio()
+        public UnidadeNegocio(IUnidadeRepositorio unidadeRepositorio)
         {
-            _unidadeRepositorio = new UnidadeRepositorio();
+            _unidadeRepositorio = unidadeRepositorio;
         }
 
         /// <summary>

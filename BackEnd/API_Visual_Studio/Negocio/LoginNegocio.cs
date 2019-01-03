@@ -1,8 +1,7 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Dominio.Negocio;
 using Negocio.Interface;
-using Repositorio;
+using Repositorio.Interface;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -10,16 +9,16 @@ namespace Negocio
     public class LoginNegocio : ILoginNegocio
     {
         /// <summary>
-        /// Declara o repositório do Login.
+        /// 
         /// </summary>
-        private readonly ILoginDominioService _loginService;
+        private readonly ILoginRepositorio _loginRepositorio;
 
         /// <summary>
-        /// Construtor para instaciar o repositório.
+        /// 
         /// </summary>
-        public LoginNegocio(ILoginDominioService loginService)
+        public LoginNegocio(ILoginRepositorio loginRepositorio)
         {
-            _loginService = loginService;
+            _loginRepositorio = loginRepositorio;
         }
 
         /// <summary>
@@ -28,9 +27,7 @@ namespace Negocio
         /// <returns>Lista de logins.</returns>
         public IEnumerable<Login> Selecionar()
         {
-            var lista = _loginService.Selecionar();
-
-            return lista;
+            return _loginRepositorio.Selecionar();
         }
 
         /// <summary>
@@ -40,7 +37,7 @@ namespace Negocio
         /// <returns>Seleciona um login ou gera uma exceção.</returns>
         public Login SelecionarPorId(int id)
         {
-            var obj = _loginService.SelecionarPorId(id);
+            var obj = _loginRepositorio.SelecionarPorId(id);
 
             if (obj == null)
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usúario com o ID: {id}");
@@ -56,7 +53,7 @@ namespace Negocio
         /// <returns></returns>
         public Login EfetuarLogin(string login, string senha)
         {
-            var objUser = _loginService.EfetuarLogin(login, senha);
+            var objUser = _loginRepositorio.EfetuarLogin(login, senha);
 
             if (objUser != null)
             {
@@ -78,9 +75,9 @@ namespace Negocio
         public Login AlterarSenha(int id, Login entity)
         {
             entity.ID = id;
-            _loginService.AlterarSenha(entity);
+            _loginRepositorio.AlterarSenha(entity);
 
-            return _loginService.SelecionarPorId(id);
+            return _loginRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -92,9 +89,9 @@ namespace Negocio
         public Login AlterarUser(int id, Login entity)
         {
             entity.ID = id;
-            _loginService.AlterarUser(entity);
+            _loginRepositorio.AlterarUser(entity);
 
-            return _loginService.SelecionarPorId(id);
+            return _loginRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -106,9 +103,9 @@ namespace Negocio
         public Login AlterarAtivoInativo(int id, Login entity)
         {
             entity.ID = id;
-            _loginService.AlterarAtivoInativo(entity);
+            _loginRepositorio.AlterarAtivoInativo(entity);
 
-            return _loginService.SelecionarPorId(id);
+            return _loginRepositorio.SelecionarPorId(id);
         }
 
         /// <summary>
@@ -117,9 +114,9 @@ namespace Negocio
 		/// <param name="id">Usado para buscar o login no Database.</param>
 		public void Deletar(int id)
         {
-            var obj = _loginService.SelecionarPorId(id);
+            var obj = _loginRepositorio.SelecionarPorId(id);
 
-            _loginService.Deletar(obj.ID);
+            _loginRepositorio.Deletar(obj.ID);
         }
     }
 }

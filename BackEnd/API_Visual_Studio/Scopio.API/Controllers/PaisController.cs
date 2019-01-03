@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -20,14 +16,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para o país.
         /// </summary>
-        private readonly PaisNegocio _paisNegocio;
+        private readonly IPaisNegocio _paisNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public PaisController()
+        public PaisController(IPaisNegocio paisNegocio)
         {
-            _paisNegocio = new PaisNegocio();
+            _paisNegocio = paisNegocio;
         }
 
         /// <summary>

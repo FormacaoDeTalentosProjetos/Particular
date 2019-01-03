@@ -1,10 +1,8 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
 using Negocio.Interface;
-using Repositorio;
-using System;
+using Repositorio.Interface;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Negocio
 {
@@ -13,14 +11,14 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        private readonly TriboRepositorio _triboRepositorio;
+        private readonly ITriboRepositorio _triboRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public TriboNegocio()
+        public TriboNegocio(ITriboRepositorio triboRepositorio)
         {
-            _triboRepositorio = new TriboRepositorio();
+            _triboRepositorio = triboRepositorio;
         }
 
         /// <summary>

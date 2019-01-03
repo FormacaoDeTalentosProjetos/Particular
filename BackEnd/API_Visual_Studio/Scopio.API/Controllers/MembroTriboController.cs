@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 namespace Scopio.API.Controllers
@@ -20,14 +16,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para o membroTribo.
         /// </summary>
-        private readonly MembroTriboNegocio _membroNegocio;
+        private readonly IMembroTriboNegocio _membroNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public MembroTriboController()
+        public MembroTriboController(IMembroTriboNegocio membroNegocio)
         {
-            _membroNegocio = new MembroTriboNegocio();
+            _membroNegocio = membroNegocio;
         }
 
         /// <summary>

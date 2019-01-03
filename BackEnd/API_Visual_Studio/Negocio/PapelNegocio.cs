@@ -2,7 +2,7 @@
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio;
+using Repositorio.Interface;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -12,14 +12,14 @@ namespace Negocio
         /// <summary>
         /// Declara o repositório do papel. 
         /// </summary>
-        private readonly PapelRepositorio _papelRepositorio;
+        private readonly IPapelRepositorio _papelRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public PapelNegocio()
+        public PapelNegocio(IPapelRepositorio papelRepositorio)
         {
-            _papelRepositorio = new PapelRepositorio();
+            _papelRepositorio = papelRepositorio;
         }
 
         /// <summary>
