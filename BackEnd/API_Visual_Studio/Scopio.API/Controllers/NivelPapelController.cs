@@ -1,6 +1,6 @@
 ﻿using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Net;
@@ -17,14 +17,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para os niveis de papel.
         /// </summary>
-        private readonly INivelPapelNegocio _nivelPapelNegocio;
+        private readonly NivelPapelNegocio _nivelPapelNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public NivelPapelController(INivelPapelNegocio nivelPapelNegocio)
+        public NivelPapelController()
         {
-            _nivelPapelNegocio = nivelPapelNegocio;
+            _nivelPapelNegocio = new NivelPapelNegocio();
         }
 
         /// <summary>

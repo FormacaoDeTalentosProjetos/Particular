@@ -1,8 +1,12 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Dominio;
 using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -17,14 +21,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly IMentorSquadNegocio _mentorSquadNegocio;
+        private readonly MentorSquadNegocio _mentorSquadNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public MentorSquadController(IMentorSquadNegocio mentorSquadNegocio)
+        public MentorSquadController()
         {
-            _mentorSquadNegocio = mentorSquadNegocio;
+            _mentorSquadNegocio = new MentorSquadNegocio();
         }
 
         /// <summary>

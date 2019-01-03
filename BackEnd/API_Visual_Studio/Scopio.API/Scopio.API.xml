@@ -81,7 +81,7 @@
             Declara as regras de negócio para o membro.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MembroSquadController.#ctor(Negocio.Interface.IMembroSquadNegocio)">
+        <member name="M:Scopio.API.Controllers.MembroSquadController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -154,7 +154,7 @@
             Declara as regras de negócio para o membroTribo.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MembroTriboController.#ctor(Negocio.Interface.IMembroTriboNegocio)">
+        <member name="M:Scopio.API.Controllers.MembroTriboController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -227,7 +227,7 @@
             Declara as regras de negócio para o mentor.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorController.#ctor(Negocio.Interface.IMentorNegocio)">
+        <member name="M:Scopio.API.Controllers.MentorController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -287,7 +287,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorSquadController.#ctor(Negocio.Interface.IMentorSquadNegocio)">
+        <member name="M:Scopio.API.Controllers.MentorSquadController.#ctor">
             <summary>
             
             </summary>
@@ -346,7 +346,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorTriboController.#ctor(Negocio.Interface.IMentorTriboNegocio)">
+        <member name="M:Scopio.API.Controllers.MentorTriboController.#ctor">
             <summary>
             
             </summary>
@@ -405,7 +405,7 @@
             Declara as regras de negócio para os niveis de papel.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.NivelPapelController.#ctor(Negocio.Interface.INivelPapelNegocio)">
+        <member name="M:Scopio.API.Controllers.NivelPapelController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -478,7 +478,7 @@
             Declara as regras de negócio para o país.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.PaisController.#ctor(Negocio.Interface.IPaisNegocio)">
+        <member name="M:Scopio.API.Controllers.PaisController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -551,7 +551,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.PapelController.#ctor(Negocio.Interface.IPapelNegocio)">
+        <member name="M:Scopio.API.Controllers.PapelController.#ctor">
             <summary>
             
             </summary>
@@ -608,7 +608,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.SquadController.#ctor(Negocio.Interface.ISquadNegocio)">
+        <member name="M:Scopio.API.Controllers.SquadController.#ctor">
             <summary>
             
             </summary>
@@ -694,7 +694,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.TriboController.#ctor(Negocio.Interface.ITriboNegocio)">
+        <member name="M:Scopio.API.Controllers.TriboController.#ctor">
             <summary>
             
             </summary>
@@ -765,7 +765,7 @@
             Declara as regras de negócio para a unidade.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.UnidadeController.#ctor(Negocio.Interface.IUnidadeNegocio)">
+        <member name="M:Scopio.API.Controllers.UnidadeController.#ctor">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -838,7 +838,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.UserController.#ctor(Negocio.Interface.IUserNegocio)">
+        <member name="M:Scopio.API.Controllers.UserController.#ctor">
             <summary>
             
             </summary>
@@ -910,6 +910,14 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:Scopio.API.Filtros.ErroFiltro.Invoke(Microsoft.AspNetCore.Http.HttpContext,System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
         </member>
         <member name="T:Scopio.API.Model.LoginInput">
              <summary>
@@ -1170,6 +1178,24 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="T:Scopio.API.Program">
+            <summary>
+            Classe principal da Solução
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Scopio.API.Program.BuildWebHost(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
         </member>
         <member name="T:Scopio.API.Startup">
             <summary>

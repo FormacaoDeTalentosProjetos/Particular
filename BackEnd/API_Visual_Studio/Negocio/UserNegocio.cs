@@ -2,7 +2,7 @@
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -12,16 +12,14 @@ namespace Negocio
         /// <summary>
         /// Declara o repositório do usuário.
         /// </summary>
-        private readonly IUserRepositorio _userRepositorio;
-        private readonly IPapelRepositorio _papelRepositorio;
+        private readonly UserRepositorio _userRepositorio;
 
         /// <summary>
         /// Construtor que instancia os repositórios
         /// </summary>
-        public UserNegocio(IUserRepositorio userRepositorio, IPapelRepositorio papelRepositorio)
+        public UserNegocio()
         {
-            _userRepositorio = userRepositorio;
-            _papelRepositorio = papelRepositorio;
+            _userRepositorio = new UserRepositorio();
         }
 
         /// <summary>
@@ -75,6 +73,8 @@ namespace Negocio
         public IEnumerable<User> SelecionarPorPapel(int idPapel)
         {
             //repositório do papel
+            var _papelRepositorio = new PapelRepositorio();
+
             if (_papelRepositorio.SelecionarPorId(idPapel) == null)
             {
                 throw new NaoEncontradoException();
@@ -92,6 +92,7 @@ namespace Negocio
         public int Inserir(User entity)
         {
             Validacoes(entity);
+
             return _userRepositorio.Inserir(entity);
         }
 
@@ -104,6 +105,7 @@ namespace Negocio
         public User AlterarPerfilUsuario(int id, User entity)
         {
             Validacoes(entity);
+
             if(_userRepositorio.SelecionarPorId(id) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhuma usuário com este ID: { id }");
@@ -160,5 +162,6 @@ namespace Negocio
                 throw new ConflitoException($"O usuário: \"{entity.Nome}\", já foi cadastrado!");
             }
         }
+
     }
 }

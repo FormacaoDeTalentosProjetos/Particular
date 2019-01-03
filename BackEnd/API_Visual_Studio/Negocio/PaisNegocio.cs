@@ -2,7 +2,7 @@
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -12,14 +12,14 @@ namespace Negocio
         /// <summary>
         /// Declara o repositório do país.
         /// </summary>
-        private readonly IPaisRepositorio _paisRepositorio;
+        private readonly PaisRepositorio _paisRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public PaisNegocio(IPaisRepositorio paisRepositorio)
+        public PaisNegocio()
         {
-            _paisRepositorio = paisRepositorio;
+            _paisRepositorio = new PaisRepositorio();
         }
 
         /// <summary>

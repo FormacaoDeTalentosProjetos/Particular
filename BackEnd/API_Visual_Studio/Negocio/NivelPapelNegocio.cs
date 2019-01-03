@@ -2,7 +2,7 @@
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -15,14 +15,14 @@ namespace Negocio
         /// <summary>
         /// Declara o repositório do nível de papel.
         /// </summary>
-        private readonly INivelPapelRepositorio _nivelPapelRepositorio;
+        private readonly NivelPapelRepositorio _nivelPapelRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public NivelPapelNegocio(INivelPapelRepositorio nivelPapelRepositorio)
+        public NivelPapelNegocio()
         {
-            _nivelPapelRepositorio = nivelPapelRepositorio;
+            _nivelPapelRepositorio = new NivelPapelRepositorio();
         }
 
         /// <summary>

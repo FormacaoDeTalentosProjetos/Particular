@@ -1,6 +1,9 @@
 ﻿using Infra.IOC.Negocio;
 using Infra.IOC.Repositorio;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Infra.IOC
 {

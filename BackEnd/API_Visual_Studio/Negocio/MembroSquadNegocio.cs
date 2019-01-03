@@ -3,7 +3,7 @@ using Dominio.dto;
 using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
@@ -13,18 +13,14 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        private readonly IMembroSquadRepositorio _membroSquadRepositorio;
-        private readonly ISquadRepositorio _squadRepositorio;
-        private readonly IUserRepositorio _userRepositorio;
-
+        private readonly MembroSquadRepositorio _membroSquadRepositorio;
+        
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public MembroSquadNegocio(IMembroSquadRepositorio membroSquadRepositorio, ISquadRepositorio squadRepositorio, IUserRepositorio userRepositorio)
+        public MembroSquadNegocio()
         {
-            _membroSquadRepositorio = membroSquadRepositorio;
-            _squadRepositorio = squadRepositorio;
-            _userRepositorio = userRepositorio;
+            _membroSquadRepositorio = new MembroSquadRepositorio();
         }
 
         /// <summary>
@@ -82,6 +78,8 @@ namespace Negocio
                 throw new ConflitoException($"O usuário com ID: {entity.IdUser}, " +
                                             $"já está vinculado a uma Squad");
             }
+
+
             return _membroSquadRepositorio.Inserir(entity);
         }
 
@@ -136,6 +134,7 @@ namespace Negocio
             }
 
             //Verifica se o Id da Squad é válido.
+            var _squadRepositorio = new SquadRepositorio();
             if (_squadRepositorio.SelecionarPorId(entity.IdSquad) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
@@ -143,6 +142,7 @@ namespace Negocio
             }
 
             //Verifica se o Id do Usuário é válido.
+            var _userRepositorio = new UserRepositorio();
             if (_userRepositorio.SelecionarPorId(entity.IdSquad) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +

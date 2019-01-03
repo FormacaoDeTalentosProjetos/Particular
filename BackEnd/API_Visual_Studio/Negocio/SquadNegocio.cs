@@ -1,8 +1,10 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
 using Negocio.Interface;
-using Repositorio.Interface;
+using Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
@@ -11,14 +13,14 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        private readonly ISquadRepositorio _squadRepositorio;
+        private readonly SquadRepositorio _squadRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public SquadNegocio(ISquadRepositorio squadRepositorio)
+        public SquadNegocio()
         {
-            _squadRepositorio = squadRepositorio;
+            _squadRepositorio = new SquadRepositorio();
         }
 
         /// <summary>

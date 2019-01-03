@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 using Repositorio;
-using Repositorio.Interface;
+using Dominio.Repositorio;
 
 namespace Infra.IOC.Repositorio
 {
