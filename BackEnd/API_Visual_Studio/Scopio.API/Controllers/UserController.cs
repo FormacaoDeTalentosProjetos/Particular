@@ -40,7 +40,7 @@ namespace Scopio.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult Get()
         {
-            return Ok(_userNegocio.Selecionar());
+            return Ok(_userNegocio.SelecionarTodos());
         }
         
         /// <summary>
@@ -62,7 +62,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}", Name = "UserGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(User), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -112,7 +112,7 @@ namespace Scopio.API.Controllers
         {
             var objUser = new User()
             {
-                UserName = input.Username,
+                Username = input.Username,
                 Senha = input.Senha,
                 IdPapel = input.IdPapel,
                 IdNivel = input.IdNivel,
@@ -124,7 +124,7 @@ namespace Scopio.API.Controllers
 
             var idUser = _userNegocio.Inserir(objUser);
             objUser.ID = idUser;
-            return CreatedAtRoute(routeName: "UserGetId", routeValues: new { id = idUser }, value: objUser);
+            return CreatedAtRoute(nameof(GetId), new { id = idUser }, objUser);
         }
 
 

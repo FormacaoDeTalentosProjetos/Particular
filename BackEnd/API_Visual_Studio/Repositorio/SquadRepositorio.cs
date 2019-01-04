@@ -42,21 +42,6 @@ namespace Repositorio
         }
 
         /// <summary>
-        /// PESQUISA SQUADS POR {IdTribo}
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<Squad> SelecionarPorIdTribo(int idTribo)
-        {
-            using (var connection = new SqlConnection(DbConnection.GetConn()))
-            {
-                var lista = connection.Query<Squad>($"SELECT * " +
-                                                    $"FROM [TB_SQUAD] " +
-                                                    $"WHERE IdTribo = {idTribo}");
-                return lista;
-            }
-        }
-
-        /// <summary>
         /// PESQUISA SQUAD POR NOME
         /// </summary>
         /// <param name="desc"></param>

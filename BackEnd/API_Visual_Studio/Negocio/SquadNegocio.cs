@@ -55,21 +55,6 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="idTribo"></param>
-        /// <returns></returns>
-        public IEnumerable<Squad> SelecionarPorIdTribo(int idTribo)
-        {
-            var lista = _squadRepositorio.SelecionarPorIdTribo(idTribo);
-
-            if (lista == null)
-                throw new NaoEncontradoException();
-
-            return lista;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
         /// <param name="desc"></param>
         /// <returns></returns>
         public Squad SelecionarPorDescricao(string desc)

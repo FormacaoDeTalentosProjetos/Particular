@@ -57,7 +57,7 @@ namespace Negocio
             var obj = _membroSquadRepositorio.SelecionarPorIdSquad(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma squad com este ID: { id }");
+                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
 
             return obj;
         }

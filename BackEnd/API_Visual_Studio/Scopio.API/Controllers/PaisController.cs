@@ -53,7 +53,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}", Name = "PaisGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Pais), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -100,7 +100,7 @@ namespace Scopio.API.Controllers
 
             var idPais = _paisNegocio.Inserir(objPais);
             objPais.Id = idPais;
-            return CreatedAtRoute(routeName: "PaisGetId", routeValues: new { id = idPais }, value: objPais);
+            return CreatedAtRoute(nameof(GetId), new { id = idPais }, objPais);
         }
 
         /// <summary>

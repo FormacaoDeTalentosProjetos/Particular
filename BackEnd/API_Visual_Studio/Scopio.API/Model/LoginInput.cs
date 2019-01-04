@@ -5,7 +5,7 @@
     /// </summary>
     public class LoginInput
     {  /// <summary>
-        /// Propriedade IdUser
+        /// P0ropriedade IdUser
         /// </summary>
         public int IdUser { get; set; }
         /// <summary>

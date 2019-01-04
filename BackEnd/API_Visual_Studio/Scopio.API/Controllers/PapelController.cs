@@ -48,7 +48,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}", Name = "PapelGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -89,7 +89,7 @@ namespace Scopio.API.Controllers
 
             var idPapel = _papelNegocio.Inserir(objPapel);
             objPapel.ID = idPapel;
-            return CreatedAtRoute(routeName: "PapelGetId", routeValues: new { id = idPapel }, value: objPapel);
+            return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPapel);
         }
 
         /// <summary>

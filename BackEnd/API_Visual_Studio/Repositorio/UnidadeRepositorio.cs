@@ -68,8 +68,8 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_UNIDADE] " +
                                                       $"(IdPais, Nome, EstSigla) " +
                                                       $"VALUES ({entity.IdPais}, " +
-                                                      $"'{entity.Nome}', '{entity.EstSigla}') " +
-                                                      $"SET @ID = SCOPE_IDENTITY(); " +
+                                                      $"'{entity.Nome}', '{entity.EstSigla}')" +
+                                                      $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
             }

@@ -1,6 +1,10 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
 using Repositorio;
+<<<<<<< HEAD
+=======
+using System;
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
 using System.Collections.Generic;
 
 namespace Negocio
@@ -21,40 +25,61 @@ namespace Negocio
         }
 
         /// <summary>
-        /// Seleciona todas as os logins do Database.
+        /// 
         /// </summary>
-        /// <returns>Lista de logins.</returns>
+        /// <returns></returns>
         public IEnumerable<Login> Selecionar()
         {
             var lista = _loginRepositorio.Selecionar();
 
+<<<<<<< HEAD
+=======
+            if (lista == null)
+                throw new NaoEncontradoException();
+
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             return lista;
         }
 
         /// <summary>
-        /// Seleciona um login do Database.
+        /// 
         /// </summary>
-        /// <param name="id">Usado para buscar um login no Database.</param>
-        /// <returns>Seleciona um login ou gera uma exceção.</returns>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Login SelecionarPorId(int id)
         {
             var obj = _loginRepositorio.SelecionarPorId(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhum usúario com o ID: {id}");
+                throw new NaoEncontradoException();
 
             return obj;
         }
 
         /// <summary>
-        /// Verifica se existe um usuário com o login e a senha indicados.
+        /// 
         /// </summary>
-        /// <param name="login">Usado para buscar o usuário no Database.</param>
-        /// <param name="senha">Usado para buscar o usuário no Database.</param>
+        /// <param name="user"></param>
         /// <returns></returns>
-        public Login EfetuarLogin(string login, string senha)
+        public Login SelecionarPorUser(string user)
         {
-            var objUser = _loginRepositorio.EfetuarLogin(login, senha);
+            var obj = _loginRepositorio.SelecionarPorUser(user);
+
+            if (obj == null)
+                throw new NaoEncontradoException();
+
+            return obj;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="senha"></param>
+        /// <returns></returns>
+        public Login EfetuarLoginUser(string login, string senha)
+        {
+            var objUser = _loginRepositorio.EfetuarLoginUser(login, senha);
 
             if (objUser != null)
             {
@@ -62,8 +87,7 @@ namespace Negocio
             }
             else
             {
-                throw new NaoEncontradoException($"Não foi encontrado nenhum usúario que" +
-                                                 $" tenha este login: {login} e esta senha: {senha}");
+                throw new NaoEncontradoException();
             }
         }
 
@@ -110,9 +134,9 @@ namespace Negocio
         }
 
         /// <summary>
-		/// Verifica se o login existe no Database antes de deleta-lo.
+		/// 
 		/// </summary>
-		/// <param name="id">Usado para buscar o login no Database.</param>
+		/// <param name="id"></param>
 		public void Deletar(int id)
         {
             var obj = _loginRepositorio.SelecionarPorId(id);

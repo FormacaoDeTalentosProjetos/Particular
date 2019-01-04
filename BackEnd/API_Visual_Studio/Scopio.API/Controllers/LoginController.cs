@@ -59,6 +59,20 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE OBTÉM UM "LOGIN" POR {USERNAME}
+        /// </summary>
+        /// <param name="unsername"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("Username/{user}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Login), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetLoginUser(string unsername)
+        {
+            return Ok(_loginNegocio.SelecionarPorUser(unsername));
+        }
+
+        /// <summary>
         /// MÉTODO QUE VALIDA O LOGIN POR {USERNAME}) E {SENHA}
         /// </summary>
         /// <param name="unsername"></param>
@@ -70,7 +84,7 @@ namespace Scopio.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetLogin([FromQuery]string unsername, [FromQuery]string senha)
         {
-            return Ok(_loginNegocio.EfetuarLogin(unsername, senha));
+            return Ok(_loginNegocio.EfetuarLoginUser(unsername, senha));
         }
 
         /// <summary>

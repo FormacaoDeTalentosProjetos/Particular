@@ -10,9 +10,9 @@
         /// </summary>
         public int IdUnidade { get; set; }
         /// <summary>
-        /// Variavél que recebe o IdTribo, permitindo que ele seja null
+        /// 
         /// </summary>
-        public int? IdTribo { get; set; }
+        public int IdTribo { get; set; }
         /// <summary>
         /// 
         /// </summary>

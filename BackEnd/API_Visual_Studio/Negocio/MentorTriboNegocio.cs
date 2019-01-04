@@ -1,5 +1,4 @@
 ﻿using Dominio;
-using Dominio.dto;
 using Dominio.Excecoes;
 using Negocio.Abstracao;
 using Repositorio;
@@ -50,17 +49,6 @@ namespace Negocio
             if (obj == null)
                 throw new NaoEncontradoException();
 
-            return obj;
-        }
-
-        /// <summary>
-        /// Seleciona um membro do Database.
-        /// </summary>
-        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarTribos()
-        {
-            var obj = _mentorTriboRepositorio.SelecionarTribos();
-            
             return obj;
         }
 
