@@ -1,25 +1,25 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
+using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio;
+using Repositorio.Interface;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class UnidadeNegocio: INegocioBase<Unidade>
+    public class UnidadeNegocio : IUnidadeNegocio
     {
         /// <summary>
         /// Declara o repositório da unidade.
         /// </summary>
-        private readonly UnidadeRepositorio _unidadeRepositorio;
+        private readonly IUnidadeRepositorio _unidadeRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public UnidadeNegocio()
+        public UnidadeNegocio(IUnidadeRepositorio unidadeRepositorio)
         {
-            _unidadeRepositorio = new UnidadeRepositorio();
+            _unidadeRepositorio = unidadeRepositorio;
         }
 
         /// <summary>
@@ -69,23 +69,7 @@ namespace Negocio
         /// <returns>ID da unidade inserida no Database ou gera alguma exceção.</returns>
         public int Inserir(Unidade entity)
         {
-            //Verifica se existem campos vazios.
-            if (CamposVazios.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos obrigatórios que não foram preenchidos!");
-            }
-
-            //Verifica se nenhum campo do objeto entity excede o limite de caracteres estipulado no Database.
-            if (ExcedeLimiteDeCaracteres.Verificar(entity))
-            {
-                throw new DadoInvalidoException("Existem campos que excedem o limite de caracteres permitidos!");
-            }
-
-            //Verifica se a unidade já foi cadastrada.
-            if (_unidadeRepositorio.SelecionarPorNome(entity.Nome) != null)
-            {
-                throw new ConflitoException($"A unidade: \"{entity.Nome}\", já foi cadastrada!");
-            }
+            Validacoes(entity);
 
             return _unidadeRepositorio.Inserir(entity);
         }
@@ -98,6 +82,37 @@ namespace Negocio
         /// <returns>ID da unidade inserida no Database ou gera alguma exceção.</returns>
         public Unidade Alterar(int id, Unidade entity)
         {
+            Validacoes(entity);
+            
+            //verifica se o Id existe
+            if (_unidadeRepositorio.SelecionarPorId(id) == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma unidade com este ID: { id }");
+            }
+
+            entity.Id = id;
+            _unidadeRepositorio.Alterar(entity);
+
+            return _unidadeRepositorio.SelecionarPorId(id);
+        }
+
+        /// <summary>
+        /// Verifica se a unidade existe no Database antes de deleta-la.
+        /// </summary>
+        /// <param name="id">Usado para buscar a unidade no Database.</param>
+        public void Deletar(int id)
+        {
+            var obj = SelecionarPorId(id);
+
+            if (obj == null)
+            {
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma unidade com este ID: { id }");
+            }
+            _unidadeRepositorio.Deletar(obj.Id);
+        }
+
+        public void Validacoes(Unidade entity)
+        {
             //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
             {
@@ -115,26 +130,7 @@ namespace Negocio
             {
                 throw new ConflitoException($"A unidade: \"{entity.Nome}\", já foi cadastrada!");
             }
-
-            entity.Id = id;
-            _unidadeRepositorio.Alterar(entity);
-
-            return _unidadeRepositorio.SelecionarPorId(id);
         }
 
-        /// <summary>
-        /// Verifica se a unidade existe no Database antes de deleta-lo.
-        /// </summary>
-        /// <param name="id">Usado para buscar a unidade no Database.</param>
-        public void Deletar(int id)
-        {
-            var obj = SelecionarPorId(id);
-
-            if (obj == null)
-            {
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma unidade com este ID: { id }");
-            }
-            _unidadeRepositorio.Deletar(obj.Id);
-        }
     }
 }

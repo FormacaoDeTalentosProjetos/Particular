@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -20,14 +16,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly SquadNegocio _squadNegocio;
+        private readonly ISquadNegocio _squadNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public SquadController()
+        public SquadController(ISquadNegocio squadNegocio)
         {
-            _squadNegocio = new SquadNegocio();
+            _squadNegocio = squadNegocio;
         }
 
         /// <summary>
@@ -48,12 +44,26 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "SquadGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
         {
             return Ok(_squadNegocio.SelecionarPorId(id));
+        }
+
+        /// <summary>
+        /// MÉTODO QUE OBTÉM UMA LISTA DE "SQUADS" PELO {IdTribo}
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("IdTribo/{id}")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetSquadIdTribo(int id)
+        {
+            return Ok(_squadNegocio.SelecionarPorIdTribo(id));
         }
 
         /// <summary>
@@ -91,7 +101,7 @@ namespace Scopio.API.Controllers
 
             var idSquad = _squadNegocio.Inserir(objSquad);
             objSquad.ID = idSquad;
-            return CreatedAtRoute(nameof(GetId), new { id = idSquad }, objSquad);
+            return CreatedAtRoute(routeName: "SquadGetId", routeValues: new { id = idSquad }, value: objSquad);
         }
 
         /// <summary>

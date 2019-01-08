@@ -1,19 +1,14 @@
 ﻿using Dapper;
 using Dominio;
-<<<<<<< HEAD
 using Dominio.dto;
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
-using Repositorio.Abstracao;
+using Repositorio.Interface;
 using Repositorio.Configuracao;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace Repositorio
 {
-    public class MentorSquadRepositorio : IRepositorioBase<MentorSquad>
+    public class MentorSquadRepositorio : IMentorSquadRepositorio
     {
         /// <summary>
         /// PESQUISA ASSOCIAÇÕES MENTOR_SQUAD
@@ -47,6 +42,30 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// Método que seleciona membros de uma squad.
+        /// </summary>
+        /// <param name="idSquad">IdUser a ser buscado no Database.</param>
+        /// <returns>Objeto com os dados do membro selecionado.</returns>
+        public IEnumerable<MentorSquadDto> SelecionarSquads()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.Query<MentorSquadDto>($"SELECT [TB_MENTOR_SQUAD].[ID], [IdSquad], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
+                                                           $"FROM [TB_MENTOR_SQUAD] " +
+                                                           $"INNER JOIN TB_MENTOR ON " +
+                                                           $"IdMentor = [TB_MENTOR].[ID] " +
+                                                           $"INNER JOIN TB_USER ON " +
+                                                           $"[IdUser] = [TB_USER].[ID] " +
+                                                           $"INNER JOIN TB_PAPEL ON " +
+                                                           $"[IdPapel] = [TB_PAPEL].[ID] " +
+                                                           $"INNER JOIN TB_NVPAPEL ON " +
+                                                           $"[IdNivel] = [TB_NVPAPEL].[ID] " +
+                                                           $"WHERE [TB_USER].[Status] = 1");
+                return obj;
+            }
+        }
+
+        /// <summary>
         /// CADASTRA ASSOCIAÇÃO MENTOR_SQUAD
         /// </summary>
         /// <param name="entity"></param>
@@ -57,8 +76,8 @@ namespace Repositorio
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_SQUAD] " +
-                                                      $"(IdSquad, IdUser) " +
-                                                      $"VALUES ({entity.IdSquad}, {entity.IdUser})" +
+                                                      $"(IdSquad, IdMentor) " +
+                                                      $"VALUES ({entity.IdSquad}, {entity.IdMentor})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
@@ -75,7 +94,7 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_MENTOR_SQUAD] " +
                                    $"SET IdSquad = {entity.IdSquad}, " +
-                                   $"IdUser = {entity.IdUser} " +
+                                   $"IdMentor = {entity.IdMentor} " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -21,14 +17,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para a unidade.
         /// </summary>
-        private readonly UnidadeNegocio _unidadeNegocio;
+        private readonly IUnidadeNegocio _unidadeNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public UnidadeController()
+        public UnidadeController(IUnidadeNegocio unidadeNegocio)
         {
-            _unidadeNegocio = new UnidadeNegocio();
+            _unidadeNegocio = unidadeNegocio;
         }
 
         /// <summary>
@@ -54,7 +50,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "UnidadeGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Unidade), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -102,7 +98,7 @@ namespace Scopio.API.Controllers
 
             var idUnidade = _unidadeNegocio.Inserir(objUnidade);
             objUnidade.Id = idUnidade;
-            return CreatedAtRoute(nameof(GetId), new { id = idUnidade }, objUnidade);
+            return CreatedAtRoute(routeName: "UnidadeGetId", routeValues: new { id = idUnidade }, value: objUnidade);
         }
 
         /// <summary>

@@ -14,17 +14,18 @@ namespace Scopio.API.Filtros
     /// </summary>
     public class ErroFiltro
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="context"></param>
-        /// <param name="next"></param>
-        /// <returns></returns>
-        public async Task Invoke(HttpContext context, Func<Task> next)
+        private readonly RequestDelegate next;
+
+        public ErroFiltro(RequestDelegate next)
+        {
+            this.next = next;
+        }
+
+        public async Task Invoke(HttpContext context)
         {
             try
             {
-                await next();
+                await next(context);
             }
             catch (Exception ex)
             {
@@ -44,11 +45,13 @@ namespace Scopio.API.Filtros
                 case ConflitoException nfEx:
                     code = HttpStatusCode.Conflict;
                     break;
+                case RecusadoException nfEx:
+                    code = HttpStatusCode.Forbidden;
+                    break;
                 default:
                     code = HttpStatusCode.InternalServerError;
                     break;
             }
-
             var result = JsonConvert.SerializeObject(new { error = exception.Message, inner = exception.InnerException });
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
