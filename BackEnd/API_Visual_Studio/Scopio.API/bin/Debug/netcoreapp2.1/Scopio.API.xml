@@ -723,6 +723,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Scopio.API.Controllers.UserController.GetMentores">
+            <summary>
+            MÉTODO QUE OBTÉM UMA LISTA DOS "USUARIOS MENTORES"
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Scopio.API.Controllers.UserController.GetAtivos">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTA DOS "USUÁRIOS" ATIVOS
@@ -974,6 +980,11 @@
             </summary>
         </member>
         <member name="P:Scopio.API.Model.UserInput.IdNivel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.UserInput.IdResponsabilidade">
             <summary>
             
             </summary>

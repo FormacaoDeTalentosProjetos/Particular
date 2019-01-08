@@ -25,6 +25,20 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// PESQUISA TODOS OS USUÁRIOS
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IEnumerable<User> SelecionarMentores()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var lista = connection.Query<User>($"select u.ID, u.Nome from [TB_USER] as u inner join [TB_RESPONSABILIDADE] as r on u.IdResponsabilidade = r.ID where UPPER(r.Nome) = 'MENTOR' and u.Status = 1");
+                return lista;
+            }
+        }
+
+        /// <summary>
         /// PESQUISA TODOS OS USUÁRIOS "ATIVOS"
         /// </summary>
         /// <returns></returns>

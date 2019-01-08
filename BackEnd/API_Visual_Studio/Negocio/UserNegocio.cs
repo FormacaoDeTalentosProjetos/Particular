@@ -36,6 +36,15 @@ namespace Negocio
         }
 
         /// <summary>
+        /// Seleciona todos os usuários do Database.
+        /// </summary>
+        /// <returns>Lista de usuários.</returns>
+        public IEnumerable<User> SelecionarMentores()
+        {
+            return _userRepositorio.SelecionarMentores();
+        }
+
+        /// <summary>
         /// Seleciona todos usuários ativos.
         /// </summary>
         /// <returns>Lista de usuários ativos.</returns>
@@ -94,8 +103,11 @@ namespace Negocio
         public int Inserir(User entity)
         {
             Validacoes(entity);
-            if(entity.IdResponsabilidade)
-            return _userRepositorio.InserirComResponsabilidade(entity);
+            if (entity.IdResponsabilidade == null || entity.IdResponsabilidade == 0)
+                return _userRepositorio.InserirSemResponsabilidade(entity);
+
+            else
+                return _userRepositorio.InserirComResponsabilidade(entity);
         }
 
 

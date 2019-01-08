@@ -11,6 +11,7 @@ namespace Repositorio.Interface
         int InserirComResponsabilidade(User entity);
         int InserirSemResponsabilidade(User entity);
         IEnumerable<User> Selecionar();
+        IEnumerable<User> SelecionarMentores();
         IEnumerable<User> SelecionarAtivos();
         User SelecionarPorId(int id);
         IEnumerable<User> SelecionarPorNome(string nome);

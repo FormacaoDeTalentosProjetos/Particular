@@ -67,7 +67,20 @@ namespace Scopio.API.Controllers
         {
             return Ok(_userNegocio.Selecionar());
         }
-        
+
+        /// <summary>
+        /// MÉTODO QUE OBTÉM UMA LISTA DOS "USUARIOS MENTORES"
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("Mentores")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(User), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetMentores()
+        {
+            return Ok(_userNegocio.SelecionarMentores());
+        }
+
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTA DOS "USUÁRIOS" ATIVOS
         /// </summary>
