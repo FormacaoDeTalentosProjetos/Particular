@@ -16,9 +16,15 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        public SquadNegocio(ISquadRepositorio squadRepositorio)
+        private readonly IMentorSquadRepositorio _mentorSquadRepositorio;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SquadNegocio(ISquadRepositorio squadRepositorio, IMentorSquadRepositorio mentorSquadRepositorio)
         {
             _squadRepositorio = squadRepositorio;
+            _mentorSquadRepositorio = mentorSquadRepositorio;
         }
 
         /// <summary>
@@ -87,17 +93,40 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Squad entity)
         {
+            int IdMentor = entity.ID;
             var UserExistente = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
             if (UserExistente != null)
             {
                 throw new ConflitoException($"Já existe cadastrado a SQUAD {UserExistente.Nome}, cadastrado!");
             }
-           
-           if(entity.IdTribo == null)
-                return _squadRepositorio.InserirSemTribo(entity);
 
-           else
-                return _squadRepositorio.InserirComTribo(entity);
+            if (entity.IdTribo == null)
+            {
+                if (entity.IdMentor == 0)
+                {
+                    return _squadRepositorio.InserirSemTribo(entity);
+                }
+                else
+                {
+                    _mentorSquadRepositorio.Inserir(entity.ID, IdMentor);
+                    return _squadRepositorio.InserirSemTribo(entity);
+
+                }
+            }
+            else
+            {
+                if (entity.IdMentor == 0)
+                {
+                    return _squadRepositorio.InserirComTribo(entity);
+                }
+                else
+                {
+                    _squadRepositorio.InserirComTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdMentor);
+                    return teste.ID;
+                }
+            }
         }
 
         /// <summary>

@@ -159,13 +159,6 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorSquadController.Post(Scopio.API.Model.MentorSquadInput)">
-            <summary>
-            MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
-            </summary>
-            <param name="input"></param>
-            <returns></returns>
-        </member>
         <member name="M:Scopio.API.Controllers.MentorSquadController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_SQUAD"
@@ -179,14 +172,12 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad">
+        <member name="M:Scopio.API.Controllers.MentorSquadController.GetSquadId(System.Int32)">
             <summary>
-            Método que retorna lista de mentores de uma squad.
+            MÉTODO QUE OBTÉM UMA ASSOCIAÇÃO "MENTOR_SQUAD" POR {ID}
             </summary>
+            <param name="id"></param>
             <returns></returns>
-            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
-            <response code="200">OK</response>
-            <response code="404">NotFoud</response>
         </member>
         <member name="M:Scopio.API.Controllers.MentorSquadController.PutPapel(System.Int32,Scopio.API.Model.MentorSquadInput)">
             <summary>
@@ -834,7 +825,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorSquadInput.IdMentor">
+        <member name="P:Scopio.API.Model.MentorSquadInput.IdUser">
             <summary>
             
             </summary>
@@ -902,6 +893,11 @@
         <member name="T:Scopio.API.Model.SquadInput">
             <summary>
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Squad 
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.SquadInput.IdMentor">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:Scopio.API.Model.SquadInput.IdUnidade">

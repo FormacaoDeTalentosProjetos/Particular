@@ -5,6 +5,11 @@
     /// </summary>
     public class SquadInput
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int IdMentor { get; set; }
         /// <summary>
         /// 
         /// </summary>

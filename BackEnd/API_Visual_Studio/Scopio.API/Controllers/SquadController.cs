@@ -40,10 +40,11 @@ namespace Scopio.API.Controllers
         {
             var objSquad = new Squad()
             {
+                IdMentor = Input.IdMentor,
                 IdUnidade = Input.IdUnidade,
                 IdTribo = Input.IdTribo,
                 Logo = Input.Logo,
-                Nome = Input.Nome
+                Nome = Input.Nome,
             };
 
             var idSquad = _squadNegocio.Inserir(objSquad);

@@ -55,9 +55,9 @@ namespace Negocio
         /// Seleciona um membro do Database.
         /// </summary>
         /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorSquadDto> SelecionarSquads()
+        public MentorSquad SelecionarSquadsPorID(int id)
         {
-            var obj = _mentorSquadRepositorio.SelecionarSquads();
+            var obj = _mentorSquadRepositorio.SelecionarSquadsPorID(id);
 
             return obj;
         }
@@ -65,11 +65,11 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="entity"></param>
+        /// <param name="IdSquad e IdMentor"></param>
         /// <returns></returns>
-        public int Inserir(MentorSquad entity)
+        public int Inserir(int IdSquad , int IdMentor)
         {
-            return _mentorSquadRepositorio.Inserir(entity);
+            return _mentorSquadRepositorio.Inserir(IdSquad, IdMentor);
         }
 
         /// <summary>
