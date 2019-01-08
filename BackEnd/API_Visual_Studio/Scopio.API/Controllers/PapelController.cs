@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -20,14 +16,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly PapelNegocio _papelNegocio;
+        private readonly IPapelNegocio _papelNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public PapelController()
+        public PapelController(IPapelNegocio papelNegocio)
         {
-            _papelNegocio = new PapelNegocio();
+            _papelNegocio = papelNegocio;
         }
 
         /// <summary>
@@ -48,7 +44,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "PapelGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Papel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -89,7 +85,7 @@ namespace Scopio.API.Controllers
 
             var idPapel = _papelNegocio.Inserir(objPapel);
             objPapel.ID = idPapel;
-            return CreatedAtRoute(nameof(GetId), new { id = idPapel }, objPapel);
+            return CreatedAtRoute(routeName: "PapelGetId", routeValues: new { id = idPapel }, value: objPapel);
         }
 
         /// <summary>

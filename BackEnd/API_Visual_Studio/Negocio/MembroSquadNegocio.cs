@@ -1,26 +1,30 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Abstracao;
+using Negocio.Interface;
 using Negocio.Validacoes;
-using Repositorio;
+using Repositorio.Interface;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class MembroSquadNegocio : INegocioBase<MembroSquad>
+    public class MembroSquadNegocio : IMembroSquadNegocio
     {
         /// <summary>
         /// 
         /// </summary>
-        private readonly MembroSquadRepositorio _membroSquadRepositorio;
-        
+        private readonly IMembroSquadRepositorio _membroSquadRepositorio;
+        private readonly ISquadRepositorio _squadRepositorio;
+        private readonly IUserRepositorio _userRepositorio;
+
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public MembroSquadNegocio()
+        public MembroSquadNegocio(IMembroSquadRepositorio membroSquadRepositorio, ISquadRepositorio squadRepositorio, IUserRepositorio userRepositorio)
         {
-            _membroSquadRepositorio = new MembroSquadRepositorio();
+            _membroSquadRepositorio = membroSquadRepositorio;
+            _squadRepositorio = squadRepositorio;
+            _userRepositorio = userRepositorio;
         }
 
         /// <summary>
@@ -57,7 +61,7 @@ namespace Negocio
             var obj = _membroSquadRepositorio.SelecionarPorIdSquad(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
+                throw new NaoEncontradoException($"Não foi encontrado nenhuma squad com este ID: { id }");
 
             return obj;
         }
@@ -78,8 +82,6 @@ namespace Negocio
                 throw new ConflitoException($"O usuário com ID: {entity.IdUser}, " +
                                             $"já está vinculado a uma Squad");
             }
-
-
             return _membroSquadRepositorio.Inserir(entity);
         }
 
@@ -134,7 +136,6 @@ namespace Negocio
             }
 
             //Verifica se o Id da Squad é válido.
-            var _squadRepositorio = new SquadRepositorio();
             if (_squadRepositorio.SelecionarPorId(entity.IdSquad) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhuma Squad " +
@@ -142,7 +143,6 @@ namespace Negocio
             }
 
             //Verifica se o Id do Usuário é válido.
-            var _userRepositorio = new UserRepositorio();
             if (_userRepositorio.SelecionarPorId(entity.IdSquad) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +

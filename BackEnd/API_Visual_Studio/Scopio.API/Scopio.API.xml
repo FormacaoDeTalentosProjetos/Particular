@@ -14,7 +14,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.LoginController.#ctor">
+        <member name="M:Scopio.API.Controllers.LoginController.#ctor(Negocio.Interface.ILoginNegocio)">
             <summary>
             
             </summary>
@@ -32,16 +32,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
-=======
-        <member name="M:Scopio.API.Controllers.LoginController.GetLoginUser(System.String)">
-            <summary>
-            MÉTODO QUE OBTÉM UM "LOGIN" POR {USERNAME}
-            </summary>
-            <param name="unsername"></param>
-            <returns></returns>
-        </member>
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="M:Scopio.API.Controllers.LoginController.GetLogin(System.String,System.String)">
             <summary>
             MÉTODO QUE VALIDA O LOGIN POR {USERNAME}) E {SENHA}
@@ -91,7 +81,7 @@
             Declara as regras de negócio para o membro.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MembroSquadController.#ctor">
+        <member name="M:Scopio.API.Controllers.MembroSquadController.#ctor(Negocio.Interface.IMembroSquadNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -164,7 +154,7 @@
             Declara as regras de negócio para o membroTribo.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MembroTriboController.#ctor">
+        <member name="M:Scopio.API.Controllers.MembroTriboController.#ctor(Negocio.Interface.IMembroTriboNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -227,7 +217,6 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
-<<<<<<< HEAD
         <member name="T:Scopio.API.Controllers.MentorController">
             <summary>
             Tipo de dado a ser retornado e rota da API.
@@ -238,7 +227,7 @@
             Declara as regras de negócio para o mentor.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorController.#ctor">
+        <member name="M:Scopio.API.Controllers.MentorController.#ctor(Negocio.Interface.IMentorNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -288,8 +277,6 @@
             <response code="200">OK</response>
             <response code="404">NotFound</response>
         </member>
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="T:Scopio.API.Controllers.MentorSquadController">
             <summary>
             
@@ -300,7 +287,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorSquadController.#ctor">
+        <member name="M:Scopio.API.Controllers.MentorSquadController.#ctor(Negocio.Interface.IMentorSquadNegocio)">
             <summary>
             
             </summary>
@@ -318,7 +305,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:Scopio.API.Controllers.MentorSquadController.GetIdSquad">
             <summary>
             Método que retorna lista de mentores de uma squad.
@@ -328,8 +314,6 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="M:Scopio.API.Controllers.MentorSquadController.Post(Scopio.API.Model.MentorSquadInput)">
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
@@ -362,7 +346,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorTriboController.#ctor">
+        <member name="M:Scopio.API.Controllers.MentorTriboController.#ctor(Negocio.Interface.IMentorTriboNegocio)">
             <summary>
             
             </summary>
@@ -380,7 +364,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad">
             <summary>
             Método que retorna lista de membros de uma Tribo.
@@ -390,8 +373,6 @@
             <response code="200">OK</response>
             <response code="404">NotFoud</response>
         </member>
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="M:Scopio.API.Controllers.MentorTriboController.Post(Scopio.API.Model.MentorTriboInput)">
             <summary>
             MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
@@ -424,7 +405,7 @@
             Declara as regras de negócio para os niveis de papel.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.NivelPapelController.#ctor">
+        <member name="M:Scopio.API.Controllers.NivelPapelController.#ctor(Negocio.Interface.INivelPapelNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -497,7 +478,7 @@
             Declara as regras de negócio para o país.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.PaisController.#ctor">
+        <member name="M:Scopio.API.Controllers.PaisController.#ctor(Negocio.Interface.IPaisNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -570,7 +551,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.PapelController.#ctor">
+        <member name="M:Scopio.API.Controllers.PapelController.#ctor(Negocio.Interface.IPapelNegocio)">
             <summary>
             
             </summary>
@@ -627,7 +608,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.SquadController.#ctor">
+        <member name="M:Scopio.API.Controllers.SquadController.#ctor(Negocio.Interface.ISquadNegocio)">
             <summary>
             
             </summary>
@@ -645,7 +626,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:Scopio.API.Controllers.SquadController.GetSquadIdTribo(System.Int32)">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTA DE "SQUADS" PELO {IdTribo}
@@ -653,8 +633,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="M:Scopio.API.Controllers.SquadController.GetSquad(System.String)">
             <summary>
             MÉTODO QUE OBTÉM UMA "SQUAD" PELO {NOME}
@@ -716,7 +694,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.TriboController.#ctor">
+        <member name="M:Scopio.API.Controllers.TriboController.#ctor(Negocio.Interface.ITriboNegocio)">
             <summary>
             
             </summary>
@@ -787,7 +765,7 @@
             Declara as regras de negócio para a unidade.
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.UnidadeController.#ctor">
+        <member name="M:Scopio.API.Controllers.UnidadeController.#ctor(Negocio.Interface.IUnidadeNegocio)">
             <summary>
             Construtor para instanciar as regras de negócio.
             </summary>
@@ -860,7 +838,7 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.UserController.#ctor">
+        <member name="M:Scopio.API.Controllers.UserController.#ctor(Negocio.Interface.IUserNegocio)">
             <summary>
             
             </summary>
@@ -933,14 +911,6 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Filtros.ErroFiltro.Invoke(Microsoft.AspNetCore.Http.HttpContext,System.Func{System.Threading.Tasks.Task})">
-            <summary>
-            
-            </summary>
-            <param name="context"></param>
-            <param name="next"></param>
-            <returns></returns>
-        </member>
         <member name="T:Scopio.API.Model.LoginInput">
              <summary>
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Login. 
@@ -948,11 +918,7 @@
         </member>
         <member name="P:Scopio.API.Model.LoginInput.IdUser">
             <summary>
-<<<<<<< HEAD
             Propriedade IdUser
-=======
-            P0ropriedade IdUser
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             </summary>
         </member>
         <member name="P:Scopio.API.Model.LoginInput.Username">
@@ -1000,7 +966,6 @@
             
             </summary>
         </member>
-<<<<<<< HEAD
         <member name="T:Scopio.API.Model.MentorInput">
              <summary>
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio do Mentor. 
@@ -1011,8 +976,6 @@
             Propriedade do IdUser
             </summary>
         </member>
-=======
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         <member name="T:Scopio.API.Model.MentorSquadInput">
             <summary>
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio do MentorSquad.
@@ -1023,11 +986,7 @@
             
             </summary>
         </member>
-<<<<<<< HEAD
         <member name="P:Scopio.API.Model.MentorSquadInput.IdMentor">
-=======
-        <member name="P:Scopio.API.Model.MentorSquadInput.IdUser">
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             <summary>
             
             </summary>
@@ -1042,11 +1001,7 @@
             
             </summary>
         </member>
-<<<<<<< HEAD
         <member name="P:Scopio.API.Model.MentorTriboInput.IdMentor">
-=======
-        <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             <summary>
             
             </summary>
@@ -1108,11 +1063,7 @@
         </member>
         <member name="P:Scopio.API.Model.SquadInput.IdTribo">
             <summary>
-<<<<<<< HEAD
             Variavél que recebe o IdTribo, permitindo que ele seja null
-=======
-            
->>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             </summary>
         </member>
         <member name="P:Scopio.API.Model.SquadInput.Logo">
@@ -1219,24 +1170,6 @@
             <summary>
             
             </summary>
-        </member>
-        <member name="T:Scopio.API.Program">
-            <summary>
-            Classe principal da Solução
-            </summary>
-        </member>
-        <member name="M:Scopio.API.Program.Main(System.String[])">
-            <summary>
-            
-            </summary>
-            <param name="args"></param>
-        </member>
-        <member name="M:Scopio.API.Program.BuildWebHost(System.String[])">
-            <summary>
-            
-            </summary>
-            <param name="args"></param>
-            <returns></returns>
         </member>
         <member name="T:Scopio.API.Startup">
             <summary>

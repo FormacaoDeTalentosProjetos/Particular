@@ -1,13 +1,13 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Abstracao;
+using Repositorio.Interface;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class UnidadeRepositorio: IRepositorioBase<Unidade>
+    public class UnidadeRepositorio : IUnidadeRepositorio
     {
         /// <summary>
         /// Método que seleciona todos as unidades do database.
@@ -68,8 +68,8 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_UNIDADE] " +
                                                       $"(IdPais, Nome, EstSigla) " +
                                                       $"VALUES ({entity.IdPais}, " +
-                                                      $"'{entity.Nome}', '{entity.EstSigla}')" +
-                                                      $"SET @ID = SCOPE_IDENTITY();" +
+                                                      $"'{entity.Nome}', '{entity.EstSigla}') " +
+                                                      $"SET @ID = SCOPE_IDENTITY(); " +
                                                       $"SELECT @ID");
                 return obj;
             }

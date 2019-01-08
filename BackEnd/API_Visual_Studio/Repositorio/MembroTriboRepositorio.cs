@@ -1,16 +1,14 @@
 ﻿using Dapper;
 using Dominio;
 using Dominio.dto;
-using Repositorio.Abstracao;
+using Repositorio.Interface;
 using Repositorio.Configuracao;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace Repositorio
 {
-    public class MembroTriboRepositorio : IRepositorioBase<MembroTribo>
+    public class MembroTriboRepositorio : IMembroTriboRepositorio
     {
         /// <summary>
         /// Método que seleciona todos os membros do database.
