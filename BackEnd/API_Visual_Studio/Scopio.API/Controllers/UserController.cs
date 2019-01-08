@@ -44,6 +44,7 @@ namespace Scopio.API.Controllers
                 Senha = input.Senha,
                 IdPapel = input.IdPapel,
                 IdNivel = input.IdNivel,
+                IdResponsabilidade= input.IdResponsabilidade,
                 Avatar = input.Avatar,
                 Nome = input.Nome,
                 Email = input.Email,

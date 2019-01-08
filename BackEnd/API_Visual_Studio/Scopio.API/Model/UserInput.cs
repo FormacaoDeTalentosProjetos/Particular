@@ -17,6 +17,10 @@
         /// <summary>
         /// 
         /// </summary>
+        public int IdResponsabilidade { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Avatar { get; set; }
         /// <summary>
         /// 

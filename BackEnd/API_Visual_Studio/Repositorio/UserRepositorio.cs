@@ -94,7 +94,7 @@ namespace Repositorio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(User entity)
+        public int InserirSemResponsabilidade(User entity)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -103,6 +103,39 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_USER] " +
                                                       $"(IdPapel, IdNivel, Avatar, Nome, Email, Tel, Status) " +
                                                       $"VALUES ({entity.IdPapel}, {entity.IdNivel}, " +
+                                                      $"'{entity.Avatar}', '{entity.Nome}', '{entity.Email}', " +
+                                                      $"'{entity.Tel}', 1)" +
+                                                      $"SET @IDUser = SCOPE_IDENTITY();" +
+                                                      $"SELECT @IDUser " +
+                                                      $"DECLARE @HASH VARCHAR(32); " +
+                                                      $"SET @HASH = '{entity.Senha}' " +
+                                                      $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
+                                                      $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
+                                                      $"INSERT INTO [TB_LOGIN] " +
+                                                      $"(IdUser, Username, Senha, Status) " +
+                                                      $"VALUES (@IDUser, " +
+                                                      $"'{entity.UserName}', " +
+                                                      $"@HASH, 1)" +
+                                                      $"SET @ID = SCOPE_IDENTITY();" +
+                                                      $"SELECT @ID");
+                return obj;
+            }
+        }
+
+        /// <summary>
+        /// CADASTRA USUARIO
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int InserirComResponsabilidade(User entity)
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.QuerySingle<int>($"DECLARE @IDUser INT; " +
+                                                      $"DECLARE @ID INT; " +
+                                                      $"INSERT INTO [TB_USER] " +
+                                                      $"(IdPapel, IdNivel, IdResponsabilidade, Avatar, Nome, Email, Tel, Status) " +
+                                                      $"VALUES ({entity.IdPapel}, {entity.IdNivel}, {entity.IdResponsabilidade}," +
                                                       $"'{entity.Avatar}', '{entity.Nome}', '{entity.Email}', " +
                                                       $"'{entity.Tel}', 1)" +
                                                       $"SET @IDUser = SCOPE_IDENTITY();" +

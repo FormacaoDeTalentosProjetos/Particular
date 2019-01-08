@@ -10,8 +10,6 @@ namespace Infra.IOC.Negocio
         {
             services.AddScoped<ILoginNegocio, LoginNegocio>();
             services.AddScoped<IMembroSquadNegocio, MembroSquadNegocio>();
-            services.AddScoped<IMembroTriboNegocio, MembroTriboNegocio>();
-            services.AddScoped<IMentorNegocio, MentorNegocio>();
             services.AddScoped<IMentorSquadNegocio, MentorSquadNegocio>();
             services.AddScoped<IMentorTriboNegocio, MentorTriboNegocio>();
             services.AddScoped<INivelPapelNegocio, NivelPapelNegocio>();

@@ -94,8 +94,10 @@ namespace Negocio
         public int Inserir(User entity)
         {
             Validacoes(entity);
-            return _userRepositorio.Inserir(entity);
+            if(entity.IdResponsabilidade)
+            return _userRepositorio.InserirComResponsabilidade(entity);
         }
+
 
         /// <summary>
         /// 
