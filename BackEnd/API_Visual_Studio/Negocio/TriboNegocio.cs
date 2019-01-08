@@ -1,24 +1,26 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
-using Repositorio.Interface;
+using Negocio.Abstracao;
+using Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
-    public class TriboNegocio : ITriboNegocio
+    public class TriboNegocio : INegocioBase<Tribo>
     {
         /// <summary>
         /// 
         /// </summary>
-        private readonly ITriboRepositorio _triboRepositorio;
+        private readonly TriboRepositorio _triboRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public TriboNegocio(ITriboRepositorio triboRepositorio)
+        public TriboNegocio()
         {
-            _triboRepositorio = triboRepositorio;
+            _triboRepositorio = new TriboRepositorio();
         }
 
         /// <summary>

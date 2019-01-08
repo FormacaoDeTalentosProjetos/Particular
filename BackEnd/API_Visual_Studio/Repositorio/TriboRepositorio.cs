@@ -1,13 +1,15 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Interface;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace Repositorio
 {
-    public class TriboRepositorio : ITriboRepositorio
+    public class TriboRepositorio : IRepositorioBase<Tribo>
     {
         /// <summary>
         /// PESQUISA TRIBOS

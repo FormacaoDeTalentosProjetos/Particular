@@ -5341,28 +5341,10 @@
           "bin/placeholder/Dominio.dll": {}
         }
       },
-      "Infra.IOC/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "2.1.1",
-          "Microsoft.Extensions.Configuration.FileExtensions": "2.1.1",
-          "Microsoft.Extensions.Configuration.Json": "2.1.1",
-          "Negocio": "1.0.0",
-          "Repositorio": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Infra.IOC.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infra.IOC.dll": {}
-        }
-      },
       "Negocio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Dominio": "1.0.0",
           "Repositorio": "1.0.0"
         },
         "compile": {
@@ -14264,11 +14246,6 @@
       "path": "../Dominio/Dominio.csproj",
       "msbuildProject": "../Dominio/Dominio.csproj"
     },
-    "Infra.IOC/1.0.0": {
-      "type": "project",
-      "path": "../Infra.IOC/Infra.IOC.csproj",
-      "msbuildProject": "../Infra.IOC/Infra.IOC.csproj"
-    },
     "Negocio/1.0.0": {
       "type": "project",
       "path": "../Negocio/Negocio.csproj",
@@ -14283,7 +14260,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Dominio >= 1.0.0",
-      "Infra.IOC >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.9",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -14301,11 +14277,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "projectName": "Scopio.API",
-      "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\Scopio.API.csproj",
       "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Scopio.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14324,14 +14300,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Infra.IOC\\Infra.IOC.csproj": {
-              "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Infra.IOC\\Infra.IOC.csproj"
-            },
-            "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj"
             }
           }
         }

@@ -1891,7 +1891,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Dominio >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Repositorio >= 1.0.0"
     ]
@@ -1903,11 +1902,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\Negocio.csproj",
       "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Negocio\\obj\\",
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1926,11 +1925,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj"
-            },
-            "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
-              "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
+            "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj": {
+              "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Repositorio\\Repositorio.csproj"
             }
           }
         }

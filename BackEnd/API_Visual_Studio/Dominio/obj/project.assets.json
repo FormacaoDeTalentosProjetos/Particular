@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
       "packagesPath": "C:\\Users\\cacaciano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cacaciano\\Desktop\\BackEnd\\API_Visual_Studio\\Dominio\\obj\\",
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

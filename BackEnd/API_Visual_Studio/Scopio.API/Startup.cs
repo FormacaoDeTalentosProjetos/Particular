@@ -5,10 +5,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using Swashbuckle.AspNetCore.Swagger;
-using Infra.IOC;
-using System.Reflection;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Scopio.API
 {
@@ -37,18 +35,17 @@ namespace Scopio.API
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
             services.AddCors();
-
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1",
                     new Info
                     {
-                        Title = "SCOPIO",
+                        Title = "Scopio",
                         Version = "v1",
-                        Description = "API SCOPIO - Grupo Viceri",
+                        Description = "API Projeto Scopio - Formação de Talentos - Grupo VICERI",
                         Contact = new Contact
                         {
                             Name = "Viceri",
@@ -57,12 +54,13 @@ namespace Scopio.API
                     });
 
                 // Usar a documentação XML dos métodos.
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var xmlPath = Path.Combine(basePath, "Scopio.API.xml");
                 c.IncludeXmlComments(xmlPath);
+
             });
-            services.AddScoped<ErroFiltro>();
-            RegisterServices(services);
+
+            //services.AddScoped<ErroFiltro>();
         }
 
         /// <summary>
@@ -73,38 +71,30 @@ namespace Scopio.API
         /// <param name="serviceFactory"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceFactory)
         {
+            string endPoint = "/swagger/v1/swagger.json";
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
+
+            //app.Use((c, next) => serviceFactory.GetService<ErroFiltro>().Invoke(c, next));
 
             app.UseCors(c =>
             {
                 c.AllowAnyHeader();
                 c.AllowAnyMethod();
                 c.AllowAnyOrigin();
-                c.DisallowCredentials();
-
             });
-
-            app.UseHttpsRedirection();
-            app.UseMiddleware<ErroFiltro>();
-            app.UseMvc();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SCOPIO API V1");
+                c.SwaggerEndpoint(endPoint, "Scopio - Grupo Viceri");
             });
+
+            app.UseMvc();
         }
 
-        void RegisterServices(IServiceCollection services)
-        {
-            new RootBootstrapper().ChildServiceRegister(services);
-        }
     }
 }

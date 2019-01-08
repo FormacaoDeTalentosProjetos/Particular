@@ -1,24 +1,26 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
-using Repositorio.Interface;
+using Negocio.Abstracao;
+using Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
-    public class SquadNegocio : ISquadNegocio
+    public class SquadNegocio : INegocioBase<Squad>
     {
         /// <summary>
         /// 
         /// </summary>
-        private readonly ISquadRepositorio _squadRepositorio;
+        private readonly SquadRepositorio _squadRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public SquadNegocio(ISquadRepositorio squadRepositorio)
+        public SquadNegocio()
         {
-            _squadRepositorio = squadRepositorio;
+            _squadRepositorio = new SquadRepositorio();
         }
 
         /// <summary>
@@ -48,21 +50,6 @@ namespace Negocio
                 throw new NaoEncontradoException();
 
             return obj;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="idTribo"></param>
-        /// <returns></returns>
-        public IEnumerable<Squad> SelecionarPorIdTribo(int idTribo)
-        {
-            var lista = _squadRepositorio.SelecionarPorIdTribo(idTribo);
-
-            if (lista == null)
-                throw new NaoEncontradoException();
-
-            return lista;
         }
 
         /// <summary>

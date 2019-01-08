@@ -1,25 +1,26 @@
 ﻿using Dominio;
-using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Interface;
-using Repositorio.Interface;
+using Negocio.Abstracao;
+using Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
-    public class MentorSquadNegocio : IMentorSquadNegocio
+    public class MentorSquadNegocio : INegocioBase<MentorSquad>
     {
         /// <summary>
         /// 
         /// </summary>
-        private readonly IMentorSquadRepositorio _mentorSquadRepositorio;
+        private readonly MentorSquadRepositorio _mentorSquadRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public MentorSquadNegocio(IMentorSquadRepositorio mentorSquadRepositorio)
+        public MentorSquadNegocio()
         {
-            _mentorSquadRepositorio = mentorSquadRepositorio;
+            _mentorSquadRepositorio = new MentorSquadRepositorio();
         }
 
         /// <summary>
@@ -47,17 +48,6 @@ namespace Negocio
 
             if (obj == null)
                 throw new NaoEncontradoException();
-
-            return obj;
-        }
-
-        /// <summary>
-        /// Seleciona um membro do Database.
-        /// </summary>
-        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorSquadDto> SelecionarSquads()
-        {
-            var obj = _mentorSquadRepositorio.SelecionarSquads();
 
             return obj;
         }

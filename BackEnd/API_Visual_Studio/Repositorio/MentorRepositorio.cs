@@ -1,14 +1,14 @@
 ﻿using Dapper;
 using Dominio;
 using Dominio.dto;
-using Repositorio.Interface;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class MentorRepositorio : IMentorRepositorio
+    public class MentorRepositorio
     {
         /// <summary>
         /// Método que seleciona todos os mentores do database.

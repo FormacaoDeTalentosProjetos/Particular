@@ -1,30 +1,26 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class MembroTriboNegocio : IMembroTriboNegocio
+    public class MembroTriboNegocio : INegocioBase<MembroTribo>
     {
         /// <summary>
         /// Declara o repositório do membro.
         /// </summary>
-        private readonly IMembroTriboRepositorio _membroTriboRepositorio;
-        private readonly ITriboRepositorio _triboRepositorio;
-        private readonly IUserRepositorio _userRepositorio;
+        private readonly MembroTriboRepositorio _membroTriboRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public MembroTriboNegocio(IMembroTriboRepositorio membroTriboRepositorio, ITriboRepositorio triboRepositorio, IUserRepositorio userRepositorio)
+        public MembroTriboNegocio()
         {
-            _membroTriboRepositorio = membroTriboRepositorio;
-            _triboRepositorio = triboRepositorio;
-            _userRepositorio = userRepositorio;
+            _membroTriboRepositorio = new MembroTriboRepositorio();
         }
 
         /// <summary>
@@ -61,7 +57,7 @@ namespace Negocio
             var obj = _membroTriboRepositorio.SelecionarPorIdTribo(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhuma tribo com este ID: { id }");
+                throw new NaoEncontradoException($"Não foi encontrado nenhum membro com este ID: { id }");
 
             return obj;
         }
@@ -126,6 +122,7 @@ namespace Negocio
             }
 
             //Verifica se o Id da Tribo é válido.
+            var _triboRepositorio = new TriboRepositorio();
             if (_triboRepositorio.SelecionarPorId(entity.IdTribo) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhuma Tribo " +
@@ -133,6 +130,7 @@ namespace Negocio
             }
 
             //Verifica se o Id do Usuário é válido.
+            var _userRepositorio = new UserRepositorio();
             if (_userRepositorio.SelecionarPorId(entity.IdTribo) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhum usuário " +

@@ -1,20 +1,21 @@
 ﻿using Dapper;
 using Dominio;
 using Repositorio.Configuracao;
-using Repositorio.Interface;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace Repositorio
 {
-    public class UserRepositorio : IUserRepositorio
+    public class UserRepositorio
     {
         /// <summary>
         /// PESQUISA TODOS OS USUÁRIOS
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public IEnumerable<User> Selecionar()
+        public IEnumerable<User> SelecionarTodos()
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -64,12 +65,12 @@ namespace Repositorio
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var lista = connection.Query<User>($"SELECT * " +
+                var obj = connection.Query<User>($"SELECT * " +
                                                  $"FROM [TB_USER] " +
                                                  $"WHERE Nome LIKE '%{nome}' " +
                                                  $"OR Nome Like '{nome}%' " +
                                                  $"OR Nome Like '%{nome}%'");
-                return lista;
+                return obj;
             }
         }
 
@@ -114,7 +115,7 @@ namespace Repositorio
                                                       $"INSERT INTO [TB_LOGIN] " +
                                                       $"(IdUser, Username, Senha) " +
                                                       $"VALUES (@IDUser, " +
-                                                      $"'{entity.UserName}', " +
+                                                      $"'{entity.Username}', " +
                                                       $"@HASH)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");

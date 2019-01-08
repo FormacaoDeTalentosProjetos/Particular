@@ -1,97 +1,143 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+<<<<<<< HEAD
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
+=======
+using Repositorio;
+using System;
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
-    public class UserNegocio : IUserNegocio
+    public class UserNegocio
     {
         /// <summary>
-        /// Declara o repositório do usuário.
+        /// 
         /// </summary>
-        private readonly IUserRepositorio _userRepositorio;
-        private readonly IPapelRepositorio _papelRepositorio;
+        private readonly UserRepositorio _userRepositorio;
 
         /// <summary>
-        /// Construtor que instancia os repositórios
+        /// 
         /// </summary>
-        public UserNegocio(IUserRepositorio userRepositorio, IPapelRepositorio papelRepositorio)
+<<<<<<< HEAD
+        public UserNegocio()
         {
-            _userRepositorio = userRepositorio;
-            _papelRepositorio = papelRepositorio;
+            _userRepositorio = new UserRepositorio();
+=======
+        private readonly LoginRepositorio _loginRepositorio;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public UserNegocio()
+        {
+            _userRepositorio = new UserRepositorio();
+            _loginRepositorio = new LoginRepositorio();
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
         }
 
         /// <summary>
-        /// Seleciona todos os usuários do Database.
+        /// 
         /// </summary>
-        /// <returns>Lista de usuários.</returns>
-        public IEnumerable<User> Selecionar()
+        /// <returns></returns>
+        public IEnumerable<User> SelecionarTodos()
         {
-            return _userRepositorio.Selecionar();
+            var lista = _userRepositorio.SelecionarTodos();
+
+            if (lista == null)
+                throw new NaoEncontradoException();
+
+            return lista;
         }
 
         /// <summary>
-        /// Seleciona todos usuários ativos.
+        /// 
         /// </summary>
-        /// <returns>Lista de usuários ativos.</returns>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarAtivos()
         {
-            return _userRepositorio.SelecionarAtivos();
+            var lista = _userRepositorio.SelecionarAtivos();
+
+            if (lista == null)
+                throw new NaoEncontradoException();
+
+            return lista;
         }
 
         /// <summary>
-        /// Seleciona um usuário do Database.
+        /// 
         /// </summary>
-        /// <param name="id">Usado para buscar um usuário no Database.</param>
-        /// <returns>Seleciona uma usuário ou gera uma exceção.</returns>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public User SelecionarPorId(int id)
         {
             var obj = _userRepositorio.SelecionarPorId(id);
 
             if (obj == null)
-                throw new NaoEncontradoException($"Não foi encontrado nenhum usuário com este ID: {id}");
+                throw new NaoEncontradoException();
 
             return obj;
         }
 
         /// <summary>
-        /// Seleciona todos os usuário do Database que possuem parte da string nome.
+        /// 
         /// </summary>
-        /// <param name="nome">Usado para buscar os usuários no Database.</param>
-        /// <returns>Seleciona uma lista de usuários ou gera uma exceção.</returns>
+        /// <param name="nome"></param>
+        /// <returns></returns>
         public IEnumerable<User> SelecionarPorNome(string nome)
         {
-            return _userRepositorio.SelecionarPorNome(nome);
+            var obj = _userRepositorio.SelecionarPorNome(nome);
+
+            if (obj == null)
+                throw new NaoEncontradoException();
+
+            return obj;
         }
 
         /// <summary>
-        /// Seleciona todos os usuário do Database de acordo com o papel buscado.
+        /// 
         /// </summary>
-        /// <param name="IdPapel">Usado para buscar o papel no Database.</param>
-        /// <returns>Seleciona uma lista usuários ou gera uma exceção.</returns>
-        public IEnumerable<User> SelecionarPorPapel(int idPapel)
+        /// <param name="IdPapel"></param>
+        /// <returns></returns>
+        public IEnumerable<User> SelecionarPorPapel(int IdPapel)
         {
+<<<<<<< HEAD
             //repositório do papel
+            var _papelRepositorio = new PapelRepositorio();
+
             if (_papelRepositorio.SelecionarPorId(idPapel) == null)
             {
-                throw new NaoEncontradoException();
-            }
+=======
+            var obj = _userRepositorio.SelecionarPorPapel(IdPapel);
 
-            return _userRepositorio.SelecionarPorPapel(idPapel);
+            if (obj == null)
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
+                throw new NaoEncontradoException();
+
+            return obj;
         }
 
         /// <summary>
-        /// Verifica se existem campos obrigatórios que não estão preenchidos e se os campos respeitam 
-        /// os limites de caracteres especificados no Database. Antes de inserir um usuário.
+        /// 
         /// </summary>
-        /// <param name="entity">Objeto com os dados do usuário.</param>
-        /// <returns>ID do usuário inserido no Database ou gera alguma exceção.</returns>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public int Inserir(User entity)
         {
+<<<<<<< HEAD
             Validacoes(entity);
+=======
+            var UserExistente = _loginRepositorio.SelecionarPorUser(entity.Username);
+
+            if (UserExistente != null)
+            {
+                throw new ConflitoException($"Já existe cadastrado o USUÁRIO {UserExistente.Username}, para outro Login!");
+            }
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
+
             return _userRepositorio.Inserir(entity);
         }
 
@@ -103,12 +149,16 @@ namespace Negocio
         /// <returns></returns>
         public User AlterarPerfilUsuario(int id, User entity)
         {
+<<<<<<< HEAD
             Validacoes(entity);
+
             if(_userRepositorio.SelecionarPorId(id) == null)
             {
                 throw new NaoEncontradoException($"Não foi encontrado nenhuma usuário com este ID: { id }");
             }
 
+=======
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             entity.ID = id;
             _userRepositorio.AlterarPerfilUsuario(entity);
 
@@ -139,6 +189,7 @@ namespace Negocio
 
             _userRepositorio.Deletar(obj.ID);
         }
+<<<<<<< HEAD
 
         public void Validacoes(User entity)
         {
@@ -160,5 +211,8 @@ namespace Negocio
                 throw new ConflitoException($"O usuário: \"{entity.Nome}\", já foi cadastrado!");
             }
         }
+
+=======
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
     }
 }

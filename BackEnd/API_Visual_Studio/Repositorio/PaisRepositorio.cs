@@ -1,13 +1,13 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Interface;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class PaisRepositorio : IPaisRepositorio
+    public class PaisRepositorio: IRepositorioBase<Pais>
     {
         /// <summary>
         /// Método que seleciona todos os paises do database.

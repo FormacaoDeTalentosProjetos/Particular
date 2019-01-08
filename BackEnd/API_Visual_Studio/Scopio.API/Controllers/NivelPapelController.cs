@@ -1,9 +1,13 @@
 ﻿using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace Scopio.API.Controllers
 {
@@ -17,14 +21,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para os niveis de papel.
         /// </summary>
-        private readonly INivelPapelNegocio _nivelPapelNegocio;
+        private readonly NivelPapelNegocio _nivelPapelNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public NivelPapelController(INivelPapelNegocio nivelPapelNegocio)
+        public NivelPapelController()
         {
-            _nivelPapelNegocio = nivelPapelNegocio;
+            _nivelPapelNegocio = new NivelPapelNegocio();
         }
 
         /// <summary>
@@ -50,7 +54,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}", Name = "NvPapelGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(NivelPapel), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -97,7 +101,7 @@ namespace Scopio.API.Controllers
 
             var idNivelPapel = _nivelPapelNegocio.Inserir(objNivelPapel);
             objNivelPapel.ID = idNivelPapel;
-            return CreatedAtRoute(routeName: "NvPapelGetId", routeValues: new { id = idNivelPapel }, value: objNivelPapel);
+            return CreatedAtRoute(nameof(GetId), new { id = idNivelPapel }, objNivelPapel);
         }
 
         /// <summary>

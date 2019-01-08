@@ -1,8 +1,11 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Dominio;
-using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -17,14 +20,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly IMentorSquadNegocio _mentorSquadNegocio;
+        private readonly MentorSquadNegocio _mentorSquadNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public MentorSquadController(IMentorSquadNegocio mentorSquadNegocio)
+        public MentorSquadController()
         {
-            _mentorSquadNegocio = mentorSquadNegocio;
+            _mentorSquadNegocio = new MentorSquadNegocio();
         }
 
         /// <summary>
@@ -45,28 +48,12 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}", Name = "MentorSquadGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorSquad), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
         {
             return Ok(_mentorSquadNegocio.SelecionarPorId(id));
-        }
-
-        /// <summary>
-        /// Método que retorna lista de mentores de uma squad.
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
-        /// <response code="200">OK</response>
-        /// <response code="404">NotFoud</response>
-        [HttpGet]
-        [Route("Squads")]
-        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorSquadDto), nameof(HttpStatusCode.OK))]
-        [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetIdSquad()
-        {
-            return Ok(_mentorSquadNegocio.SelecionarSquads());
         }
 
         /// <summary>
@@ -83,12 +70,12 @@ namespace Scopio.API.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdMentor = input.IdMentor
+                IdUser = input.IdUser
             };
 
             var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
             objMentorSquad.ID = idMentorSquad;
-            return CreatedAtRoute(routeName: "MentorSquadGetId", routeValues: new { id = idMentorSquad }, value: objMentorSquad);
+            return CreatedAtRoute(nameof(GetId), new { id = idMentorSquad }, objMentorSquad);
         }
 
         /// <summary>
@@ -107,7 +94,7 @@ namespace Scopio.API.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdMentor = input.IdMentor
+                IdUser = input.IdUser
             };
 
             var obj = _mentorSquadNegocio.Alterar(id, objMentorSquad);

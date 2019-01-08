@@ -1,13 +1,15 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Interface;
+using Repositorio.Abstracao;
 using Repositorio.Configuracao;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace Repositorio
 {
-    public class SquadRepositorio : ISquadRepositorio
+    public class SquadRepositorio : IRepositorioBase<Squad>
     {
         /// <summary>
         /// PESQUISA SQUAD
@@ -36,21 +38,6 @@ namespace Repositorio
                                                                 $"FROM [TB_SQUAD] " +
                                                                 $"WHERE ID = {id}");
                 return obj;
-            }
-        }
-
-        /// <summary>
-        /// PESQUISA SQUADS POR {IdTribo}
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<Squad> SelecionarPorIdTribo(int idTribo)
-        {
-            using (var connection = new SqlConnection(DbConnection.GetConn()))
-            {
-                var lista = connection.Query<Squad>($"SELECT * " +
-                                                    $"FROM [TB_SQUAD] " +
-                                                    $"WHERE IdTribo = {idTribo}");
-                return lista;
             }
         }
 

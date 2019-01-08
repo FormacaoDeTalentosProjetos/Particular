@@ -1,7 +1,11 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -16,14 +20,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly ITriboNegocio _triboNegocio;
+        private readonly TriboNegocio _triboNegocio;
 
         /// <summary>
         /// 
         /// </summary>
-        public TriboController(ITriboNegocio triboNegocio)
+        public TriboController()
         {
-            _triboNegocio = triboNegocio;
+            _triboNegocio = new TriboNegocio();
         }
 
         /// <summary>
@@ -44,7 +48,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}", Name = "TriboGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Tribo), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -98,7 +102,7 @@ namespace Scopio.API.Controllers
 
             var idTribo = _triboNegocio.Inserir(objTribo);
             objTribo.ID = idTribo;
-            return CreatedAtRoute(routeName: "TriboGetId", routeValues: new { id = idTribo }, value: objTribo);
+            return CreatedAtRoute(nameof(GetId), new { id = idTribo }, objTribo);
         }
 
         /// <summary>

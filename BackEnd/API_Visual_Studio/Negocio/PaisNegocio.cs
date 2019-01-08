@@ -1,25 +1,25 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
-using Negocio.Interface;
+using Negocio.Abstracao;
 using Negocio.Validacoes;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
 
 namespace Negocio
 {
-    public class PaisNegocio : IPaisNegocio
+    public class PaisNegocio: INegocioBase<Pais>
     {
         /// <summary>
         /// Declara o repositório do país.
         /// </summary>
-        private readonly IPaisRepositorio _paisRepositorio;
+        private readonly PaisRepositorio _paisRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public PaisNegocio(IPaisRepositorio paisRepositorio)
+        public PaisNegocio()
         {
-            _paisRepositorio = paisRepositorio;
+            _paisRepositorio = new PaisRepositorio();
         }
 
         /// <summary>

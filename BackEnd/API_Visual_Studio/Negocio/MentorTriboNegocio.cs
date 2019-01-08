@@ -1,25 +1,26 @@
 ﻿using Dominio;
-using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Interface;
-using Repositorio.Interface;
+using Negocio.Abstracao;
+using Repositorio;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Negocio
 {
-    public class MentorTriboNegocio : IMentorTriboNegocio
+    public class MentorTriboNegocio : INegocioBase<MentorTribo>
     {
         /// <summary>
         /// 
         /// </summary>
-        private readonly IMentorTriboRepositorio _mentorTriboRepositorio;
+        private readonly MentorTriboRepositorio _mentorTriboRepositorio;
 
         /// <summary>
         /// 
         /// </summary>
-        public MentorTriboNegocio(IMentorTriboRepositorio mentorTriboRepositorio)
+        public MentorTriboNegocio()
         {
-            _mentorTriboRepositorio = mentorTriboRepositorio;
+            _mentorTriboRepositorio = new MentorTriboRepositorio();
         }
 
         /// <summary>
@@ -48,17 +49,6 @@ namespace Negocio
             if (obj == null)
                 throw new NaoEncontradoException();
 
-            return obj;
-        }
-
-        /// <summary>
-        /// Seleciona um membro do Database.
-        /// </summary>
-        /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarTribos()
-        {
-            var obj = _mentorTriboRepositorio.SelecionarTribos();
-            
             return obj;
         }
 

@@ -1,27 +1,25 @@
 ﻿using Dominio;
 using Dominio.dto;
 using Dominio.Excecoes;
-using Negocio.Interface;
-using Repositorio.Interface;
+using Repositorio;
 using System.Collections.Generic;
+
 
 namespace Negocio
 {
-    public class MentorNegocio : IMentorNegocio
+    public class MentorNegocio
     {
         /// <summary>
         /// Declara o repositório do mentor.
         /// </summary>
-        private readonly IMentorRepositorio _mentorRepositorio;
-        private readonly IUserRepositorio _userRepositorio;
+        private readonly MentorRepositorio _mentorRepositorio;
 
         /// <summary>
         /// Construtor para instaciar o repositório.
         /// </summary>
-        public MentorNegocio(IMentorRepositorio mentorRepositorio, IUserRepositorio userRepositorio)
+        public MentorNegocio()
         {
-            _mentorRepositorio = mentorRepositorio;
-            _userRepositorio = userRepositorio;
+            _mentorRepositorio = new MentorRepositorio();
         }
 
         /// <summary>
@@ -87,6 +85,8 @@ namespace Negocio
 
         public void Validacao(Mentor entity)
         {
+            var _userRepositorio = new UserRepositorio();
+
             //Verifica se o Id do usuário existe
             if (_userRepositorio.SelecionarPorId(entity.IdUser) == null)
             {

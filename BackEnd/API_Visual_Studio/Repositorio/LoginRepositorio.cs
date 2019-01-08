@@ -1,13 +1,13 @@
 ﻿using Dapper;
 using Dominio;
 using Repositorio.Configuracao;
-using Repositorio.Interface;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace Repositorio
 {
-    public class LoginRepositorio : ILoginRepositorio
+    public class LoginRepositorio
     {
         /// <summary>
         /// PESQUISA LOGINS
@@ -64,7 +64,7 @@ namespace Repositorio
         /// <param name="user"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
-        public Login EfetuarLogin(string user, string senha)
+        public Login EfetuarLoginUser(string user, string senha)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {

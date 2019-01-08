@@ -1,8 +1,12 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using Dominio;
 using Dominio.dto;
 using Microsoft.AspNetCore.Mvc;
-using Negocio.Interface;
+using Negocio;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -17,14 +21,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// Declara as regras de negócio para o membro.
         /// </summary>
-        private readonly IMembroSquadNegocio _membroNegocio;
+        private readonly MembroSquadNegocio _membroNegocio;
 
         /// <summary>
         /// Construtor para instanciar as regras de negócio.
         /// </summary>
-        public MembroSquadController(IMembroSquadNegocio membroNegocio)
+        public MembroSquadController()
         {
-            _membroNegocio = membroNegocio;
+            _membroNegocio = new MembroSquadNegocio();
         }
 
         /// <summary>
@@ -50,7 +54,7 @@ namespace Scopio.API.Controllers
         /// <response code="200">OK</response>
         /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("{id}", Name = "MembroSquadGetId")]
+        [Route("{id}")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(MembroSquad), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -97,7 +101,7 @@ namespace Scopio.API.Controllers
 
             var idMembro = _membroNegocio.Inserir(objMembro);
             objMembro.Id = idMembro;
-            return CreatedAtRoute(routeName: "MembroSquadGetId", routeValues: new { id = idMembro }, value: objMembro);
+            return CreatedAtRoute(nameof(GetId), new { id = idMembro }, objMembro);
         }
 
         /// <summary>
