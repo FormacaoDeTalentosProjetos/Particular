@@ -1,9 +1,14 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
 using Negocio.Abstracao;
+<<<<<<< HEAD
+using Negocio.Validacoes;
+using Repositorio;
+=======
 using Repositorio;
 using Repositorio.Abstracao;
 using System;
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,5 +1,9 @@
 ﻿using Dapper;
 using Dominio;
+<<<<<<< HEAD
+using Dominio.dto;
+=======
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
 using Repositorio.Abstracao;
 using Repositorio.Configuracao;
 using System;

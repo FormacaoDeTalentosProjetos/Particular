@@ -1,7 +1,10 @@
 ﻿using Dominio;
 using Dominio.Excecoes;
 using Repositorio;
+<<<<<<< HEAD
+=======
 using System;
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
 using System.Collections.Generic;
 
 namespace Negocio
@@ -9,12 +12,12 @@ namespace Negocio
     public class LoginNegocio
     {
         /// <summary>
-        /// 
+        /// Declara o repositório do Login.
         /// </summary>
         private readonly LoginRepositorio _loginRepositorio;
 
         /// <summary>
-        /// 
+        /// Construtor para instaciar o repositório.
         /// </summary>
         public LoginNegocio()
         {
@@ -29,9 +32,12 @@ namespace Negocio
         {
             var lista = _loginRepositorio.Selecionar();
 
+<<<<<<< HEAD
+=======
             if (lista == null)
                 throw new NaoEncontradoException();
 
+>>>>>>> parent of ff85fb7... Merge pull request #24 from LemuresMutualistas/BackEnd
             return lista;
         }
 
