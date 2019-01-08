@@ -3,7 +3,9 @@ using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
 using Repositorio.Interface;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Negocio
 {
@@ -142,6 +144,9 @@ namespace Negocio
 
         public void Validacoes(User entity)
         {
+            var UserExistente = _userRepositorio.SelecionarPorNome(entity.Nome);
+            int UserExistente_ = UserExistente.Count();
+
             //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
             {
@@ -155,7 +160,7 @@ namespace Negocio
             }
 
             //Verifica se o usuário já foi cadastrado.
-            if (_userRepositorio.SelecionarPorNome(entity.Nome) != null)
+            if (UserExistente_ != 0)
             {
                 throw new ConflitoException($"O usuário: \"{entity.Nome}\", já foi cadastrado!");
             }

@@ -26,6 +26,32 @@ namespace Scopio.API.Controllers
             _paisNegocio = paisNegocio;
         }
 
+
+        /// <summary>
+        /// Método que insere um país.
+        /// </summary>
+        /// <param name="input">Objeto com os dados do país.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Pais), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]PaisInput input)
+        {
+            var objPais = new Pais()
+            {
+                Nome = input.Nome,
+                Sigla = input.Sigla
+            };
+
+            var idPais = _paisNegocio.Inserir(objPais);
+            objPais.Id = idPais;
+            return CreatedAtRoute(routeName: "PaisGetId", routeValues: new { id = idPais }, value: objPais);
+        }
+
         /// <summary>
         /// Método que obtêm todos os paises.
         /// </summary>
@@ -74,30 +100,6 @@ namespace Scopio.API.Controllers
             return Ok(_paisNegocio.SelecionarPorNome(nome));
         }
 
-        /// <summary>
-        /// Método que insere um país.
-        /// </summary>
-        /// <param name="input">Objeto com os dados do país.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Pais), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]PaisInput input)
-        {
-            var objPais = new Pais()
-            {
-                Nome = input.Nome,
-                Sigla = input.Sigla
-            };
-
-            var idPais = _paisNegocio.Inserir(objPais);
-            objPais.Id = idPais;
-            return CreatedAtRoute(routeName: "PaisGetId", routeValues: new { id = idPais }, value: objPais);
-        }
 
         /// <summary>
         /// Método que altera os dados de um país.

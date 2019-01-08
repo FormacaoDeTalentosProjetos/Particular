@@ -88,13 +88,16 @@ namespace Negocio
         public int Inserir(Squad entity)
         {
             var UserExistente = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
-
             if (UserExistente != null)
             {
                 throw new ConflitoException($"Já existe cadastrado a SQUAD {UserExistente.Nome}, cadastrado!");
             }
+           
+           if(entity.IdTribo == null)
+                return _squadRepositorio.InserirSemTribo(entity);
 
-            return _squadRepositorio.Inserir(entity);
+           else
+                return _squadRepositorio.InserirComTribo(entity);
         }
 
         /// <summary>

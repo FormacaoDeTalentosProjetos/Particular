@@ -8,7 +8,8 @@ namespace Repositorio.Interface
         void Alterar(Squad entity);
         void AlterarAtivoInativo(Squad entity);
         void Deletar(int id);
-        int Inserir(Squad entity);
+        int InserirComTribo(Squad entity);
+        int InserirSemTribo(Squad entity);
         void SairDaTribo(Squad entity);
         IEnumerable<Squad> Selecionar();
         Squad SelecionarPorDescricao(string desc);

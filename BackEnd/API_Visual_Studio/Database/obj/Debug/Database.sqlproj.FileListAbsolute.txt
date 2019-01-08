@@ -1,0 +1,6 @@
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\bin\Debug\Database.dacpac
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\bin\Debug\Database.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\bin\Debug\Database.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.pdb

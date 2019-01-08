@@ -112,10 +112,10 @@ namespace Repositorio
                                                       $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                       $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                       $"INSERT INTO [TB_LOGIN] " +
-                                                      $"(IdUser, Username, Senha) " +
+                                                      $"(IdUser, Username, Senha, Status) " +
                                                       $"VALUES (@IDUser, " +
                                                       $"'{entity.UserName}', " +
-                                                      $"@HASH)" +
+                                                      $"@HASH, 1)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;

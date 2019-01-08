@@ -75,7 +75,27 @@ namespace Repositorio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(Squad entity)
+        public int InserirSemTribo(Squad entity)
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
+                                                      $"INSERT INTO [TB_SQUAD] " +
+                                                      $"(IdUnidade, Logo, Nome, Status) " +
+                                                      $"VALUES ({entity.IdUnidade}," +
+                                                      $"'{entity.Logo}', '{entity.Nome}', 1)" +
+                                                      $"SET @ID = SCOPE_IDENTITY();" +
+                                                      $"SELECT @ID");
+                return obj;
+            }
+        }
+
+        /// <summary>
+        /// CADASTRA SQUAD
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int InserirComTribo(Squad entity)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {

@@ -28,6 +28,28 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorSquad), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]MentorSquadInput input)
+        {
+            var objMentorSquad = new MentorSquad()
+            {
+                IdSquad = input.IdSquad,
+                IdMentor = input.IdMentor
+            };
+
+            var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
+            objMentorSquad.ID = idMentorSquad;
+            return CreatedAtRoute(routeName: "MentorSquadGetId", routeValues: new { id = idMentorSquad }, value: objMentorSquad);
+        }
+
+        /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_SQUAD"
         /// </summary>
         /// <returns></returns>
@@ -69,27 +91,7 @@ namespace Scopio.API.Controllers
             return Ok(_mentorSquadNegocio.SelecionarSquads());
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorSquad), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MentorSquadInput input)
-        {
-            var objMentorSquad = new MentorSquad()
-            {
-                IdSquad = input.IdSquad,
-                IdMentor = input.IdMentor
-            };
 
-            var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
-            objMentorSquad.ID = idMentorSquad;
-            return CreatedAtRoute(routeName: "MentorSquadGetId", routeValues: new { id = idMentorSquad }, value: objMentorSquad);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UMA ASSOCIAÇÃO "MENTOR_SQUAD" POR {ID}

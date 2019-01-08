@@ -28,6 +28,28 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorTribo), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]MentorTriboInput input)
+        {
+            var objMentorTribo = new MentorTribo()
+            {
+                IdTribo = input.IdTribo,
+                IdMentor = input.IdMentor
+            };
+
+            var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
+            objMentorTribo.ID = idMentorTribo;
+            return CreatedAtRoute(routeName: "MentorTriboGetId", routeValues: new { id = idMentorTribo }, value: objMentorTribo);
+        }
+
+        /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_TRIBO"
         /// </summary>
         /// <returns></returns>
@@ -69,27 +91,7 @@ namespace Scopio.API.Controllers
             return Ok(_mentorTriboNegocio.SelecionarTribos());
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorTribo), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MentorTriboInput input)
-        {
-            var objMentorTribo = new MentorTribo()
-            {
-                IdTribo = input.IdTribo,
-                IdMentor = input.IdMentor
-            };
 
-            var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
-            objMentorTribo.ID = idMentorTribo;
-            return CreatedAtRoute(routeName: "MentorTriboGetId", routeValues: new { id = idMentorTribo }, value: objMentorTribo);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UMA ASSOCIAÇÃO "MENTOR_TRIBO" POR {ID}

@@ -25,6 +25,28 @@ namespace Scopio.API.Controllers
         {
             _triboNegocio = triboNegocio;
         }
+        /// <summary>
+        /// MÉTODO QUE INSERE UMA "TRIBO"
+        /// </summary>
+        /// <param name="Input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Tribo), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]TriboInput Input)
+        {
+            var objTribo = new Tribo()
+            {
+                Logo = Input.Logo,
+                Nome = Input.Nome
+            };
+
+            var idTribo = _triboNegocio.Inserir(objTribo);
+            objTribo.ID = idTribo;
+            return CreatedAtRoute(routeName: "TriboGetId", routeValues: new { id = idTribo }, value: objTribo);
+        }
+
 
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTA DAS "TRIBOS"
@@ -79,27 +101,6 @@ namespace Scopio.API.Controllers
             return Ok(_triboNegocio.SelecionarPorDescricao(nome));
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UMA "TRIBO"
-        /// </summary>
-        /// <param name="Input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Tribo), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]TriboInput Input)
-        {
-            var objTribo = new Tribo()
-            {
-                Logo = Input.Logo,
-                Nome = Input.Nome
-            };
-
-            var idTribo = _triboNegocio.Inserir(objTribo);
-            objTribo.ID = idTribo;
-            return CreatedAtRoute(routeName: "TriboGetId", routeValues: new { id = idTribo }, value: objTribo);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UMA "TRIBO" POR {ID}

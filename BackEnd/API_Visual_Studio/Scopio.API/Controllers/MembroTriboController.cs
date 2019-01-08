@@ -27,6 +27,31 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que insere uma vinculação entre Membro e Tribo.
+        /// </summary>
+        /// <param name="input">Objeto com os dados da vinculação.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MembroTribo), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]MembroTriboInput input)
+        {
+            var objMembro = new MembroTribo()
+            {
+                IdTribo = input.IdTribo,
+                IdUser = input.IdUser
+            };
+
+            var idMembro = _membroNegocio.Inserir(objMembro);
+            objMembro.Id = idMembro;
+            return CreatedAtRoute(routeName: "MembroTriboGetId", routeValues: new { id = idMembro }, value: objMembro);
+        }
+
+        /// <summary>
         /// Método que obtêm todos as vinculações entre Membro e Tribo.
         /// </summary>
         /// <returns></returns>
@@ -74,30 +99,6 @@ namespace Scopio.API.Controllers
             return Ok(_membroNegocio.SelecionarPorIdTribo(id));
         }
 
-        /// <summary>
-        /// Método que insere uma vinculação entre Membro e Tribo.
-        /// </summary>
-        /// <param name="input">Objeto com os dados da vinculação.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MembroTribo), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MembroTriboInput input)
-        {
-            var objMembro = new MembroTribo()
-            {
-                IdTribo = input.IdTribo,
-                IdUser = input.IdUser
-            };
-
-            var idMembro = _membroNegocio.Inserir(objMembro);
-            objMembro.Id = idMembro;
-            return CreatedAtRoute(routeName: "MembroTriboGetId", routeValues: new { id = idMembro }, value: objMembro);
-        }
 
         /// <summary>
         /// Método que altera os dados de uma vinculação entre Membro e Tribo.

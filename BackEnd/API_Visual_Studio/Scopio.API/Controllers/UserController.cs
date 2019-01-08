@@ -26,7 +26,35 @@ namespace Scopio.API.Controllers
         {
             _userNegocio = userNegocio;
         }
-        
+
+        /// <summary>
+        /// MÉTODO QUE INSERE UM "USUÁRIO"
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]UserInput input)
+        {
+            var objUser = new User()
+            {
+                UserName = input.Username,
+                Senha = input.Senha,
+                IdPapel = input.IdPapel,
+                IdNivel = input.IdNivel,
+                Avatar = input.Avatar,
+                Nome = input.Nome,
+                Email = input.Email,
+                Tel = input.Tel
+            };
+
+            var idUser = _userNegocio.Inserir(objUser);
+            objUser.ID = idUser;
+            return CreatedAtRoute(routeName: "UserGetId", routeValues: new { id = idUser }, value: objUser);
+        }
+
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTA DOS "USUÁRIOS"
         /// </summary>
@@ -94,34 +122,6 @@ namespace Scopio.API.Controllers
             return Ok(_userNegocio.SelecionarPorPapel(IdPapel));
         }
 
-
-        /// <summary>
-        /// MÉTODO QUE INSERE UM "USUÁRIO"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Login), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]UserInput input)
-        {
-            var objUser = new User()
-            {
-                UserName = input.Username,
-                Senha = input.Senha,
-                IdPapel = input.IdPapel,
-                IdNivel = input.IdNivel,
-                Avatar = input.Avatar,
-                Nome = input.Nome,
-                Email = input.Email,
-                Tel = input.Tel
-            };
-
-            var idUser = _userNegocio.Inserir(objUser);
-            objUser.ID = idUser;
-            return CreatedAtRoute(routeName: "UserGetId", routeValues: new { id = idUser }, value: objUser);
-        }
 
 
         /// <summary>

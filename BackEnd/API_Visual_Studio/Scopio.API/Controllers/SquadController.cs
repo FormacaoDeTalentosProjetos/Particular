@@ -26,6 +26,31 @@ namespace Scopio.API.Controllers
             _squadNegocio = squadNegocio;
         }
 
+
+        /// <summary>
+        /// MÉTODO QUE INSERE UMA "SQUAD"
+        /// </summary>
+        /// <param name="Input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Squad), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]SquadInput Input)
+        {
+            var objSquad = new Squad()
+            {
+                IdUnidade = Input.IdUnidade,
+                IdTribo = Input.IdTribo,
+                Logo = Input.Logo,
+                Nome = Input.Nome
+            };
+
+            var idSquad = _squadNegocio.Inserir(objSquad);
+            objSquad.ID = idSquad;
+            return CreatedAtRoute(routeName: "SquadGetId", routeValues: new { id = idSquad }, value: objSquad);
+        }
+
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTA DAS "SQUADS"
         /// </summary>
@@ -81,27 +106,16 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
-        /// MÉTODO QUE INSERE UMA "SQUAD"
+        /// MÉTODO QUE OBTÉM UMA LISTA DAS "SQUADS" SEM TRIBO
         /// </summary>
-        /// <param name="Input"></param>
         /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Squad), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]SquadInput Input)
+        [HttpGet]
+        [Route("SquadSemTribo")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
+        [SwaggerResponse((int)HttpStatusCode.NotFound)]
+        public IActionResult GetSquadSemTribo()
         {
-            var objSquad = new Squad()
-            {
-                IdUnidade = Input.IdUnidade,
-                IdTribo = Input.IdTribo,
-                Logo = Input.Logo,
-                Nome = Input.Nome
-            };
-
-            var idSquad = _squadNegocio.Inserir(objSquad);
-            objSquad.ID = idSquad;
-            return CreatedAtRoute(routeName: "SquadGetId", routeValues: new { id = idSquad }, value: objSquad);
+            return Ok(_squadNegocio.SquadSemTribo());
         }
 
         /// <summary>
@@ -129,18 +143,6 @@ namespace Scopio.API.Controllers
             return Accepted(obj);
         }
 
-        /// <summary>
-        /// MÉTODO QUE OBTÉM UMA LISTA DAS "SQUADS" SEM TRIBO
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("SquadSemTribo")]
-        [SwaggerResponse((int)HttpStatusCode.OK, typeof(Squad), nameof(HttpStatusCode.OK))]
-        [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetSquadSemTribo()
-        {
-            return Ok(_squadNegocio.SquadSemTribo());
-        }
 
         /// <summary>
         /// MÉTODO QUE RETIRA ASSOCIÇÃO COM "TRIBO" POR {ID}

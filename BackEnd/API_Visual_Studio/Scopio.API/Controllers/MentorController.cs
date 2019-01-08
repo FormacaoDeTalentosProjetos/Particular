@@ -30,6 +30,31 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que insere um mentor.
+        /// </summary>
+        /// <param name="input">Objeto com os dados do mentor.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Mentor), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]MentorInput input)
+        {
+            var objMentor = new Mentor()
+            {
+                IdUser = input.IdUser
+            };
+
+            var idMentor = _mentorNegocio.Inserir(objMentor);
+            objMentor.ID = idMentor;
+
+            return CreatedAtRoute(routeName: "MentorGetId", routeValues: new { id = idMentor }, value: objMentor);
+        }
+
+        /// <summary>
         /// Método que obtêm todos os mentores.
         /// </summary>
         /// <returns></returns>
@@ -75,30 +100,7 @@ namespace Scopio.API.Controllers
             return Ok(_mentorNegocio.SelecionarAtivos());
         }
 
-        /// <summary>
-        /// Método que insere um mentor.
-        /// </summary>
-        /// <param name="input">Objeto com os dados do mentor.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Mentor), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MentorInput input)
-        {
-            var objMentor = new Mentor()
-            {
-                IdUser = input.IdUser
-            };
 
-            var idMentor = _mentorNegocio.Inserir(objMentor);
-            objMentor.ID = idMentor;
-
-            return CreatedAtRoute(routeName: "MentorGetId", routeValues: new { id = idMentor }, value: objMentor);
-        }
 
         /// <summary>
         /// Método que deleta um mentor.

@@ -26,6 +26,29 @@ namespace Scopio.API.Controllers
             _papelNegocio = papelNegocio;
         }
 
+
+        /// <summary>
+        /// MÉTODO QUE INSERE UM "PAPEL"
+        /// </summary>
+        /// <param name="Input"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Papel), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]PapelInput Input)
+        {
+            var objPapel = new Papel()
+            {
+                Desc = Input.Desc,
+                Nivel = Input.Nivel
+            };
+
+            var idPapel = _papelNegocio.Inserir(objPapel);
+            objPapel.ID = idPapel;
+            return CreatedAtRoute(routeName: "PapelGetId", routeValues: new { id = idPapel }, value: objPapel);
+        }
+
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTA DOS "PAPEIS"
         /// </summary>
@@ -66,27 +89,6 @@ namespace Scopio.API.Controllers
             return Ok(_papelNegocio.SelecionarPorDescricao(desc));
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UM "PAPEL"
-        /// </summary>
-        /// <param name="Input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Papel), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]PapelInput Input)
-        {
-            var objPapel = new Papel()
-            {
-                Desc = Input.Desc,
-                Nivel = Input.Nivel
-            };
-
-            var idPapel = _papelNegocio.Inserir(objPapel);
-            objPapel.ID = idPapel;
-            return CreatedAtRoute(routeName: "PapelGetId", routeValues: new { id = idPapel }, value: objPapel);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UM "PAPEL" POR {ID}
