@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TriboService } from '../tribo.service';
-
+import { TriboService } from '../services/tribo.service';
+import { Route, Router } from '@angular/router';
+import { Navigation } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-tribos',
@@ -13,12 +14,21 @@ export class TribosComponent implements OnInit {
 
   public triboImageUrl ="././assets/images/estandarte.png";
 
-  constructor(private triboService: TriboService) {}
+  constructor(
+    private router: Router,
+    private triboService: TriboService
+  ) {}
+  
   ngOnInit() {
     this.listar();
   }
+  
   listar () {
     this.triboService.listar().subscribe(dados => this.tribos = dados);
-  }  
+  } 
+
+//  acessar(tribo){
+//    this.router.navigate(['squads-from-tribe'])
+//  }
 
 }

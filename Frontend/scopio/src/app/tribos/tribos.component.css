@@ -2,11 +2,16 @@
     display: flex;
     flex-wrap: wrap;
 }
-  
-.flex-container > div {
-    width: 100px;
-    margin: 10px;
+
+.tribe-icon {
+    width: 12vh;
+    height: 12vh;
+    margin: 0% 10%;
+}
+
+.label {
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    color:black;
+    font-size: 1.5vh;
+    font-weight: bold;
 }

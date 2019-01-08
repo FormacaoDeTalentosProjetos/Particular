@@ -48,7 +48,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "TriboGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(Tribo), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -102,7 +102,7 @@ namespace Scopio.API.Controllers
 
             var idTribo = _triboNegocio.Inserir(objTribo);
             objTribo.ID = idTribo;
-            return CreatedAtRoute(nameof(GetId), new { id = idTribo }, objTribo);
+            return CreatedAtRoute(routeName: "TriboGetId", routeValues: new { id = idTribo }, value: objTribo);
         }
 
         /// <summary>
