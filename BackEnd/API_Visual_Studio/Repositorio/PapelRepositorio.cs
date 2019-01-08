@@ -1,15 +1,13 @@
 ﻿using Dapper;
 using Dominio;
-using Repositorio.Abstracao;
+using Repositorio.Interface;
 using Repositorio.Configuracao;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 
 namespace Repositorio
 {
-    public class PapelRepositorio : IRepositorioBase<Papel>
+    public class PapelRepositorio : IPapelRepositorio
     {
         /// <summary>
         /// PESQUISA PAPEIS

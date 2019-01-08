@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Net;
 using Dominio;
 using Microsoft.AspNetCore.Mvc;
-using Negocio;
+using Negocio.Interface;
 using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -21,14 +17,14 @@ namespace Scopio.API.Controllers
         /// <summary>
         /// 
         /// </summary>
-        private readonly UserNegocio _userNegocio;
+        private readonly IUserNegocio _userNegocio;
         
         /// <summary>
         /// 
         /// </summary>
-        public UserController()
+        public UserController(IUserNegocio userNegocio)
         {
-            _userNegocio = new UserNegocio();
+            _userNegocio = userNegocio;
         }
         
         /// <summary>
@@ -40,7 +36,7 @@ namespace Scopio.API.Controllers
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult Get()
         {
-            return Ok(_userNegocio.SelecionarTodos());
+            return Ok(_userNegocio.Selecionar());
         }
         
         /// <summary>
@@ -62,7 +58,7 @@ namespace Scopio.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id}", Name = "UserGetId")]
         [SwaggerResponse((int)HttpStatusCode.OK, typeof(User), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
         public IActionResult GetId(int id)
@@ -112,7 +108,7 @@ namespace Scopio.API.Controllers
         {
             var objUser = new User()
             {
-                Username = input.Username,
+                UserName = input.Username,
                 Senha = input.Senha,
                 IdPapel = input.IdPapel,
                 IdNivel = input.IdNivel,
@@ -124,7 +120,7 @@ namespace Scopio.API.Controllers
 
             var idUser = _userNegocio.Inserir(objUser);
             objUser.ID = idUser;
-            return CreatedAtRoute(nameof(GetId), new { id = idUser }, objUser);
+            return CreatedAtRoute(routeName: "UserGetId", routeValues: new { id = idUser }, value: objUser);
         }
 
 
