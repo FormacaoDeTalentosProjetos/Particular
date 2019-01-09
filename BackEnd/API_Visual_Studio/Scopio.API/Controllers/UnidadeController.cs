@@ -28,6 +28,32 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que insere uma unidade.
+        /// </summary>
+        /// <param name="input">Objeto com os dados da unidade.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Unidade), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]UnidadeInput input)
+        {
+            var objUnidade = new Unidade()
+            {
+                IdPais = input.IdPais,
+                Nome = input.Nome,
+                EstSigla = input.EstSigla
+            };
+
+            var idUnidade = _unidadeNegocio.Inserir(objUnidade);
+            objUnidade.Id = idUnidade;
+            return CreatedAtRoute(routeName: "UnidadeGetId", routeValues: new { id = idUnidade }, value: objUnidade);
+        }
+
+        /// <summary>
         /// Método que obtêm todos as unidades.
         /// </summary>
         /// <returns></returns>
@@ -75,31 +101,6 @@ namespace Scopio.API.Controllers
             return Ok(_unidadeNegocio.SelecionarPorNome(nome));
         }
 
-        /// <summary>
-        /// Método que insere uma unidade.
-        /// </summary>
-        /// <param name="input">Objeto com os dados da unidade.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(Unidade), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]UnidadeInput input)
-        {
-            var objUnidade = new Unidade()
-            {
-                IdPais = input.IdPais,
-                Nome = input.Nome,
-                EstSigla = input.EstSigla
-            };
-
-            var idUnidade = _unidadeNegocio.Inserir(objUnidade);
-            objUnidade.Id = idUnidade;
-            return CreatedAtRoute(routeName: "UnidadeGetId", routeValues: new { id = idUnidade }, value: objUnidade);
-        }
 
         /// <summary>
         /// Método que altera os dados de uma unidade.

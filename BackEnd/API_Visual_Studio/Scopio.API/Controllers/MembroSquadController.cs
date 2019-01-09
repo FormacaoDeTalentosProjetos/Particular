@@ -28,6 +28,31 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que insere uma vinculação entre Membro e Squad.
+        /// </summary>
+        /// <param name="input">Objeto com os dados da vinculação.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MembroSquad), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]MembroSquadInput input)
+        {
+            var objMembro = new MembroSquad()
+            {
+                IdSquad = input.IdSquad,
+                IdUser = input.IdUser
+            };
+
+            var idMembro = _membroNegocio.Inserir(objMembro);
+            objMembro.Id = idMembro;
+            return CreatedAtRoute(routeName: "MembroSquadGetId", routeValues: new { id = idMembro }, value: objMembro);
+        }
+
+        /// <summary>
         /// Método que obtêm todos as vinculações entre Membro e Squad.
         /// </summary>
         /// <returns></returns>
@@ -75,30 +100,7 @@ namespace Scopio.API.Controllers
             return Ok(_membroNegocio.SelecionarPorIdSquad(id));
         }
 
-        /// <summary>
-        /// Método que insere uma vinculação entre Membro e Squad.
-        /// </summary>
-        /// <param name="input">Objeto com os dados da vinculação.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MembroSquad), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MembroSquadInput input)
-        {
-            var objMembro = new MembroSquad()
-            {
-                IdSquad = input.IdSquad,
-                IdUser = input.IdUser
-            };
 
-            var idMembro = _membroNegocio.Inserir(objMembro);
-            objMembro.Id = idMembro;
-            return CreatedAtRoute(routeName: "MembroSquadGetId", routeValues: new { id = idMembro }, value: objMembro);
-        }
 
         /// <summary>
         /// Método que altera os dados de uma vinculação entre Membro e Squad.

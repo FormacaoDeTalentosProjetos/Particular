@@ -19,11 +19,11 @@ namespace Repositorio
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var lista = connection.Query<MentorSquad>($"SELECT * " +
-                                                          $"FROM [TB_MENTOR_SQUAD]");
+                var lista = connection.Query<MentorSquad>($"SELECT * FROM [TB_MENTOR_SQUAD]");
                 return lista;
             }
         }
+
 
         /// <summary>
         /// PESQUISA ASSOCIAÇÃO MENTOR_SQUAD POR {ID}
@@ -46,21 +46,14 @@ namespace Repositorio
         /// </summary>
         /// <param name="idSquad">IdUser a ser buscado no Database.</param>
         /// <returns>Objeto com os dados do membro selecionado.</returns>
-        public IEnumerable<MentorSquadDto> SelecionarSquads()
+        public MentorSquad SelecionarSquadsPorID(int id)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var obj = connection.Query<MentorSquadDto>($"SELECT [TB_MENTOR_SQUAD].[ID], [IdSquad], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
-                                                           $"FROM [TB_MENTOR_SQUAD] " +
-                                                           $"INNER JOIN TB_MENTOR ON " +
-                                                           $"IdMentor = [TB_MENTOR].[ID] " +
-                                                           $"INNER JOIN TB_USER ON " +
-                                                           $"[IdUser] = [TB_USER].[ID] " +
-                                                           $"INNER JOIN TB_PAPEL ON " +
-                                                           $"[IdPapel] = [TB_PAPEL].[ID] " +
-                                                           $"INNER JOIN TB_NVPAPEL ON " +
-                                                           $"[IdNivel] = [TB_NVPAPEL].[ID] " +
-                                                           $"WHERE [TB_USER].[Status] = 1");
+                var obj = connection.QueryFirstOrDefault<MentorSquad>($"SELECT M.ID, M.IdSquad, M.IdUser, U.Nome AS NomeUser, S.Nome AS NomeSquad FROM [TB_MENTOR_SQUAD] AS M INNER JOIN [TB_USER] AS U ON M.IdUser = U.ID INNER JOIN[TB_SQUAD]AS S ON M.IdSquad = S.ID WHERE M.IdSquad = @id", 
+                    new {
+                        id
+                    });
                 return obj;
             }
         }
@@ -70,14 +63,14 @@ namespace Repositorio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(MentorSquad entity)
+        public int Inserir(int IdSquad, int IdUser)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_SQUAD] " +
-                                                      $"(IdSquad, IdMentor) " +
-                                                      $"VALUES ({entity.IdSquad}, {entity.IdMentor})" +
+                                                      $"(IdSquad, IdUser) " +
+                                                      $"VALUES ({IdSquad}, {IdUser})" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;
@@ -94,7 +87,7 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_MENTOR_SQUAD] " +
                                    $"SET IdSquad = {entity.IdSquad}, " +
-                                   $"IdMentor = {entity.IdMentor} " +
+                                   $"IdMentor = {entity.IdUser} " +
                                    $"WHERE ID = {entity.ID}");
             }
         }

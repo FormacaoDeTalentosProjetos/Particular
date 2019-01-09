@@ -5,6 +5,11 @@
     /// </summary>
     public class SquadInput
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int IdUser { get; set; }
         /// <summary>
         /// 
         /// </summary>

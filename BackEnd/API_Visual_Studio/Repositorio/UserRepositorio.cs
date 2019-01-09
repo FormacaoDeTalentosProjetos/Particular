@@ -25,6 +25,20 @@ namespace Repositorio
         }
 
         /// <summary>
+        /// PESQUISA TODOS OS USUÁRIOS
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IEnumerable<User> SelecionarMentores()
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var lista = connection.Query<User>($"select u.ID, u.Nome from [TB_USER] as u inner join [TB_RESPONSABILIDADE] as r on u.IdResponsabilidade = r.ID where UPPER(r.Nome) = 'MENTOR' and u.Status = 1");
+                return lista;
+            }
+        }
+
+        /// <summary>
         /// PESQUISA TODOS OS USUÁRIOS "ATIVOS"
         /// </summary>
         /// <returns></returns>
@@ -94,7 +108,7 @@ namespace Repositorio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(User entity)
+        public int InserirSemResponsabilidade(User entity)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
@@ -112,10 +126,43 @@ namespace Repositorio
                                                       $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                       $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
                                                       $"INSERT INTO [TB_LOGIN] " +
-                                                      $"(IdUser, Username, Senha) " +
+                                                      $"(IdUser, Username, Senha, Status) " +
                                                       $"VALUES (@IDUser, " +
                                                       $"'{entity.UserName}', " +
-                                                      $"@HASH)" +
+                                                      $"@HASH, 1)" +
+                                                      $"SET @ID = SCOPE_IDENTITY();" +
+                                                      $"SELECT @ID");
+                return obj;
+            }
+        }
+
+        /// <summary>
+        /// CADASTRA USUARIO
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int InserirComResponsabilidade(User entity)
+        {
+            using (var connection = new SqlConnection(DbConnection.GetConn()))
+            {
+                var obj = connection.QuerySingle<int>($"DECLARE @IDUser INT; " +
+                                                      $"DECLARE @ID INT; " +
+                                                      $"INSERT INTO [TB_USER] " +
+                                                      $"(IdPapel, IdNivel, IdResponsabilidade, Avatar, Nome, Email, Tel, Status) " +
+                                                      $"VALUES ({entity.IdPapel}, {entity.IdNivel}, {entity.IdResponsabilidade}," +
+                                                      $"'{entity.Avatar}', '{entity.Nome}', '{entity.Email}', " +
+                                                      $"'{entity.Tel}', 1)" +
+                                                      $"SET @IDUser = SCOPE_IDENTITY();" +
+                                                      $"SELECT @IDUser " +
+                                                      $"DECLARE @HASH VARCHAR(32); " +
+                                                      $"SET @HASH = '{entity.Senha}' " +
+                                                      $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
+                                                      $"SET @HASH = CONVERT(VARCHAR(32), HashBytes('MD5', @HASH), 2)" +
+                                                      $"INSERT INTO [TB_LOGIN] " +
+                                                      $"(IdUser, Username, Senha, Status) " +
+                                                      $"VALUES (@IDUser, " +
+                                                      $"'{entity.UserName}', " +
+                                                      $"@HASH, 1)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
                                                       $"SELECT @ID");
                 return obj;

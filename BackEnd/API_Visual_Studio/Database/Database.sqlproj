@@ -62,7 +62,6 @@
   <ItemGroup>
     <Build Include="dbo\Login.sql" />
     <Build Include="dbo\MembroSquad.sql" />
-    <Build Include="dbo\MembroTribo.sql" />
     <Build Include="dbo\MentorSquad.sql" />
     <Build Include="dbo\MentorTribo.sql" />
     <Build Include="dbo\Pais.sql" />
@@ -72,7 +71,6 @@
     <Build Include="dbo\Unidade.sql" />
     <Build Include="dbo\User.sql" />
     <Build Include="dbo\NivelPapel.sql" />
-    <Build Include="dbo\Mentor.sql" />
-    <Build Include="dbo\Mentor.sql" />
+    <Build Include="DBO\Responsabilidade.sql" />
   </ItemGroup>
 </Project>

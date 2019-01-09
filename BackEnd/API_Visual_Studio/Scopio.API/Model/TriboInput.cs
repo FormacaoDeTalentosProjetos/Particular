@@ -8,6 +8,14 @@
         /// <summary>
         /// 
         /// </summary>
+        public int IdUser { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int IdUnidade { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public string Logo { get; set; }
         /// <summary>
         /// 

@@ -10,13 +10,12 @@ namespace Infra.IOC.Repositorio
         {
             services.AddScoped<ILoginRepositorio, LoginRepositorio>();
             services.AddScoped<IMembroSquadRepositorio, MembroSquadRepositorio>();
-            services.AddScoped<IMembroTriboRepositorio, MembroTriboRepositorio>();
-            services.AddScoped<IMentorRepositorio, MentorRepositorio>();
             services.AddScoped<IMentorSquadRepositorio, MentorSquadRepositorio>();
             services.AddScoped<IMentorTriboRepositorio, MentorTriboRepositorio>();
             services.AddScoped<INivelPapelRepositorio, NivelPapelRepositorio>();
             services.AddScoped<IPaisRepositorio, PaisRepositorio>();
             services.AddScoped<IPapelRepositorio, PapelRepositorio>();
+            services.AddScoped<IResponsabilidadeRepositorio, ResponsabilidadeRepositorio>();
             services.AddScoped<ISquadRepositorio, SquadRepositorio>();
             services.AddScoped<ITriboRepositorio, TriboRepositorio>();
             services.AddScoped<IUnidadeRepositorio, UnidadeRepositorio>();

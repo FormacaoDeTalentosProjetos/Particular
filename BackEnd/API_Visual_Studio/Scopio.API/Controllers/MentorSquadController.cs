@@ -54,42 +54,20 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
-        /// Método que retorna lista de mentores de uma squad.
+        /// MÉTODO QUE OBTÉM O MENTOR DA SQUAD PELO ID
         /// </summary>
+        /// <param name="id"></param>
         /// <returns></returns>
-        /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
-        /// <response code="200">OK</response>
-        /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("Squads")]
-        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorSquadDto), nameof(HttpStatusCode.OK))]
+        [Route("squad/{id}", Name = "MentorSquadGetPeloId")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorSquad), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetIdSquad()
+        public IActionResult GetSquadId(int id)
         {
-            return Ok(_mentorSquadNegocio.SelecionarSquads());
+            return Ok(_mentorSquadNegocio.SelecionarSquadsPorID(id));
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_SQUAD"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorSquad), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MentorSquadInput input)
-        {
-            var objMentorSquad = new MentorSquad()
-            {
-                IdSquad = input.IdSquad,
-                IdMentor = input.IdMentor
-            };
 
-            var idMentorSquad = _mentorSquadNegocio.Inserir(objMentorSquad);
-            objMentorSquad.ID = idMentorSquad;
-            return CreatedAtRoute(routeName: "MentorSquadGetId", routeValues: new { id = idMentorSquad }, value: objMentorSquad);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UMA ASSOCIAÇÃO "MENTOR_SQUAD" POR {ID}
@@ -107,7 +85,7 @@ namespace Scopio.API.Controllers
             var objMentorSquad = new MentorSquad()
             {
                 IdSquad = input.IdSquad,
-                IdMentor = input.IdMentor
+                IdUser = input.IdUser
             };
 
             var obj = _mentorSquadNegocio.Alterar(id, objMentorSquad);

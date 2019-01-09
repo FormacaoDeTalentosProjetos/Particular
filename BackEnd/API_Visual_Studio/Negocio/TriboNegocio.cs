@@ -16,9 +16,15 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        public TriboNegocio(ITriboRepositorio triboRepositorio)
+        private readonly IMentorTriboRepositorio _mentorTriboRepositorio;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TriboNegocio(ITriboRepositorio triboRepositorio, IMentorTriboRepositorio mentorTriboRepositorio)
         {
             _triboRepositorio = triboRepositorio;
+            _mentorTriboRepositorio = mentorTriboRepositorio;
         }
 
         /// <summary>
@@ -86,14 +92,29 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Tribo entity)
         {
+            int IdUser = entity.ID;
             var UserExistente = _triboRepositorio.SelecionarPorDescricao(entity.Nome);
-
             if (UserExistente != null)
             {
                 throw new ConflitoException($"Já existe cadastrado a TRIBO {UserExistente.Nome}, cadastrado!");
             }
 
-            return _triboRepositorio.Inserir(entity);
+
+                if (entity.IdUser == 0)
+                {
+                    _triboRepositorio.Inserir(entity);
+                    var teste = _triboRepositorio.SelecionarPorDescricao(entity.Nome);
+                    return teste.ID;
+                }
+                else
+                {
+
+                    _triboRepositorio.Inserir(entity);
+                    var teste = _triboRepositorio.SelecionarPorDescricao(entity.Nome);
+                    _mentorTriboRepositorio.Inserir(teste.ID, entity.IdUser);
+                    return teste.ID;
+                }
+
         }
 
         /// <summary>

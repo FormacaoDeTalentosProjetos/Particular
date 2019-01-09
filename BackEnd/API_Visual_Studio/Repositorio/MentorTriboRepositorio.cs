@@ -36,30 +36,29 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<MentorTribo>($"SELECT * " +
                                                                       $"FROM [TB_MENTOR_TRIBO] " +
-                                                                      $"WHERE ID = {id}");
+                                                                      $"WHERE ID = @id",
+                                                                      new
+                                                                      {
+                                                                          id
+                                                                      });
                 return obj;
             }
         }
 
+
         /// <summary>
-        /// Método que seleciona membros de uma squad.
+        /// Método que seleciona o mentor daquela tribo.
         /// </summary>
+        /// <param name="idTribo">IdUser a ser buscado no Database.</param>
         /// <returns>Objeto com os dados do membro selecionado.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarTribos()
+        public MentorTribo SelecionarTribosPorId(int id)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var obj = connection.Query<MentorTriboDto>($"SELECT [TB_MENTOR_TRIBO].[ID], [IdTribo], [Nome], [TB_PAPEL].[Desc] AS [DescPapel], [TB_NVPAPEL].[Desc] AS [DescNivel] " +
-                                                           $"FROM [TB_MENTOR_TRIBO] " +
-                                                           $"INNER JOIN TB_MENTOR ON " +
-                                                           $"IdMentor = [TB_MENTOR].[ID] " +
-                                                           $"INNER JOIN TB_USER ON " +
-                                                           $"[IdUser] = [TB_USER].[ID] " +
-                                                           $"INNER JOIN TB_PAPEL ON " +
-                                                           $"[IdPapel] = [TB_PAPEL].[ID] " +
-                                                           $"INNER JOIN TB_NVPAPEL ON " +
-                                                           $"[IdNivel] = [TB_NVPAPEL].[ID] " +
-                                                           $"WHERE [TB_USER].[Status] = 1");
+                var obj = connection.QueryFirstOrDefault<MentorTribo>($"SELECT M.ID, M.IdTribo, M.IdUser, U.Nome AS NomeUser, S.Nome AS NomeTribo FROM [TB_MENTOR_TRIBO] AS M INNER JOIN [TB_USER] AS U ON M.IdUser = U.ID INNER JOIN[TB_TRIBO]AS S ON M.IdTribo = S.ID WHERE M.IdTribo = @id",
+                    new {
+                        id
+                    });
                 return obj;
             }
         }
@@ -69,16 +68,20 @@ namespace Repositorio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(MentorTribo entity)
+        public int Inserir(int IdTribo, int IdUser)
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
                 var obj = connection.QuerySingle<int>($"DECLARE @ID INT; " +
                                                       $"INSERT INTO [TB_MENTOR_TRIBO] " +
-                                                      $"(IdTribo, IdMentor) " +
-                                                      $"VALUES ({entity.IdTribo}, {entity.IdMentor})" +
+                                                      $"(IdTribo, IdUser) " +
+                                                      $"VALUES (@IdTribo, @IdUser)" +
                                                       $"SET @ID = SCOPE_IDENTITY();" +
-                                                      $"SELECT @ID");
+                                                      $"SELECT @ID",
+                                                      new {
+                                                          IdTribo,
+                                                          IdUser
+                                                      });
                 return obj;
             }
         }
@@ -93,7 +96,7 @@ namespace Repositorio
             {
                 connection.Execute($"UPDATE [TB_MENTOR_TRIBO] " +
                                    $"SET IdTribo = {entity.IdTribo}, " +
-                                   $"IdMentor = {entity.IdMentor} " +
+                                   $"IdMentor = {entity.IdUser} " +
                                    $"WHERE ID = {entity.ID}");
             }
         }
@@ -112,6 +115,7 @@ namespace Repositorio
                                    $"WHERE ID = {id}");
             }
         }
+
     }
 }
 
