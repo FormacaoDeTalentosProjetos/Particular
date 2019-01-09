@@ -15,6 +15,7 @@ namespace Infra.IOC.Repositorio
             services.AddScoped<INivelPapelRepositorio, NivelPapelRepositorio>();
             services.AddScoped<IPaisRepositorio, PaisRepositorio>();
             services.AddScoped<IPapelRepositorio, PapelRepositorio>();
+            services.AddScoped<IResponsabilidadeRepositorio, ResponsabilidadeRepositorio>();
             services.AddScoped<ISquadRepositorio, SquadRepositorio>();
             services.AddScoped<ITriboRepositorio, TriboRepositorio>();
             services.AddScoped<IUnidadeRepositorio, UnidadeRepositorio>();

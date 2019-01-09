@@ -8,7 +8,7 @@ namespace Negocio.Interface
     {
         MentorSquad Alterar(int id, MentorSquad entity);
         void Deletar(int id);
-        int Inserir(int IdSquad, int IdMentor);
+        int Inserir(int IdSquad, int IdUser);
         IEnumerable<MentorSquad> Selecionar();
         MentorSquad SelecionarPorId(int id);
         MentorSquad SelecionarSquadsPorID(int id);

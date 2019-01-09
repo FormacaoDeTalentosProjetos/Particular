@@ -6,7 +6,8 @@ using Scopio.API.Model;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Scopio.API.Controllers
-{/// <summary>
+{
+/// <summary>
 /// 
 /// </summary>
     [Produces("application/json")]

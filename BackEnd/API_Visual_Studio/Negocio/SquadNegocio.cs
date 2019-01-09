@@ -93,7 +93,7 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Squad entity)
         {
-            int IdMentor = entity.ID;
+            int IdUser = entity.ID;
             var UserExistente = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
             if (UserExistente != null)
             {
@@ -102,28 +102,34 @@ namespace Negocio
 
             if (entity.IdTribo == null)
             {
-                if (entity.IdMentor == 0)
+                if (entity.IdUser == 0)
                 {
-                    return _squadRepositorio.InserirSemTribo(entity);
+                    _squadRepositorio.InserirSemTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    return teste.ID;
                 }
                 else
                 {
-                    _mentorSquadRepositorio.Inserir(entity.ID, IdMentor);
-                    return _squadRepositorio.InserirSemTribo(entity);
+                    _squadRepositorio.InserirSemTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdUser);
+                    return teste.ID;
 
                 }
             }
             else
             {
-                if (entity.IdMentor == 0)
+                if (entity.IdUser == 0)
                 {
-                    return _squadRepositorio.InserirComTribo(entity);
+                    _squadRepositorio.InserirComTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    return teste.ID;
                 }
                 else
                 {
                     _squadRepositorio.InserirComTribo(entity);
                     var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
-                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdMentor);
+                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdUser);
                     return teste.ID;
                 }
             }

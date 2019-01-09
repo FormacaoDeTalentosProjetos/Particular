@@ -67,9 +67,9 @@ namespace Negocio
         /// </summary>
         /// <param name="IdSquad e IdMentor"></param>
         /// <returns></returns>
-        public int Inserir(int IdSquad , int IdMentor)
+        public int Inserir(int IdSquad , int IdUser)
         {
-            return _mentorSquadRepositorio.Inserir(IdSquad, IdMentor);
+            return _mentorSquadRepositorio.Inserir(IdSquad, IdUser);
         }
 
         /// <summary>

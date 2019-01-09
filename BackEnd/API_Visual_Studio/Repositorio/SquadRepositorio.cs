@@ -17,8 +17,7 @@ namespace Repositorio
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var lista = connection.Query<Squad>($"SELECT * " +
-                                                    $"FROM [TB_SQUAD]");
+                var lista = connection.Query<Squad>($"SELECT * FROM [TB_SQUAD] ");
                 return lista;
             }
         }

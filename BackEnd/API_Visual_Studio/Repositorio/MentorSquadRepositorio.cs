@@ -50,7 +50,10 @@ namespace Repositorio
         {
             using (var connection = new SqlConnection(DbConnection.GetConn()))
             {
-                var obj = connection.QueryFirstOrDefault<MentorSquad>($"SELECT * FROM [TB_MENTOR_SQUAD] WHERE IdSquad = {id}");
+                var obj = connection.QueryFirstOrDefault<MentorSquad>($"SELECT M.ID, M.IdSquad, M.IdUser, U.Nome AS NomeUser, S.Nome AS NomeSquad FROM [TB_MENTOR_SQUAD] AS M INNER JOIN [TB_USER] AS U ON M.IdUser = U.ID INNER JOIN[TB_SQUAD]AS S ON M.IdSquad = S.ID WHERE M.IdSquad = @id", 
+                    new {
+                        id
+                    });
                 return obj;
             }
         }

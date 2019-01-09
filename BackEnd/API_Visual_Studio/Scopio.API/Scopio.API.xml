@@ -174,7 +174,7 @@
         </member>
         <member name="M:Scopio.API.Controllers.MentorSquadController.GetSquadId(System.Int32)">
             <summary>
-            MÉTODO QUE OBTÉM UMA ASSOCIAÇÃO "MENTOR_SQUAD" POR {ID}
+            MÉTODO QUE OBTÉM O MENTOR DA SQUAD PELO ID
             </summary>
             <param name="id"></param>
             <returns></returns>
@@ -209,13 +209,6 @@
             
             </summary>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorTriboController.Post(Scopio.API.Model.MentorTriboInput)">
-            <summary>
-            MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
-            </summary>
-            <param name="input"></param>
-            <returns></returns>
-        </member>
         <member name="M:Scopio.API.Controllers.MentorTriboController.Get">
             <summary>
             MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_TRIBO"
@@ -229,14 +222,12 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Scopio.API.Controllers.MentorTriboController.GetIdSquad">
+        <member name="M:Scopio.API.Controllers.MentorTriboController.GetTriboId(System.Int32)">
             <summary>
-            Método que retorna lista de membros de uma Tribo.
+            MÉTODO QUE OBTÉM O MENTOR DA TRIBO PELO ID
             </summary>
+            <param name="id"></param>
             <returns></returns>
-            <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
-            <response code="200">OK</response>
-            <response code="404">NotFoud</response>
         </member>
         <member name="M:Scopio.API.Controllers.MentorTriboController.PutPapel(System.Int32,Scopio.API.Model.MentorTriboInput)">
             <summary>
@@ -454,6 +445,48 @@
             MÉTODO QUE EXCLUI UM "PAPEL" POR {ID}
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Scopio.API.Controllers.ResponsabilidadeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Scopio.API.Controllers.ResponsabilidadeController._responsabilidadeNegocio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.ResponsabilidadeController.#ctor(Negocio.Interface.IResponsabilidadeNegocio)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Scopio.API.Controllers.ResponsabilidadeController.Post(Scopio.API.Model.ResponsabilidadeInput)">
+            <summary>
+            MÉTODO QUE INSERE UMA "Responsabilidade"
+            </summary>
+            <param name="Input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.ResponsabilidadeController.Get">
+            <summary>
+            MÉTODO QUE OBTÉM UMA LISTA DOS "RESPONSABILIDADE"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.ResponsabilidadeController.GetId(System.Int32)">
+            <summary>
+            MÉTODO QUE OBTÉM UMA "RESPONSABILIDADE" POR {ID}
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Scopio.API.Controllers.ResponsabilidadeController.GetPapel(System.String)">
+            <summary>
+            MÉTODO QUE OBTÉM UM "RESPONSABILIDADE" PELO {NOME}
+            </summary>
+            <param name="Nome"></param>
             <returns></returns>
         </member>
         <member name="T:Scopio.API.Controllers.SquadController">
@@ -840,7 +873,7 @@
             
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.MentorTriboInput.IdMentor">
+        <member name="P:Scopio.API.Model.MentorTriboInput.IdUser">
             <summary>
             
             </summary>
@@ -895,7 +928,7 @@
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Squad 
             </summary>
         </member>
-        <member name="P:Scopio.API.Model.SquadInput.IdMentor">
+        <member name="P:Scopio.API.Model.SquadInput.IdUser">
             <summary>
             
             </summary>
@@ -928,6 +961,16 @@
         <member name="T:Scopio.API.Model.TriboInput">
             <summary>
             Contêm o objeto que fará a comunicação entre a API e as regras de negócio da Tribo. 
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.TriboInput.IdUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Scopio.API.Model.TriboInput.IdUnidade">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:Scopio.API.Model.TriboInput.Logo">

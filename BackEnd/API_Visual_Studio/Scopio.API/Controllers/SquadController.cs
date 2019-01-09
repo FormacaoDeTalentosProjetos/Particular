@@ -7,8 +7,8 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Scopio.API.Controllers
 {/// <summary>
-/// 
-/// </summary>
+ /// 
+ /// </summary>
     [Produces("application/json")]
     [Route("api/Squad")]
     public class SquadController : Controller
@@ -40,7 +40,7 @@ namespace Scopio.API.Controllers
         {
             var objSquad = new Squad()
             {
-                IdMentor = Input.IdMentor,
+                IdUser = Input.IdUser,
                 IdUnidade = Input.IdUnidade,
                 IdTribo = Input.IdTribo,
                 Logo = Input.Logo,
