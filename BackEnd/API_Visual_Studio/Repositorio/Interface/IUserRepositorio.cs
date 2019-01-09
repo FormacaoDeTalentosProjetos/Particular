@@ -8,8 +8,10 @@ namespace Repositorio.Interface
         void AlterarAtivoInativo(User entity);
         void AlterarPerfilUsuario(User entity);
         void Deletar(int id);
-        int Inserir(User entity);
+        int InserirComResponsabilidade(User entity);
+        int InserirSemResponsabilidade(User entity);
         IEnumerable<User> Selecionar();
+        IEnumerable<User> SelecionarMentores();
         IEnumerable<User> SelecionarAtivos();
         User SelecionarPorId(int id);
         IEnumerable<User> SelecionarPorNome(string nome);

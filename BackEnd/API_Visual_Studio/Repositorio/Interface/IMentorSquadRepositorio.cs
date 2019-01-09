@@ -8,9 +8,9 @@ namespace Repositorio.Interface
     {
         void Alterar(MentorSquad entity);
         void Deletar(int id);
-        int Inserir(MentorSquad entity);
+        int Inserir(int IdSquad, int IdMentor);
         IEnumerable<MentorSquad> Selecionar();
         MentorSquad SelecionarPorId(int id);
-        IEnumerable<MentorSquadDto> SelecionarSquads();
+        MentorSquad SelecionarSquadsPorID(int id);
     }
 }

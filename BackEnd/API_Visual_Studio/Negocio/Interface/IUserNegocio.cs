@@ -10,6 +10,7 @@ namespace Negocio.Interface
         void Deletar(int id);
         int Inserir(User entity);
         IEnumerable<User> Selecionar();
+        IEnumerable<User> SelecionarMentores();
         IEnumerable<User> SelecionarAtivos();
         User SelecionarPorId(int id);
         IEnumerable<User> SelecionarPorNome(string nome);

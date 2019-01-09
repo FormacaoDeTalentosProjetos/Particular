@@ -3,7 +3,9 @@ using Dominio.Excecoes;
 using Negocio.Interface;
 using Negocio.Validacoes;
 using Repositorio.Interface;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Negocio
 {
@@ -31,6 +33,15 @@ namespace Negocio
         public IEnumerable<User> Selecionar()
         {
             return _userRepositorio.Selecionar();
+        }
+
+        /// <summary>
+        /// Seleciona todos os usuários do Database.
+        /// </summary>
+        /// <returns>Lista de usuários.</returns>
+        public IEnumerable<User> SelecionarMentores()
+        {
+            return _userRepositorio.SelecionarMentores();
         }
 
         /// <summary>
@@ -92,8 +103,13 @@ namespace Negocio
         public int Inserir(User entity)
         {
             Validacoes(entity);
-            return _userRepositorio.Inserir(entity);
+            if (entity.IdResponsabilidade == null || entity.IdResponsabilidade == 0)
+                return _userRepositorio.InserirSemResponsabilidade(entity);
+
+            else
+                return _userRepositorio.InserirComResponsabilidade(entity);
         }
+
 
         /// <summary>
         /// 
@@ -142,6 +158,9 @@ namespace Negocio
 
         public void Validacoes(User entity)
         {
+            var UserExistente = _userRepositorio.SelecionarPorNome(entity.Nome);
+            int UserExistente_ = UserExistente.Count();
+
             //Verifica se existem campos vazios.
             if (CamposVazios.Verificar(entity))
             {
@@ -155,7 +174,7 @@ namespace Negocio
             }
 
             //Verifica se o usuário já foi cadastrado.
-            if (_userRepositorio.SelecionarPorNome(entity.Nome) != null)
+            if (UserExistente_ != 0)
             {
                 throw new ConflitoException($"O usuário: \"{entity.Nome}\", já foi cadastrado!");
             }

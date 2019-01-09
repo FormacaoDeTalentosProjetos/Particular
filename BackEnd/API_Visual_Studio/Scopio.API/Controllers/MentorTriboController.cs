@@ -27,6 +27,7 @@ namespace Scopio.API.Controllers
             _mentorTriboNegocio = mentorTriboNegocio;
         }
 
+
         /// <summary>
         /// MÉTODO QUE OBTÉM UMA LISTADE ASSOCIAÇÕES "MENTOR_TRIBO"
         /// </summary>
@@ -54,42 +55,20 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
-        /// Método que retorna lista de membros de uma Tribo.
+        /// MÉTODO QUE OBTÉM O MENTOR DA TRIBO PELO ID
         /// </summary>
+        /// <param name="id"></param>
         /// <returns></returns>
-        /// <remarks>Obtêm uma vinculação entre membro e squad através do Id informado.</remarks>
-        /// <response code="200">OK</response>
-        /// <response code="404">NotFoud</response>
         [HttpGet]
-        [Route("Tribos")]
-        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorTriboDto), nameof(HttpStatusCode.OK))]
+        [Route("tribo/{id}", Name = "MentorTriboGetPeloId")]
+        [SwaggerResponse((int)HttpStatusCode.OK, typeof(MentorTribo), nameof(HttpStatusCode.OK))]
         [SwaggerResponse((int)HttpStatusCode.NotFound)]
-        public IActionResult GetIdSquad()
+        public IActionResult GetTriboId(int id)
         {
-            return Ok(_mentorTriboNegocio.SelecionarTribos());
+            return Ok(_mentorTriboNegocio.SelecionarTribosPorId(id));
         }
 
-        /// <summary>
-        /// MÉTODO QUE INSERE UMA ASSOCIAÇÃO "MENTOR_TRIBO"
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(MentorTribo), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]MentorTriboInput input)
-        {
-            var objMentorTribo = new MentorTribo()
-            {
-                IdTribo = input.IdTribo,
-                IdMentor = input.IdMentor
-            };
 
-            var idMentorTribo = _mentorTriboNegocio.Inserir(objMentorTribo);
-            objMentorTribo.ID = idMentorTribo;
-            return CreatedAtRoute(routeName: "MentorTriboGetId", routeValues: new { id = idMentorTribo }, value: objMentorTribo);
-        }
 
         /// <summary>
         /// MÉTODO QUE ALTERA UMA ASSOCIAÇÃO "MENTOR_TRIBO" POR {ID}
@@ -107,7 +86,7 @@ namespace Scopio.API.Controllers
             var objMentorTribo = new MentorTribo()
             {
                 IdTribo = input.IdTribo,
-                IdMentor = input.IdMentor
+                IdUser = input.IdUser
             };
 
             var obj = _mentorTriboNegocio.Alterar(id, objMentorTribo);

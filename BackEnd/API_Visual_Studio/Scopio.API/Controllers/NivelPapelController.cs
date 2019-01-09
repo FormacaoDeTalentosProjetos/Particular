@@ -28,6 +28,31 @@ namespace Scopio.API.Controllers
         }
 
         /// <summary>
+        /// Método que insere um nivel de papel.
+        /// </summary>
+        /// <param name="input">Objeto com os dados do nível de papel.</param>
+        /// <returns></returns>
+        /// <response code="201">Created</response>
+        /// <response code="400">BadRequest</response>
+        /// <response code="500">InternalServerError</response>
+        [HttpPost]
+        [SwaggerResponse((int)HttpStatusCode.Created, typeof(NivelPapel), nameof(HttpStatusCode.Created))]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
+        public IActionResult Post([FromBody]NivelPapelInput input)
+        {
+            var objNivelPapel = new NivelPapel()
+            {
+                Desc = input.Desc,
+                Nivel = input.Nivel
+            };
+
+            var idNivelPapel = _nivelPapelNegocio.Inserir(objNivelPapel);
+            objNivelPapel.ID = idNivelPapel;
+            return CreatedAtRoute(routeName: "NvPapelGetId", routeValues: new { id = idNivelPapel }, value: objNivelPapel);
+        }
+
+        /// <summary>
         /// Método que obtêm todos os niveis de papel.
         /// </summary>
         /// <returns></returns>
@@ -75,30 +100,6 @@ namespace Scopio.API.Controllers
             return Ok(_nivelPapelNegocio.SelecionarPorNome(nome));
         }
 
-        /// <summary>
-        /// Método que insere um nivel de papel.
-        /// </summary>
-        /// <param name="input">Objeto com os dados do nível de papel.</param>
-        /// <returns></returns>
-        /// <response code="201">Created</response>
-        /// <response code="400">BadRequest</response>
-        /// <response code="500">InternalServerError</response>
-        [HttpPost]
-        [SwaggerResponse((int)HttpStatusCode.Created, typeof(NivelPapel), nameof(HttpStatusCode.Created))]
-        [SwaggerResponse((int)HttpStatusCode.BadRequest)]
-        [SwaggerResponse((int)HttpStatusCode.InternalServerError)]
-        public IActionResult Post([FromBody]NivelPapelInput input)
-        {
-            var objNivelPapel = new NivelPapel()
-            {
-                Desc = input.Desc,
-                Nivel = input.Nivel
-            };
-
-            var idNivelPapel = _nivelPapelNegocio.Inserir(objNivelPapel);
-            objNivelPapel.ID = idNivelPapel;
-            return CreatedAtRoute(routeName: "NvPapelGetId", routeValues: new { id = idNivelPapel }, value: objNivelPapel);
-        }
 
         /// <summary>
         /// Método que altera os dados de um nível de papel.

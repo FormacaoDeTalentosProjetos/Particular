@@ -8,9 +8,9 @@ namespace Negocio.Interface
     {
         MentorTribo Alterar(int id, MentorTribo entity);
         void Deletar(int id);
-        int Inserir(MentorTribo entity);
+        int Inserir(int IdTribo, int IdUser);
         IEnumerable<MentorTribo> Selecionar();
         MentorTribo SelecionarPorId(int id);
-        IEnumerable<MentorTriboDto> SelecionarTribos();
+        MentorTribo SelecionarTribosPorId(int id);
     }
 }

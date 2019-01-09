@@ -55,9 +55,9 @@ namespace Negocio
         /// Seleciona um membro do Database.
         /// </summary>
         /// <returns>Seleciona um membro ou gera uma exceção.</returns>
-        public IEnumerable<MentorTriboDto> SelecionarTribos()
+        public MentorTribo SelecionarTribosPorId(int id)
         {
-            var obj = _mentorTriboRepositorio.SelecionarTribos();
+            var obj = _mentorTriboRepositorio.SelecionarTribosPorId(id);
             
             return obj;
         }
@@ -67,9 +67,9 @@ namespace Negocio
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Inserir(MentorTribo entity)
+        public int Inserir(int IdTribo, int IdUser)
         {
-            return _mentorTriboRepositorio.Inserir(entity);
+            return _mentorTriboRepositorio.Inserir(IdTribo, IdUser);
         }
 
         /// <summary>

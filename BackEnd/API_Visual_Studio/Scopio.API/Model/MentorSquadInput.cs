@@ -12,6 +12,6 @@
         /// <summary>
         /// 
         /// </summary>
-        public int IdMentor { get; set; }
+        public int IdUser { get; set; }
     }
 }

@@ -16,9 +16,15 @@ namespace Negocio
         /// <summary>
         /// 
         /// </summary>
-        public SquadNegocio(ISquadRepositorio squadRepositorio)
+        private readonly IMentorSquadRepositorio _mentorSquadRepositorio;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public SquadNegocio(ISquadRepositorio squadRepositorio, IMentorSquadRepositorio mentorSquadRepositorio)
         {
             _squadRepositorio = squadRepositorio;
+            _mentorSquadRepositorio = mentorSquadRepositorio;
         }
 
         /// <summary>
@@ -87,14 +93,46 @@ namespace Negocio
         /// <returns></returns>
         public int Inserir(Squad entity)
         {
+            int IdUser = entity.ID;
             var UserExistente = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
-
             if (UserExistente != null)
             {
                 throw new ConflitoException($"Já existe cadastrado a SQUAD {UserExistente.Nome}, cadastrado!");
             }
 
-            return _squadRepositorio.Inserir(entity);
+            if (entity.IdTribo == null)
+            {
+                if (entity.IdUser == 0)
+                {
+                    _squadRepositorio.InserirSemTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    return teste.ID;
+                }
+                else
+                {
+                    _squadRepositorio.InserirSemTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdUser);
+                    return teste.ID;
+
+                }
+            }
+            else
+            {
+                if (entity.IdUser == 0)
+                {
+                    _squadRepositorio.InserirComTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    return teste.ID;
+                }
+                else
+                {
+                    _squadRepositorio.InserirComTribo(entity);
+                    var teste = _squadRepositorio.SelecionarPorDescricao(entity.Nome);
+                    _mentorSquadRepositorio.Inserir(teste.ID, entity.IdUser);
+                    return teste.ID;
+                }
+            }
         }
 
         /// <summary>
