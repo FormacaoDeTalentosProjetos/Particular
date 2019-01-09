@@ -1,0 +1,14 @@
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.deps.json
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Negocio.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csprojAssemblyReference.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csproj.CoreCompileInputs.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.AssemblyInfoInputs.cache
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.AssemblyInfo.cs
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.csproj.CopyComplete
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.dll
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Negocio\obj\Debug\netcoreapp2.1\Negocio.pdb
