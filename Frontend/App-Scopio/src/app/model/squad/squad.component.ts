@@ -10,7 +10,7 @@ export class SquadComponent implements OnInit {
 
   squads : Array<any>;
 
-  public squadImageUrl ="././assets/images/brasao.png";
+  public squadImageUrl ="././assets/imagens/squad.png";
 
   constructor(private squadService: SquadService) { }
 

@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class TriboService {
 
  /* API ADRESS */
- tribosUrl = 'http://localhost:5000/api/Tribo/TriboAtiva';
+ url = 'http://localhost:55221/api/Tribo/';
 
  constructor(private http: HttpClient) { }
 
- listar () {
-   return this.http.get<any[]>(`${this.tribosUrl}`);
+ getTribo () {
+   return this.http.get<any[]>(`${this.url}`);
  }
 }

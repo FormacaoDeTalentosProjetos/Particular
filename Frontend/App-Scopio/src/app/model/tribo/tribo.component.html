@@ -1,10 +1,8 @@
-<div class="flex-container">
-  <div *ngFor="let t of tribos" (click)="acessar(t)">
-    <div class="label">
-      <span>{{ t.nome }}</span>
-    </div>
-    <div>
-        <img class="tribe-icon" src="{{ triboImageUrl }}">
-    </div>
+<div *ngFor="let t of tribos" (click)="acessar(t)">
+  <div class="label">
+    <span>{{ t.nome }}</span>
+  </div>
+  <div>
+      <img class="tribe-icon" src="{{ triboImageUrl }}">
   </div>
 </div>

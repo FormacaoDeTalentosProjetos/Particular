@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class MentorService {
 
   /* API ADRESS */
-  mentorsUrl = 'http://localhost:5000/api/Mentor/MentoresAtivos';
+  Url = 'http://localhost:55221/api/User/Mentores/';
 
   constructor(private http: HttpClient) { }
 
-  listar () {
-    return this.http.get<any[]>(`${this.mentorsUrl}`);
+  getMentoresAtivos () {
+    return this.http.get<any[]>(`${this.Url}`);
   }
 }
 

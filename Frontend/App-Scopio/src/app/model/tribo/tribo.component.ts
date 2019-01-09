@@ -10,7 +10,7 @@ import { TriboService } from '../../services/tribo.service';
 export class TriboComponent implements OnInit {
   tribos : Array<any>;
 
-  public triboImageUrl ="././assets/images/estandarte.png";
+  public triboImageUrl ="././assets/imagens/tribo.png";
 
   constructor(
     private router: Router,
@@ -22,7 +22,7 @@ export class TriboComponent implements OnInit {
   }
   
   listar () {
-    this.triboService.listar().subscribe(dados => this.tribos = dados);
+    this.triboService.getTribo().subscribe(dados => this.tribos = dados);
   } 
 
   acessar(tribo){

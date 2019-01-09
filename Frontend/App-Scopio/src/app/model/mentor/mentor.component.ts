@@ -10,7 +10,7 @@ export class MentorComponent implements OnInit {
 
   mentors : Array<any>;
 
-  public mentorImageUrl = "././assets/images/mentor.png";
+  public mentorImageUrl = "././assets/imagens/mentor.png";
 
   constructor(private mentorService: MentorService) { }
 
@@ -19,7 +19,7 @@ export class MentorComponent implements OnInit {
   }
 
   listar () {
-    this.mentorService.listar().subscribe(dados => this.mentors = dados);
+    this.mentorService.getMentoresAtivos().subscribe(dados => this.mentors = dados);
   }
 
 }

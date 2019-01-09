@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class SquadService {
 
    /* API ADRESS */
-   squadsUrl = 'http://localhost:5000/api/Squad/SquadSemTribo/';
+   url = 'http://localhost:55221/api/Squad/SquadSemTribo/';
 
    constructor(private http: HttpClient) { }
  
    getSquadSemTribo () {
-     return this.http.get<any[]>(`${this.squadsUrl}`);
+     return this.http.get<any[]>(`${this.url}`);
    }
  }

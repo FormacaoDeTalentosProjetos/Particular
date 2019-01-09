@@ -8,11 +8,11 @@ import { HttpClient } from '@angular/common/http';
 export class MembroService {
   
   /*ENDEREÇO DA API*/
-  membersUrl = 'http://localhost:5000/api/Membro/MembrosAtivos';
+  Url = 'http://localhost:55221/api/User/Ativos/';
 
   constructor(private http: HttpClient) { }
   
-  listar () {
-    return this.http.get<any[]>(`${this.membersUrl}`);
+  getMembrosAtivos () {
+    return this.http.get<any[]>(`${this.Url}`);
   }
 }

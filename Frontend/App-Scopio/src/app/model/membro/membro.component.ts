@@ -19,6 +19,6 @@ export class MembroComponent implements OnInit {
   }
 
   listar () {
-    this.membroService.listar().subscribe(dados => this.membros = dados);
+    this.membroService.getMembrosAtivos().subscribe(dados => this.membros = dados);
   }
 }
