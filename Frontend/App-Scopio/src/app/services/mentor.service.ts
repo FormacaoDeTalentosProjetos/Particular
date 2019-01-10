@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import ApiConexao from './api/apiConexao';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class MentorService {
+  //URL base de conenexão com a API
+  urlBase: ApiConexao;
 
-  /* API ADRESS */
-  Url = 'http://localhost:55221/api/User/Mentores/';
+  //URL de conexão com a api mentor 
+  urlApi: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.urlBase = new ApiConexao();
+    this.urlApi = this.urlBase.getUrl().trim() + 'User/Mentores/';
+  }
 
   getMentoresAtivos () {
-    return this.http.get<any[]>(`${this.Url}`);
+    return this.http.get<any[]>(`${this.urlApi}`);
   }
 }
-
