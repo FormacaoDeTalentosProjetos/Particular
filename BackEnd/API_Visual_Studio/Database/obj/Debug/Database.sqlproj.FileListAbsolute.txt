@@ -4,3 +4,7 @@ C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Database\bin\Debug\Database.pdb
 C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
 C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.dll
 C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Database.pdb
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\Model.xml
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\refactor.xml
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\postdeploy.sql
+C:\GIT_PROJECTS\Scopio\BackEnd\API_Visual_Studio\Database\obj\Debug\predeploy.sql

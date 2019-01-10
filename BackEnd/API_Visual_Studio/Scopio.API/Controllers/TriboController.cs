@@ -39,7 +39,6 @@ namespace Scopio.API.Controllers
             var objTribo = new Tribo()
             {
                 IdUser = Input.IdUser,
-                IdUnidade = Input.IdUnidade,
                 Logo = Input.Logo,
                 Nome = Input.Nome,
             };

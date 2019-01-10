@@ -72,7 +72,7 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<Responsabilidade>($"SELECT * " +
                                                                 $"FROM [TB_RESPONSABILIDADE] " +
-                                                                $"WHERE [Nome] = '@Nome'",
+                                                                $"WHERE [Nome] = @Nome",
                                                                 new {
                                                                     Nome
                                                                });

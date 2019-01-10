@@ -8,7 +8,6 @@ namespace Dominio
     {
         public int ID { get; set; }
         public int IdUser { get; set; }
-        public int IdUnidade { get; set; }
         public string Logo { get; set; }
         public string Nome { get; set; }
         public bool Status { get; set; }

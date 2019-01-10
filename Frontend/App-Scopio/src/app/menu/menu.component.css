@@ -17,10 +17,10 @@
 }
 
 img {
-  width: 8vh;
-  height: 8vh;
+  width: 7vh;
+  height: 7vh;
 }
 
 .mat-toolbar{
-  background-color: green;
+  background-color: gray;
 }

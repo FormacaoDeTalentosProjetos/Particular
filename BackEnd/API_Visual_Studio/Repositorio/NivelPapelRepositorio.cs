@@ -53,7 +53,7 @@ namespace Repositorio
             {
                 var obj = connection.QueryFirstOrDefault<NivelPapel>($"SELECT * " +
                                                                     $"FROM [TB_NVPAPEL] " +
-                                                                    $"WHERE Nome = '{nome}'");
+                                                                    $"WHERE [Desc] = '{nome}'");
                 return obj;
             }
         }

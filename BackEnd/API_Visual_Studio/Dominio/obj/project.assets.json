@@ -520,10 +520,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -687,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abarletta\\.nuget\\packages\\": {},
+    "C:\\Users\\mamaral\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GIT_PROJECTS\\scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "C:\\GIT_PROJECTS\\scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
-      "packagesPath": "C:\\Users\\abarletta\\.nuget\\packages\\",
-      "outputPath": "C:\\GIT_PROJECTS\\scopio\\BackEnd\\API_Visual_Studio\\Dominio\\obj\\",
+      "projectPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\mamaral\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT_PROJECTS\\Scopio\\BackEnd\\API_Visual_Studio\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\abarletta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mamaral\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
