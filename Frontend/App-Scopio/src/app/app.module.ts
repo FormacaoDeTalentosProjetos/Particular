@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -23,6 +23,8 @@ import { TriboService } from './services/tribo.service';
 import { SquadService } from './services/squad.service';
 import { MembroService } from './services/membro.service';
 import { MentorService } from './services/mentor.service';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { MentorService } from './services/mentor.service';
     MentorComponent,
     TriboComponent,
     SquadComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -43,7 +46,12 @@ import { MentorService } from './services/mentor.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [TriboService, SquadService, MembroService, MentorService],
   bootstrap: [AppComponent],

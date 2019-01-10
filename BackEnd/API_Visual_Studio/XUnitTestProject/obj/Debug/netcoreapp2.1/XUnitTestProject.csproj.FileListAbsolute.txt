@@ -9,3 +9,17 @@ C:\Users\cacaciano\Desktop\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\
 C:\Users\cacaciano\Desktop\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.csproj.CoreCompileInputs.cache
 C:\Users\cacaciano\Desktop\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.AssemblyInfoInputs.cache
 C:\Users\cacaciano\Desktop\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.AssemblyInfo.cs
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\XUnitTestProject.deps.json
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\XUnitTestProject.runtimeconfig.json
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\XUnitTestProject.runtimeconfig.dev.json
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\XUnitTestProject.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\bin\Debug\netcoreapp2.1\XUnitTestProject.pdb
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.csprojAssemblyReference.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.csproj.CoreCompileInputs.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.AssemblyInfoInputs.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.AssemblyInfo.cs
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\XUnitTestProject\obj\Debug\netcoreapp2.1\XUnitTestProject.pdb

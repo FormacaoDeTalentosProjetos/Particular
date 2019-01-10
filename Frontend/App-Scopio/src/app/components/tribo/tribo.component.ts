@@ -9,12 +9,11 @@ import { TriboService } from '../../services/tribo.service';
 })
 export class TriboComponent implements OnInit {
   tribos : Array<any>;
-
   public triboImageUrl ="././assets/imagens/tribo.png";
 
   constructor(
     private router: Router,
-    private triboService: TriboService
+    private triboService: TriboService,
   ) {}
   
   ngOnInit() {
@@ -28,6 +27,6 @@ export class TriboComponent implements OnInit {
   } 
   
   acessar(tribo){
-    this.router.navigate(['tribo', tribo.id])
+    this.router.navigate(['tribos', tribo.id])
   }
 }

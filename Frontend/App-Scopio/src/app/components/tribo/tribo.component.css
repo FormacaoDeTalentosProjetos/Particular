@@ -1,12 +1,12 @@
 .tribe-icon {
     width: 11vh;
     height: 11vh;
-    margin: 0% 10%;
+    margin: center;
 }
 
 .label {
     /* text-align: center; */
     color:black;
-    font-size: 1.5vh;
+    font-size: 1.4vh;
     font-weight: bold;
 }

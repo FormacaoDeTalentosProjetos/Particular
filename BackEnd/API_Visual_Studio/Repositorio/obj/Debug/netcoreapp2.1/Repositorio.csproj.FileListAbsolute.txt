@@ -1,0 +1,12 @@
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\GIT_PROJECTS\scopio\BackEnd\API_Visual_Studio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb

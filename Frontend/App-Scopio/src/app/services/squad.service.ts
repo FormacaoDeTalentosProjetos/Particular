@@ -15,10 +15,14 @@ export class SquadService {
 
   constructor(private http: HttpClient) {
     this.urlBase = new ApiConexao();
-    this.urlApi = this.urlBase.getUrl().trim() + 'Squad/SquadSemTribo/';
+    this.urlApi = this.urlBase.getUrl().trim() + 'Squad';
   }
  
   getSquadSemTribo () {
-    return this.http.get<any[]>(`${this.urlApi}`);
+    return this.http.get<any[]>(`${this.urlApi}/SquadSemTribo/`);
+  }
+
+  getSquadByTribo(id: number){
+    return this.http.get<any[]>(`${this.urlApi}/IdTribo/${id}`);
   }
 }

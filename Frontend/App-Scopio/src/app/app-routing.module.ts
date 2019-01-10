@@ -5,12 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 //Imports dos components das paginas
 import { MapaComponent } from './components/mapa/mapa.component';
 import { TriboComponent } from './components/tribo/tribo.component';
+import { SquadComponent } from './components/squad/squad.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/mapa', pathMatch: 'full' },
   { path: 'mapa', component: MapaComponent },
-  { path: 'tribos', component: TriboComponent }
-  // { path: 'tribos/:id', component: SquadComponent },
+  { path: 'tribos', component: TriboComponent },
+  { path: 'tribos/:id', component: SquadComponent },
   // { path: 'squads/:id', component: SquadComponent }
 ];
 
