@@ -34,7 +34,7 @@ CREATE TABLE [dbo].[TB_USER](
 	[ID] INT IDENTITY NOT NULL,
 	[IdPapel] INT NOT NULL,
 	[IdNivel] INT NOT NULL,
-	[IdResponsabilidade] INT,
+	[IdResponsabilidade] INT NULL,
 	[Avatar] VARCHAR(200) NULL,
 	[Nome] VARCHAR(50) NOT NULL,
 	[Email] VARCHAR(100) NULL,
