@@ -1,0 +1,12 @@
+.squad-icon {
+    width: 10vh;
+    height: 10vh;
+    margin: 0% 10%;
+}
+
+.label {
+    text-align: center;
+    color:black;
+    font-size: 1.5vh;
+    font-weight: bold;
+}

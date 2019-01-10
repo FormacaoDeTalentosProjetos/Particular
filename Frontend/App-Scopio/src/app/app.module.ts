@@ -1,4 +1,4 @@
-// Imports do core do Angular
+//Imports do core do Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -7,24 +7,22 @@ import { MatNativeDateModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Imports dos componentes
-import { HeaderComponent } from './model/header/header.component';
-import { MapaComponent } from './model/mapa/mapa.component';
-import { MembroComponent } from './model/membro/membro.component';
-import { MentorComponent } from './model/mentor/mentor.component';
-import { TriboComponent } from './model/tribo/tribo.component';
-import { SquadComponent } from './model/squad/squad.component';
-import { FooterComponent } from './model/footer/footer.component';
+//Imports dos componentes
+import { HeaderComponent } from './components/header/header.component';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { MembroComponent } from './components/membro/membro.component';
+import { MentorComponent } from './components/mentor/mentor.component';
+import { TriboComponent } from './components/tribo/tribo.component';
+import { SquadComponent } from './components/squad/squad.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 //Imports dos serviços
 import { TriboService } from './services/tribo.service';
 import { SquadService } from './services/squad.service';
 import { MembroService } from './services/membro.service';
 import { MentorService } from './services/mentor.service';
-
 
 @NgModule({
   declarations: [
@@ -42,11 +40,6 @@ import { MentorService } from './services/mentor.service';
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
