@@ -1,9 +1,9 @@
 // Imports do core do Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -12,12 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Imports dos componentes
 import { HeaderComponent } from './model/header/header.component';
-import { FooterComponent } from './model/footer/footer.component';
 import { MapaComponent } from './model/mapa/mapa.component';
 import { MembroComponent } from './model/membro/membro.component';
 import { MentorComponent } from './model/mentor/mentor.component';
 import { TriboComponent } from './model/tribo/tribo.component';
 import { SquadComponent } from './model/squad/squad.component';
+import { FooterComponent } from './model/footer/footer.component';
 
 //Imports dos serviços
 import { TriboService } from './services/tribo.service';
@@ -30,12 +30,12 @@ import { MentorService } from './services/mentor.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     MapaComponent,
     MembroComponent,
     MentorComponent,
     TriboComponent,
-    SquadComponent
+    SquadComponent,
+    FooterComponent
   ],
   imports: [
     BrowserAnimationsModule,
